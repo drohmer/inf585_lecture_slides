@@ -1,0 +1,44 @@
+
+
+= Implementation - transparency in OpenGL
+
+Transparency is not straightforward using projection/rasterization rendering.
+::[font-size:80%; line-height:1.3em;]
+* __No perfect solution__
+::
+
+::[height:1em;]::
+
+\(\Rightarrow\) Possibility to blend color for each pixel using \(\alpha\) channel (rgba)
+
+
+::[height:0.5em;]::
+
+* Need to be explicitely activated in OpenGL
+
+::(.code)[margin-left: 2em; display:inline-block; border:2px solid gray; border-radius:10px;]
+<pre>
+__glEnable(**GL_BLEND**);__ 
+link::https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml[**glBlendFunc**] (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+ __... **Draw Calls** ...__ 
+__glDisable(GL_BLEND);__
+</pre>
+::
+
+::[height:1em;]
+
+::[font-size:85%; line-height:1.3em;]
+** - Various blending are possible for multiple effects (see link::https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml[glBlendFunc])
+** - For transparency: __(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)__
+*** \(\Rightarrow\) newColor = \(\alpha\) currentColor + \((1-\alpha)\) previousColor
+::
+
+::[height:2em;]::
+
+Important note:
+* The **order** of the draw calls is important (previousColor/currentColor)
+* The depth-buffer cannot handle the notion of transparency
+
+::[position:fixed; top:400px; left:1300px;]
+img::assets/color_blending.png[width:500px;]
+::

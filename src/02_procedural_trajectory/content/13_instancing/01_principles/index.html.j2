@@ -1,0 +1,63 @@
+= Instancing
+
+* In particle system we need to display lots of similar shapes
+** Multiple draw calls (N>1000) can be costly
+::[font-size:85%; line-height:1.3em;]
+*** __each draw call requires synchronization b/w CPU-GPU__
+::
+
+::[height:0.5em;]::
+
+::[margin-left:2em;]
+code::[c++]
+// Slow for large N
+for(int k=0; k<N; ++k)
+   someOperator(k)
+   draw(shape) // ... glDrawElements(...)
+code::[-]
+::
+
+::[height:0.5em;]::
+
+::[position:fixed; top:150px; left:1250px;]
+img::assets/opengl_performance.jpg[width:550px;]
+::[text-align:center;]
+::(.ref) link::https://youtu.be/-bCeNzgiJ8I?t=1916[NVIDIA] ::
+::
+::
+
+* Solution: **Use Instancing**
+
+::[font-size:85%; line-height:1.3em;]
+** glDrawArrays \(\rightarrow\) link::https://www.khronos.org/registry/OpenGL-Refpages/es3.0/html/glDrawArraysInstanced.xhtml[glDrawArraysInstanced]
+** glDrawElements \(\rightarrow\) link::https://www.khronos.org/registry/OpenGL-Refpages/es3.0/html/glDrawElementsInstanced.xhtml[glDrawElementsInstanced]
+::
+
+::[height:0.5em;]::
+
+::[margin-left:2em;]
+::[font-size:85%;color:gray;line-height:1.3em;] __In the C++ code__ ::
+::[margin-left:1em;]
+code::[c++]
+// 1 unique call, N is a parameter
+drawInstanced(shape, N) // ... glDrawElementsInstanced(...,N)
+// No more explicit loop
+code::[-]
+::
+
+::[height:0.5em;]::
+
+::[font-size:85%;color:gray;line-height:1.3em;] __In the Shader:__ ::
+::[margin-left:1em;]
+code::[c++]
+// ...
+someOperator(gl_InstanceID)
+// ...
+code::[-]
+::
+::
+
+::[position:fixed; top:700px; left:1250px;]
+* (+) Full capability of your GPU
+* (-) Require a specific shader
+::

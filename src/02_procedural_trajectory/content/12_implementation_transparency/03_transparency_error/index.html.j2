@@ -1,0 +1,32 @@
+
+
+= Image Blending - common errors
+
+::[display:inline-block; width:800px; vertical-align:top;]
+* Keeping depth-buffer write activated (without sorting)
+
+videoplay::assets/depth_error.mp4[width:700px;]{controls}
+
+::[font-size:85%; line-height:1.3em;]
+* __Strong artifact, cannot be used__
+::
+
+::
+::[display:inline-block; width:800px; vertical-align:top;]
+* No sorting, depth buffer write de-activated
+
+videoplay::assets/sort_error.mp4[width:700px;]{controls}
+
+::[font-size:85%; line-height:1.3em;]
+* __Note__: 
+** Can be OK for blury sprites (like smokes) 
+*** where element order is hard to distinguish.
+** Avoids the cost of the sorting.
+::
+
+::
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+= Perlin noise usage
+
+
+
+Direct use: \(z=P(x,y)\)  
+* Mountain-looking terrain
+
+div::[position:fixed; top:100px; left:900px;]
+img::assets/mountains.png[]
+::
+
+div::[height:180px;]::
+
+Material texture
+
+* Ridge effect: \(\sum_k \alpha^k |f(\omega^k x)|\)
+* Marble effect: \(\sin\left(x+\sum_k \alpha^k |f(\omega^k x)| \right)\)
+
+div::[position:fixed; top:420px; left:900px;]
+img::assets/mars.jpg[height:300px]
+img::assets/marble.jpg[height:300px]
+::
+
+div::[height:160px;]::
+
+Animated textures 
+
+* Translation: \(P(x,y+t)\)
+* Smooth evolution: \(P(x,y,t)\)
+
+div::[position:fixed; top:740px; left:900px;]
+img::assets/animated2.gif[height:300px]
+img::assets/animated.gif[height:300px]
+::
+

@@ -1,0 +1,27 @@
+= Instancing Demo
+
+::[height:2em;]::
+
+::[display:inline-block;]
+**Without Instancing** <br>
+::[box-shadow:3px 3px 10px gray;]
+videoplay::assets/no_instancing.mp4[width:850px;]{controls}
+::
+ <br>
+::[font-size:85%; line-height:1.3em;]
+Slow for 15,000 particles 
+* #vertices=750,000
+::
+::
+
+::[display:inline-block; margin-left:1em;]
+**With Instancing** <br>
+::[box-shadow:3px 3px 10px gray;]
+videoplay::assets/with_instancing.mp4[width:850px;]{controls} 
+::
+<br>
+::[font-size:85%; line-height:1.3em;]
+Can display 450,000 particles at 60fps (depends on GPU)
+* #vertices=22,000,000
+::
+::

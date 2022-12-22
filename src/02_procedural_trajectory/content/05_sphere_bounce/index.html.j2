@@ -1,0 +1,39 @@
+{% set pageTitle = 'Bouncing spheres' %}
+{% set tocTitle = 'Bouncing spheres' %}
+
+{% extends "theme/template/base.html" %}
+
+
+{% block content %}
+
+= Bouncing spheres
+
+div::[width:750px;]
+
+* Q. What is the equation of motion ?
+** (taking into account the bouncing)
+** \(p(t)=...\)
+
+<br>
+
+
+div::[font-size:80%;]
+** Help:
+** - __Consider a particle emited at time \(t=0\)__
+** - __At what time \(t_i\), the particle touches the ground ?__
+** - __What is the new speed after impact ?__
+** - __Express the complete equation of trajectory (piecewise definition)__
+::
+
+<br>
+
+* Bonus: How the "impact shadow" effect is computed ?
+
+::
+
+div::[position:fixed; top:150px; left:900px;]
+videoplay::assets/bouncing.webm[width:950px;]{controls}
+::
+
+
+{% endblock %}

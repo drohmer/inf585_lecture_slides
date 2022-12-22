@@ -1,0 +1,36 @@
+{% set pageTitle = 'Example of particle system' %}
+{% set tocTitle = 'Example of particle system' %}
+
+{% extends "theme/template/base.html" %}
+
+
+{% block content %}
+
+= Example of particle system
+
+== Free fall of spheres under gravity
+
+* - Geometrical representation of each particle: sphere
+* - Equation of motion \(p(t) = \frac{1}{2} g t^2 + v_0 t + p_0\)
+
+<br>
+
+* - Initial position and speed may be placed at random position
+* - Each particle may have a different life time
+
+div::[position:fixed; top:350px; left:1200px]
+videoplay::assets/particles.webm[width:550px]
+::
+
+<br> <br>
+
+* Q. __What are the parameters used for \(p_0\) and \(v_0\) in this example ?__
+** \(p_0= ...\)
+** \(v_0= ...\)
+
+::[font-size:80%;]
+** __Note: Coordinate system \((x,y,z)=\)(red, green, blue).__
+::
+
+
+{% endblock %}

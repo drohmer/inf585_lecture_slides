@@ -1,0 +1,38 @@
+
+
+= Billboards, Impostors, Sprites
+
+::[width:1000px;]
+
+* Particles can be displayed as small images/thumbnails (instead of simple sphere)
+
+<br>
+
+* In practice
+** - Each particle is displayed as a quadrangle
+** - A texture is mapped on the quad
+
+<br> 
+
+div::[font-size:90%; line-height:1.2em;]
+* - The texture can contain transparency : quad geometry is invisible
+** span::[font-size:75%;] Fake a more complex geometry ::
+* - The quad can be facing the camera at all time (billboard)
+* - The texture can be animated (sprite)
+* - Texture can be adapted to the point of view (impostors)
+::
+
+::
+
+div::[position:fixed; left:1200px; top:100px;]
+videoplay::assets/smoke.webm[width:700px;]{controls}
+::
+
+div::[position:fixed; left:1650px; top:600px;]
+img::assets/texture.png[width:200px;]
+::
+
+
+div::[position:fixed; left:1100px; top:580px;]
+videoplay::assets/cauldron.webm[width:310px;]{controls}
+::

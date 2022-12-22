@@ -1,0 +1,43 @@
+
+= Create procedural noise
+
+__Ex. Continous function \(f(x)\) with limited frequency.__
+
+::[height:25px;]::
+
+* For integer value: \(f(n)=\) pseudo-random, determinic, value
+div::[font-size:85%; color:gray;]
+*** ex. Hash Function: float hash(float n) { return fract(sin(n) * 1e4); }
+::
+* Interpolate using smooth curve between each integer value (Smooth step, cubic polynomials, etc.)
+
+::[height:25px;]::
+
+* Properties: 
+::[line-height:1.3em;]
+** - Continuous function
+** - Looks non-periodic
+** - Frequency limited around 1
+::
+
+::[height:25px;]::
+
+* __Can be computed in 2D, 3D, etc.__
+
+::[height:25px;]::
+
+::[font-size:85%; color:gray; line-height:1.3em;]
+* Simple algorithm - ex. in 1D
+** For a given \(x\), \(n=\)floor\((x)\)
+*** - Evaluate hash function at \(n\), \(n+1\) 
+**** ( (\(n\pm i\)) for further sampling)
+*** - Compute interpolated value \(f(x)\) at position \(x\)
+::
+
+div::[position:fixed; top:475px; left:1100px;]
+img::assets/perlin.svg[width:700px]
+::
+
+div::[position:fixed; top:700px; left:1100px;]
+img::assets/perlin_2d_00.png[height:280px]
+::

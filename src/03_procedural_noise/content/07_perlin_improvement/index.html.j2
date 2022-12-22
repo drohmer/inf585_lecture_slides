@@ -1,0 +1,26 @@
+
+= Perlin Noise - Improvement
+
+* **Gradient Noise**
+** __Use pseudo-random Gradients instead of Positions__
+** Improved frequency control: Oscillate at period 1
+
+::[position:fixed; left:1200px; top:200px;]
+img::assets/perlin.svg[width:600px]
+::
+
+::[height:100px;]::
+
+* **Simplex Noise**
+** __Simplex-based interpolation instead of grid interpolation__
+** Avoids grid-direction artifact
+** Faster for high dimensions
+*** ::(.ref) link::http://staffwww.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf[Stefan Gustavson Simplex noise demystified] ::
+
+::[position:fixed; right:150px; top:650px;]
+img::assets/simplex.jpg[width:800px]
+::
+
+::[height:150px;]::
+
+* To go beyond: ::(.ref) link::http://staffwww.itn.liu.se/~stegu/TNM084-2019/noise-eg2010.pdf[A Lagae et al., STAR in Procedural Noise Functions. EG 2010] ::

@@ -1,0 +1,52 @@
+= Perlin Noise
+
+First procedural noise proposed in 
+* ::(.ref) link::assets/perlin85.pdf[Ken Perlin, An Image Synthesizer. SIGGRAPH 85] ::
+
+::[height:25px;]::
+
+::[width:1000px;]
+Idea: Sum over pseudo-random function with increasing frequencies and decreasing magnitude
+::
+
+::[height:50px;]::
+
+::[font-size:85%;](.border)
+* \(f\) : Smooth pseudo-random function
+* \(\displaystyle P(x) = \sum_{k=0}^{N} \alpha^k f(\omega^k\;x)\)
+** - \(N\) number of Octave
+** - \(\alpha\) persistency (\(1/\alpha\) attenuation)
+** - \(\omega\) frequency gain
+::
+
+div::[position:fixed; top:80px; left:1250px;]
+img::assets/perlin.png[width:280px]
+::
+
+::[position:fixed; right:80px; bottom:80px;]
+
+img::assets/perlin_2d_00.png[height:200px]
+img::assets/perlin_2d_01.png[height:200px]
+img::assets/perlin_2d_02.png[height:200px]
+img::assets/perlin_2d_03.png[height:200px]
+img::assets/perlin_2d_04.png[height:200px]
+
+::
+
+div::[color:gray; font-size:85%;]
+div::[position:fixed; top:100px; left:1575px;]
+\(\;\;\;\;\;\;\;f(x)\)
+::
+div::[position:fixed; top:220px; left:1575px;]
+\(0.8\,\,\,f(2\,x)\)
+::
+div::[position:fixed; top:300px; left:1575px;]
+\(0.8^2\,f(4\,x)\)
+::
+div::[position:fixed; top:390px; left:1575px;]
+\(0.8^3\,f(8\,x)\)
+::
+div::[position:fixed; top:470px; left:1575px;]
+\(0.8^4\,f(16\,x)\)
+::
+::

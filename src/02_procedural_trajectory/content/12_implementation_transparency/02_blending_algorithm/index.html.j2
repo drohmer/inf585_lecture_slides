@@ -1,0 +1,38 @@
+
+
+= Implementation - transparency in OpenGL
+
+General Process: <br>
+
+
+::[line-height:1.3em;display:inline-block; width:800px; border: 2px solid gray; font-size:80%; border-radius:10px; vertical-align:top;]
+* - 1. Draw all **non-transparent** objects
+* - 2.a Activate color blending, desactivate depth buffer write
+* - 2.b **Sort** transparent objects by depth to the camera
+::[font-size:75%; color:rgb(100,100,100);]
+** \(p_{proj} = Proj \times ModelView \times p\)
+** \(z_{depth} = p_{proj}.z/p_{proj}.w\)
+::
+* - 3. **Draw transparent objects** from furthest to closest
+::
+::[display:inline-block; width:900px; border: 2px solid gray; font-size:90%; border-radius:10px; vertical-align:top;]
+code::[c++]
+ ... Draw all non-transparent objects ...
+glEnable(GL_BLEND); // Color Blending
+glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+glDepthMask(false); // do not write on depth buffer
+ ... Sort transparent objects by depth ...
+ ... Draw all transparent objects from furthest to closest ...
+glDisable(GL_BLEND); 
+// do not forget to re-activate depth buffer write
+glDepthMask(true);
+code::[-]
+::
+
+
+::[margin-left:100px;]
+videoplay::assets/transparency.mp4[width:675px;]
+::
+
+
+

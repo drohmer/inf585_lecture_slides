@@ -1,0 +1,31 @@
+
+
+= Implementation - transparency in OpenGL
+
+* For impostors shape with fully opaque/transparent fragment:
+** **discard** can be used on transparent fragments
+::[font-size:85%; line-height:1.3em;]
+*** __discard = Stop fragment shader execution (nothing is written)__
+::
+::[height:1em;]::
+
+::[font-size:85%; line-height:1.3em;]
+** (+) Generic, standard display
+*** __no need to sort shapes, depth-buffer works__
+** (-) Possible aliasing artifacts
+** (-) Cannot be used on semi-transparent objects
+::
+
+::[height:1em;]::
+
+videoplay::assets/discard.mp4[width:600px;]{controls}
+
+::[position:fixed; top:600px; left:900px;]
+__In fragment shader:__
+code::[glsl]
+float limit = 0.6;
+if( texture.a < limit) {
+	discard;
+}
+code::[-]
+::
