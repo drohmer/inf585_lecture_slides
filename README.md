@@ -1,1 +1,1 @@
-= INF585 lab class description
+# INF585 course slides
