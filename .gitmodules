@@ -1,0 +1,3 @@
+[submodule "static_website_lhtml"]
+	path = static_website_lhtml
+	url = https://github.com/drohmer/static_website_lhtml
