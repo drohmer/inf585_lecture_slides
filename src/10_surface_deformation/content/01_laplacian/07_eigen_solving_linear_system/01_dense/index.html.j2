@@ -1,0 +1,33 @@
+= Solving a dense least square problem
+
+div::[font-size:80%;]
+code::[c++]
+#include <iostream>
+#include <Eigen/Dense>
+
+int main()
+{
+    // Build matrix
+    Eigen::MatrixXf M;
+    // M.resize(N,N)
+    // Fill the matrix ... M(i,j) = value
+    M = Eigen::MatrixXf::Random(3, 3); // example
+
+    //QR Decomposition (different types are proposed in Eigen)
+    auto solver = M.colPivHouseholderQr();
+
+    // Build RHS
+    Eigen::VectorXf b;
+    // b.resize(N); b(i) = value ...
+    b = Eigen::VectorXf::Random(3);
+
+    // Solve linear system
+    Eigen::VectorXf x = solver.solve(b);
+
+    std::cout << x << std::endl;
+    std::cout <<"Check solution : "<< (M*x-b).norm() << std::endl;   
+
+    return 0;
+}
+code::[-]
+::

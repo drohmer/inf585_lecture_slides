@@ -1,0 +1,33 @@
+= Mean Value - Idea in 2D
+
+div::[font-size:85%; line-height:1.3em;]
+
+Look for an interpolant.
+* Given a 2D boundary curve \(b(\theta)\), with values \(f(\theta)\)
+* Mean-value associated to point \(p\):
+** \( \hat f(p)=\frac{\displaystyle \int_{\theta=0}^{2\pi} \kappa(\theta)\,f(\theta)\,\mathrm{d}\theta }{\displaystyle \int_{\theta=0}^{2\pi} \kappa(\theta)\,\mathrm{d}\theta} \,\), \(\;\kappa(\theta)=1/\|b(\theta)-p\|\)
+** __Averaged value projected around a unit circle, weighted by the inverse distance.__
+
+div::[height:50px;]::
+
+* For a piecewise linear boundary 
+** Over the edge \(p_i \, p_{i+1}\)
+** \(\displaystyle \int_{\theta=\theta_1}^{\theta=\theta_2} \kappa(\theta)\,f(\theta) \mathrm{d}\theta= \dots =\left(\frac{f(p_i)}{\|p_i-p\|}+\frac{f(p_{i+1})}{\|p_{i+1}-p\|}\right)\,{tan}\left(\frac{\theta_2-\theta_1}{2}\right)\)
+
+div::[height:25px;]::
+
+** \(\Rightarrow \displaystyle \omega_i = \frac{\tan(\alpha_{i-1}/2)+\tan(\alpha_i/2)}{\|p_i-p\|} \)
+
+div::[height:50px;]::
+
+::
+
+div::[position:fixed; top:150px; right:100px;]
+img::assets/integral_2D.jpg[width:700px;]
+::
+
+div::[position:fixed; top:600px; right:100px;]
+img::assets/mean_2D.svg[width:400px;]
+::
+
+

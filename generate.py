@@ -11,7 +11,7 @@ source_root_directory = 'src/'
 site_directory = '_site/'
 
 compile_all = False
-compile_dirs = ['08_volume_deformation_I/']
+compile_dirs = ['10_surface_deformation/']
 
 
 
@@ -23,7 +23,7 @@ if __name__== '__main__':
     parser.add_argument('-v','--videos', action='store_true',help='Add video cache generation.')
     args = parser.parse_args()
 
-    if args.all != None:
+    if args.all==True:
         compile_all = True
 
     if compile_all:

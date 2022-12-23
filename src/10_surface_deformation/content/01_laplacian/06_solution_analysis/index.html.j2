@@ -1,0 +1,28 @@
+= Laplacian deformation least square solution
+
+* Need to minimize \(\|\mathrm{M}\,q - b\|^2\)
+** Similar to solve the linear system \((\mathrm{M}^T\,\mathrm{M})\, q = \mathrm{M}^T\,b\) (__Normal equations__)
+
+div::[height:25px;]::
+
+* \(\mathrm{M}^T\mathrm{M}\) is sparse  (diagonally dominant)
+div::[font-size:85%; line-height:1.3em;]
+** Can use standard sparse solver (CG, Jacobi, Gauss Seidel, etc.)
+** __Reminder: Never try to compute the inverse matrix ! Only solve the linear system.__
+** __Special solvers (QR factorization) doesn't even need to compute the normal equations__
+::
+
+div::[height:25px;]::
+
+* System can be solved independently on \(x,y,z\) coordinates. Same matrix \(\mathrm{M}\)
+** \(\mathrm{M}\,q_x = b_x\), \(\;\;\mathrm{M}\,q_y = b_y\), \(\;\;\mathrm{M}\,q_z = b_z\)
+
+div::[height:50px;]::
+
+div::[line-height:1.3em;]
+* Changing constraints position \(c_i\) only impact rhs \(b\) 
+** \(\rightarrow\) \(\mathrm{M}\) can be factorized once, and reused during interactive deformation
+div::[height:25px;]::
+* Changing constrained vertex impact \(\mathrm{M}\) 
+** \(\rightarrow\) need to be re-factorized
+::

@@ -1,0 +1,36 @@
+= Laplacian of the coordinates
+
+div::[font-size:90%;]
+
+* - For a scalar/vector function \(f\) defined in \(\mathbb{R}^2\) with parameter \((u,v)\): \(\triangle f = \frac{\partial^2 f}{\partial u^2}+\frac{\partial^2 f}{\partial v^2}=div(grad(f))\)
+
+* - Laplacian on a manifold: Called Laplace-Beltrami operator.
+
+* - Differential coordinates \(\delta\): Laplace-Beltrami operator applied on coordinates functions \(f=(x,y,z)\) itself.
+
+div::[height:25px;]::
+
+* Common approximation in the discrete case
+<div class="border" style="margin-left:75px;">
+\(\displaystyle \delta_i = \frac{1}{|\mathcal{N}_i|} \sum_{j\in\mathcal{N}_i} (p_i-p_j) = p_i - \frac{1}{|\mathcal{N}_i|} \sum_{j\in\mathcal{N}_i} p_j\)
+</div>
+** \(\mathcal{N}_i\): one ring neighborhood
+
+div::[height:50px;]::
+
+** Note: \(\displaystyle \delta_i \simeq \lim_{|\gamma|\to 0} \frac{1}{|\gamma|}\int_{p\in\gamma} (p_i-p)\,\mathrm{d}l(p) = \mathrm{H}(p_i)\,n_i\)
+div::[font-size:85%; line-height:1.3em;]
+*** \(\gamma\): small contour around \(p_i\)
+*** \(\mathrm{H}(p_i)\): Mean curvature at \(p_i\), \(n_i\) normal at \(p_i\)
+::
+
+div::[height:50px;]::
+
+** \(\Rightarrow\) Encode an approximation of the mean curvature
+
+div::[position:fixed; top:400px; left:1200px;]
+img::assets/approximation_discrete.svg[width:500px;] <br>
+img::assets/approximation_continuous.jpg[width:400px;]
+::
+
+::

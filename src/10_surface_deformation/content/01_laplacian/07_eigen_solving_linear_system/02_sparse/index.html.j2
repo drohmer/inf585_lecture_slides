@@ -1,0 +1,52 @@
+= Solving a sparse least square problem
+
+div::[font-size:80%;]
+code::[c++]
+#include <iostream>
+#include <Eigen/Sparse>
+
+int main()
+{
+    // Build matrix
+    Eigen::SparseMatrix<float> M;
+    
+    // Resize and reserve space to store coefficients
+    //   ex. N rows, 10 coeffs per rows
+    int N = 50;
+    M.resize(N,N);
+    M.reserve(Eigen::VectorXi::Constant(N,10));
+    // Fill the matrix ... M.coeffRef(i,j) = value
+    for(int k=0; k<N; ++k) {
+        M.coeffRef(k,k)=1.0f; M.coeffRef(k,(k+1)%N)=-0.3f;
+    }
+    
+    // Compress the matrix representation
+    M.makeCompressed();
+
+    // Factorization for a solver (here Conj. Gradient)
+    Eigen::LeastSquaresConjugateGradient< Eigen::SparseMatrix<float> > solver;
+    solver.compute(M);
+    solver.setTolerance(1e-6f);
+
+code::[-]
+
+div::[position:fixed; top:200px; right:50px;]
+code::[c++]
+
+    // Build RHS
+    Eigen::VectorXf b;
+    b = Eigen::VectorXf::Random(N);
+
+    // Solve linear system
+    Eigen::VectorXf x = solver.solve(b);
+    // or solver.solveWithGuess(b, x0) 
+    //   faster with good guess
+    std::cout <<"Check solution : "
+       << (M*x-b).norm() << std::endl;   
+    std::cout <<"N iterations : "
+       << solver.iterations() << std::endl;   
+    return 0;
+}
+code::[-]
+::
+::

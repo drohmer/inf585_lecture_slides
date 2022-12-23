@@ -1,0 +1,28 @@
+= Laplacian deformation least square formulation
+
+* \(\displaystyle E = \sum_{i=0}^{N-1} \left\|q_i-\frac{1}{|\mathcal{N}_i|}\sum_{j\in\mathcal{N}_i} q_j-\delta(p_i)\right\|^2 + \omega\,\sum_{i\in C} \|q_i-c_i\|^2\) 
+
+div::[height:25px;]::
+
+* Finding \(q\) minimizing \(E\) is similar to solve the least square problem
+
+<div class="border" style="margin-left:50px;">
+\(q^{\star}=arg\min_{q} \; \|\mathrm{M}\,q-b\|^2\)
+</div>
+
+div::[height:50px;]::
+
+div::[font-size:85%; line-height:1.3em;]
+** \(q=(q_0, \cdots, q_{N-1})^T\) : \(N\) unknown
+
+div::[height:25px;]::
+
+** \(\mathrm{M}=\left(\begin{array}{c} \mathrm{D} \\ \hline \mathrm{C} \end{array} \right)\) with \(\mathrm{D}\) (\( N \times N \)) ref. Laplacian weights; \(\mathrm{C}\) (\( N_c \times N \)) ref. constraints.
+*** - \(\forall i\in[0,N-1]\;,\;\;\) \(\mathrm{D}_{ii} = 1\;\), \(\;\;\mathrm{D}_{ij} = -1/|\mathcal{N}_i|\) if \(j\in\mathcal{N}_i\)
+*** - \(\forall k\in[0,N_c-1]\;,\;\;\) \(\mathrm{C}_{ki}=\omega\), with \(i\) refering to the vertex index of the \(k\)th constraint.
+
+div::[height:25px;]::
+
+** \(b=(\delta(p_0),\cdots,\delta(p_{N-1}),\;\omega\, c_0,\cdots,\omega\, c_{N_c-1})^T\)
+::
+

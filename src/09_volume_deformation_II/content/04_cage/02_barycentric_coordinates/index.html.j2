@@ -1,0 +1,40 @@
+= Barycentric coordinates
+
+== Reminder barycentric coordinates for Triangle
+
+div::[height:25px;]::
+
+* Triangle \((p_1\, p_2\, p_3)\) - barycentric coordinates \((\lambda_1,\lambda_2,\lambda_3)\) 
+::(.border)
+** \(p\in(p_1\,p_2\,p_3) \Rightarrow p=\lambda_1\, p_1+\lambda_2\, p_2+\lambda_3\, p_3\)
+** \(\lambda_1+\lambda_2+\lambda_3=1\,\), \(\;\;(\lambda_1,\lambda_2,\lambda_3)\in[0,1]^3\)
+::
+
+div::[height:25px;]::
+
+div::[font-size:85%; line-height:1.1em;]
+* \(\lambda_1={area}(p_3\; p\; p_2)/\mathcal{A}\)
+* \(\lambda_2={area}(p_1\; p\; p_3)/\mathcal{A}\)
+* \(\lambda_3={area}(p_2\; p\; p_1)/\mathcal{A}\)
+* \({with, } \;\;\mathcal{A}={area}(p_1\; p_2\; p_3)\)
+* \({and, }\;\;{area}(A\; B\; C)= \frac{1}{2} \|(p_2-p_1)\times (p_3-p_1)\| \)
+
+div::[height:25px;]::
+
+* __Note. Similar for tetrahedron: \(p=\lambda_1\, p_1+\lambda_2\, p_2 + \lambda_3\, p_3 +\lambda_4\, p_4\)__
+
+::
+
+div::[height:25px;]::
+
+**Idea**: Generalize barycentric coordinates to arbitrary cages
+
+::(.border)
+ \(\displaystyle p=\sum_i \lambda_i\,p_i = \sum_i \omega_i\,p_i /\sum_i \omega_i\)
+::
+
+
+div::[position:fixed; top:100px; right:100px; width:450px;]
+img::assets/barycentric_color.svg[width:450px;]
+img::assets/barycentric_weights.svg[width:450px;]
+::

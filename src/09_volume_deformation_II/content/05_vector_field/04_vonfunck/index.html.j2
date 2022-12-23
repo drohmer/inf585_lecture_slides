@@ -1,0 +1,30 @@
+= Divergence free vector field example
+
+* Example from [link::assets/Funck_2006_SIGGRAPH.pdf[Vector Field Based Shape Deformations. W. von Funck et al. SIGGRAPH 2006]]
+
+div::[height:50px;]::
+
+::[font-size:85%; line-height:1.3em;]
+* \(a(p)=\left\{ \begin{array}{rl}a_0(p)  & \|p\| < r_1 \\ (1-\alpha(p))\,a_0(p) & r_1\leq \|p\|\leq r_2 \\ 0 & otherwise \end{array} \right.\)
+** __Similarily with \(b(p)\)__
+::
+
+div::[height:25px;]::
+
+* Translation: \(a_0(p)=v_1 \cdot (p-p_0)\), \(b_0(p)=v_2 \cdot (p-p_0)\) 
+** span::[font-size:85%;] \(v_1,v_2\) arbitrary orthogonal unit vector to the direction of translation. ::
+* Bending: \(a_0(p)= a \cdot (p-p_0) \), \(b_0=\|a \times (p-p_0)\|^2\)
+** span::[font-size:85%;] \(a\) rotation axis. ::
+
+div::[height:25px;]::
+
+img::assets/extreme_deformation.jpg[width:1100px;]
+
+div::[position:fixed; top:280px; right:50px;]
+div::[display:flex; flex-direction:column; align-items:center;]
+img::assets/deformation.jpg[width:700px;]
+div::[height:25px;]::
+img::assets/field.jpg[width:250px;] 
+::
+::
+

@@ -1,0 +1,28 @@
+= Divergence Free Vector Field
+
+* Divergence of \(u\): \(div(u)=\nabla\cdot u=\frac{\partial u_x}{\partial x}+\frac{\partial u_y}{\partial u_y}+\frac{\partial u_z}{\partial u_z}\)
+
+::[height:1em;]::
+
+* Divergence free / solenoidal field : \(div(u)=0\)
+** span::[font-size:85%;] __Ex. Magnetic fields, incompressible fluids velocity, are divergent free__ ::
+* \(\Rightarrow\) Volume preserving deformation
+
+
+::[height:1em;]::
+Dem. (in 2D)
+
+::[font-size:85%; line-height:1.3em; color:gray;]
+* \(f = I + u\)
+* \(\Rightarrow J_f = \left(\begin{array}{ccc} \frac{\partial f_x}{\partial x} & \frac{\partial f_x}{\partial y} \\ \frac{\partial f_y}{\partial x} & \frac{\partial f_y}{\partial y} \end{array}\right) = \left(\begin{array}{ccc} 1+\frac{\partial u_x}{\partial x} & \frac{\partial u_x}{\partial y} \\ \frac{\partial u_y}{\partial x} & 1+\frac{\partial u_y}{\partial y} \end{array}\right) \)
+
+::[height:0.5em;]::
+
+* Volume preserving deformation \(det(J_f)=1\)
+** \(\Rightarrow\left(1+\frac{\partial u_x}{\partial x}\right)\left(1+\frac{\partial u_y}{\partial y}\right)-\frac{\partial u_x}{\partial y}\frac{\partial u_y}{\partial x}=1\)
+** \(\Rightarrow \frac{\partial u_x}{\partial x}+\frac{\partial u_y}{\partial y}=0\)
+::
+
+::[position:fixed; top:300px; right:150px;]
+img::assets/solenoidal.jpg[width:500px;]
+::

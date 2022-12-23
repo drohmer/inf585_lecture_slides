@@ -1,0 +1,21 @@
+= Building divergence free vector field
+
+* Example: Define 2 scalar fields \((a,b)\)
+* Build vector field \(u=\nabla a \times \nabla b\)
+
+div::[height:25px;]::
+
+div::[color:gray;]
+** \({div}(u) = {div}(\nabla a \times \nabla b)\)
+
+** \(div(u) = \underbrace{curl(\nabla a)}_{=0} \cdot \nabla b - \nabla a\cdot \underbrace{curl(\nabla b)}_{=0}\)
+
+** \(div(u) = 0 \Rightarrow \) divergence free vector field
+::
+
+div::[height:25px;]::
+
+div::[text-align:center;]
+img::assets/scalar_field.jpg[width:400px;]
+img::assets/vector_field.jpg[width:400px;]
+::

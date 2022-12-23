@@ -1,0 +1,26 @@
+= Case of implicit surfaces
+
+* Undeformed implicit surface \(S=\{p\in\mathbb{R}^3\;|\;\;g(p)=0\}\)
+
+div::[height:50px;]::
+
+* Given a vector field \(u\)
+* The implicit surface \(S'\) advected by \(u\) is defined as
+** ::(.border) \(\displaystyle \frac{\partial g}{\partial t}+u\cdot \nabla g = 0\) ::
+div::[width:600px; margin-top:25px;]
+* __Note: Only velocity normal to the surface changes the shape__
+::
+
+div::[color:gray; font-size:80%; line-height:1.1em; position:fixed; bottom:40px; left:700px;]
+* \(g\) is a space-time function \(g(p,t)\)
+* \(g(p+u\mathrm{d}t,t+\mathrm{d}t)=g(p,t)=0\)
+** \(\Rightarrow\) The differential \(\mathrm{d}g = 0\)
+** \(\Rightarrow \frac{\partial g}{\partial t}\,\mathrm{d}t+\nabla g \cdot \mathrm{d}p=0\)
+** \(\Rightarrow \frac{\partial g}{\partial t}+\nabla g \cdot \underbrace{\frac{\mathrm{d}p}{\mathrm{d}t}}_{u}=0\)
+::
+
+
+div::[position:fixed; top:650px; right:50px;]
+img::assets/speed.png[width:600px;]
+* ::(.ref) link::assets/stam_2011.pdf[On the Velocity of an Implicit Surface] ::
+::

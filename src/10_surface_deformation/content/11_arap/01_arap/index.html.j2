@@ -1,0 +1,32 @@
+= As Rigid As Possible (ARAP)
+
+* The Laplacian formulation tries to preserve the surface orientation.
+** While we could expect surface rotation
+
+div::[height:50px;]::
+
+* **Idea**: Include rotation transformation \(\color{red}{\mathrm{R}}\) in the formulation
+
+** \(\displaystyle E = \sum_{i=0}^{N-1} \|\delta(q_i)- {\color{red}{R(q_i)}} \,\delta(p_i)\|^2 + \omega\,\sum_{i\in C} \|q_i-c_i\|^2\) \(\;\;\)
+** \(R(q_i)\): best rotation at point \(q_i\)
+
+div::[height:50px;]::
+
+* Finding the best rotation at a given point
+** 1- Look at surrounding edges at the point \(q_i\)/\(p_i\)
+*** \(e_j=q_j-q_i\), \(e_j^0=p_j-p_i\)
+** 2- Compute covariance matrix \( \sigma = \sum_j e_j\,(e_j^0)^T \)
+** 3- Compute rotation using polar decomposition: \(R=polar(\sigma)\)
+
+div::[position:fixed; top:50px; right:50px;]
+videoplay::assets/no_arap.mp4[width:550px;]{controls} <br>
+videoplay::assets/arap.mp4[width:550px;]{controls}
+::
+
+div::[position:fixed; top:375px; right:50px; color:gray;]
+__No ARAP__
+::
+
+div::[position:fixed; top:875px; right:50px; color:gray;]
+__ARAP__
+::

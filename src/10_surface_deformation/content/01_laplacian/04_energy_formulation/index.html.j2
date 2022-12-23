@@ -1,0 +1,16 @@
+= Laplacian deformation formulation
+
+* Given initial position \((p_i)_{i\in [0,N-1]}\) + set of \(N_c\) positional constraints \(c_i\), \(i\in C\).
+
+* Find \(q_i\) such that 
+** \(\delta(q_i) = \delta(p_i)\) : Same differential coordinates
+** \(\forall i\in C, q_{i} = c_i\) : Positional constraints
+
+div::[height:75px;]::
+
+* Formulate using quadratic energy w/r to unknown \(q\)
+** \(\displaystyle E = \sum_{i=0}^{N-1} \|\delta(q_i)-\delta(p_i)\|^2 + \omega\,\sum_{i\in C} \|q_i-c_i\|^2\) \(\;\;\), \(w\): weight associated to positional constraints.
+
+div::[height:25px;]::
+
+** \(\displaystyle E = \sum_{i=0}^{N-1} \left\|q_i-\frac{1}{|\mathcal{N}_i|}\sum_{j\in\mathcal{N}_i} q_j-\delta(p_i)\right\|^2 + \omega\,\sum_{i\in C} \|q_i-c_i\|^2\) 

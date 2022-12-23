@@ -1,0 +1,48 @@
+= Spatial / Surface based deformation
+
+* Consider a shape defined as \((p_i)_{i\in[0,N-1]}\) positions
+
+div::[display:flex; font-size:90%]
+div::[width:1150px;]
+== Spatial/volume deformation
+
+* Define spatial deformation \(\forall p\in\mathbb{R}^3\,,\;\;f: p \to f(p)\)
+** Apply \(f\) to every positions
+** \(\forall i\in[0,N-1]\,,\; q_i = f(p_i)\)
+div::[font-size:85%; line-height:1.3em; margin-top:50px;]
+* (+) Independant from shape representation
+** Point sets, Surface, Volume.
+* (-) Indirect control
+** Spatial deformation \(\to\) shape deformation
+* (-) Deformation fully defined by spatial position
+::
+
+::[text-align:center;  margin-top:0.5em;]
+img::assets/shape_morphology.svg[width:250px]
+::
+
+::
+
+
+
+div::[]
+== Surface-based
+
+* Compute deformation on surface only
+** Deformation is defined at \(p_i\)
+** But not at arbitrary position in space
+div::[color:gray; font-size:85%;]
+*** ex. \(q_i = p_i+n_i\), \(\;\;n_i\):surface normal at position \(p_i\)
+::
+
+div::[font-size:85%; line-height:1.3em; margin-top:50px;]
+* (+) Can integrate/preserve surface properties (neighborood, curvature, etc.)
+* (-) Sensible to surface representation & connectivity.
+::
+
+::[text-align:center; margin-top:1em;]
+img::assets/surface_deformation.png[width:250px]
+::
+
+::
+::

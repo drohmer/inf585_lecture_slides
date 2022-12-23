@@ -1,0 +1,28 @@
+= Vector field-based deformation
+
+* Smooth vector field (or velocity) \(u:(x,y,z) \to (u_x(x,y,z),u_y(x,y,z),u_z(x,y,z))\)
+** At arbitrary time \(t\), \(\dot{p}(t)=u(p(t))\)
+
+div::[height:50px;]::
+
+* Applying deformation = integrate vertex position along streamlines
+** \(\displaystyle p_1=p_0+\int_t u(p(t))\,\mathrm{d}t\)
+* At a given time \(t\), the instantaneous deformation at position \(p\) is
+** \(f(p,t) = p + u(p,t) \rightarrow f=I+u\)
+
+
+div::[height:50px;]::
+
+div::[font-size:90%;]
+* (+) If \(\|u\|\neq 0\) (and \(\neq\) singularity) no-intersection
+** span::[font-size:85%; color:gray;] __Streamlines do not intersect__ ::
+* (-) Arbitrary vector fields hard to define and control.
+::
+
+div::[height:50px;]::
+
+* __Note: All physically-based deformation can be seen as vector field deformations__
+
+div::[position:fixed; top:300px; right:75px;]
+img::assets/vector_field.svg[width:525px;]
+::

@@ -1,0 +1,30 @@
+= Laplacian of the coordinates: Approximation
+
+div::[line-height:1.3em;]
+* Simplest approximation of the laplacian (Graph-Laplacian): \(\displaystyle \delta_i = \frac{1}{|\mathcal{N}_i|} \sum_{j\in\mathcal{N}_i} (p_i-p_j)\) 
+** (-) __Depends on the connectivity, assume homogeneous and regular geometrical sampling__
+::
+
+div::[height:75px;]::
+
+* Other possible approximations: \(\displaystyle \delta_i = \sum_{j\in\mathcal{N}_i} \omega_{ij} \, (p_i-p_j) \)
+
+* Ex. Cotangent weights ("Mesh Laplacian")
+** \(\displaystyle \delta_i = \frac{1}{|\Omega_i|} \sum_{j\in\mathcal{N}_i} \frac{1}{2} (\mathrm{cot} \alpha_{ij}+\mathrm{cot} \beta_{ij})\, (p_i-p_j) \)
+
+** __Better geometrical properties: independant of the connectivity__
+** __(-) Can become negative__
+
+* Or using mean-value coordinates
+
+div::[height:25px;]::
+
+* No perfect approximation (satisfying all properties of the continuous Laplacian operator)
+<div class="ref" style="margin-left:75px;">
+link::assets/wardetzky_laplacian_sgp_2007.pdf[Discrete Laplace operators: No free lunch. M. Wardetzky et al. SGP 2007]
+</div>
+
+
+div::[position:fixed; top:350px; left:1200px;]
+img::assets/cotan_weights.svg[width:550px;]
+::

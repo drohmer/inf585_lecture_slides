@@ -1,0 +1,22 @@
+= Idea: Approximation function 
+
+* __Bezier, BSpline, NURBS, etc.__
+
+div::[height:25px;]::
+
+* Reminder for 1D curve \(c\) approximating points \((p_i)_{i=0..N}\) (control polygon)
+** \(\displaystyle c(u)=\sum_{i=0}^{N} b_i(u)\, p_i \) 
+** \( b_i(u)={N \choose i} \, u^i \, (1-u)^{N-i}\;,\;\;u\in[0,1]\) (Bernstein Polynomial)
+
+div::[height:50px;]::
+
+* For a 2D surface \(S\) approximating points \(p_{ij}\)
+** \(\displaystyle S(u,v)=\sum_i \sum_j b_i(u) \, b_j(v)\; p_{ij}\) (tensor-product)
+
+div::[height:25px;]::
+
+* For a 3D volume \(V\) approximating points on the lattice \(p_{ijk}\)
+** \(\displaystyle V(u,v,w)=\sum_i \sum_j \sum_k b_i(u) b_j(v) b_k(w)\; p_{ijk}\)
+
+** \(\Rightarrow\) Use V as a spatial deformation on vertex coordinates \((u,v,w)\), use \(p_{ijk}\) as grid.
+

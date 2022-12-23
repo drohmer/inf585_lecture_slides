@@ -1,0 +1,32 @@
+= As Rigid As Possible (ARAP) Solution
+
+
+
+* Minimize the following term
+** \(\displaystyle E = \sum_{i=0}^{N-1} \|\delta(q_i)- R(q_i) \,\delta(p_i)\|^2 + \omega\,\sum_{i\in C} \|q_i-c_i\|^2\)
+
+div::[width:900px;]
+
+div::[height:50px;]::
+
+* __Problem__: \(R(q_i)\) is a non linear function of \(q_i\)
+** \(E\) is non quadratic, cannot use least square.
+
+div::[height:50px;]::
+
+* __Idea__: Interleave and iterate on these two steps
+** Find optimal rotation \(R(q_i)\) with fixed \(q_i\)
+** Find \(q_i\) optimizing \(E\) with fixed \(R(q_i)\)
+
+div::[height:50px;]::
+
+* __Gain__: Surface rotates during deformation
+* __Limit__: Slightly more costly 
+** __Iterations + polar decomposition__
+
+::
+
+div::[position:fixed; top:400px; right:50px;]
+img::assets/arap_iterations_1.jpg[width:800px;] <br>
+img::assets/arap_iterations_2.jpg[width:800px;]
+::
