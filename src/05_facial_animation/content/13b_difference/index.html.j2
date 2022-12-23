@@ -1,0 +1,26 @@
+
+
+= Coordinate differences
+
+* Often simpler to add/remove some expression w/r neutral pose
+::[font-size:80%;]
+** __Add smile, open more the left eye, etc.__
+::
+
+::[height:25px;]::
+
+* Idea: 
+** - Set \(b^0\) to be neutral pose
+** - Precompute __poses differences__ \(d_k = b_k-b^0\)
+** - Compute span::[font-size:80%;](.border) \(\displaystyle p_i(t)=b^0_i+\sum_{k}^{N_{\scriptsize{poses}}} \omega_k(t)\,d_{ik}\) ::
+
+::[height:50px;]::
+
+** In matrix formulation span::[font-size:80%;] \({\bf p}(t)={\bf b^0}+\mathrm{D}\,\mathbf{\omega}(t)\) ::
+::[font-size:80%;]
+*** \(D\): matrix of vertex differences between poses.
+::
+
+div::[position:fixed; top:250px; right:100px; ]
+videoplay::assets/blend_shape.mp4[width:750px]
+::

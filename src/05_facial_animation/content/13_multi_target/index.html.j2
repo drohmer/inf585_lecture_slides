@@ -1,0 +1,40 @@
+
+
+= Blend Shapes: Multi-target blending
+
+
+div::[height:25px;] ::
+
+* Interpolate between multiple key poses 
+** Interesting for facial animation
+** __ex. 30% happy, 50% suprised, 20% tired__
+div::[height:25px;]::
+
+
+* - Per-vertex formulation span::[font-size:80%;] \( \displaystyle p_i(t)=\sum_{k}^{N_{poses}}\omega_k(t) \, b_{ik}\) ::
+
+
+div::[font-size:85%; line-height:1.3em;]
+** - \(p_i\): \(i\)th deformed vertex coordinates
+** - \(b_{ik}\): Initial \(i\)th vertex coordinates at pose \(k\)
+** - \(w_{k}\): Interpolation weight for pose \(k\).
+::
+
+div::[height:25px;]::
+
+
+* - Matrix formulation \({\bf p}(t)=\mathrm{B}\,{\bf \omega}(t)\)
+
+::[height:25px;]::
+
+::[font-size:55%;]
+* \(\left(\begin{array}{c}p_1(t) \\ p_2(t) \\ \vdots \\ \vdots \\ p_N(t)\end{array}\right) =  \underbrace{\left(\begin{array}{ccc}b_{11} & \dots & b_{1 N_{poses}} \\ b_{21} & \dots & b_{2 N_{poses}} \\ & \vdots & \\ & \vdots & \\ b_{N1} & \dots & b_{N N_{poses}} \end{array}\right)}_{all\; vertices\; from\; all\; poses}  \underbrace{\left(\begin{array}{c}\omega_1(t) \\ \vdots  \\ \omega_{N_{poses}}(t)\end{array}\right)}_{weights\; per\; pose}\)
+::
+
+
+
+
+div::[position:fixed; top:150px; left:1100px;]
+img::assets/morphs.jpg[width:650px;]
+img::assets/multi_target.jpg[width:550px;]
+::

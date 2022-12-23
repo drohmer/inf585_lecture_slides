@@ -1,0 +1,38 @@
+
+
+= Usage of keyframes interpolation
+
+* Facial expression are catgorized:
+
+img::assets/expressions.jpg[width:800px;]
+
+::[height:1em;]::
+
+* Interpolate every vertex between multiple meshes (key-poses)
+
+
+div::[text-align:center]
+img::assets/p01.png[height:350px]
+img::assets/p00.png[height:350px]
+span::[display:inline-block;width:50px;]::
+video::assets/face.webm[height:350px]{autoplay muted loop}
+span::[display:inline-block;width:50px;]::
+img::assets/p03.png[height:350px]
+img::assets/p02.png[height:350px]
+::
+
+::[position:fixed; top:825px; left:400px]
+Pose \(b_1\)
+::
+
+::[position:fixed; top:825px; left:850px]
+Interpolation \(p(t)\)
+::
+
+::[position:fixed; top:825px; left:1500px]
+Pose \(b_2\)
+::
+
+::[position:fixed; top:900px; left:700px]
+\(p_i(t)=\omega_1(t) b_{i1} + \omega_2(t) b_{i2}\)
+::

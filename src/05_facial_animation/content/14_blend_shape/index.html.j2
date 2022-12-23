@@ -1,0 +1,37 @@
+= Blend shapes - Summary
+
+* Standard for facial/complex shapes deformation
+::[font-size:80%;line-height:1.3em;]
+** (+) Allow to add/substract local expressions from pre-set poses 
+*** __even extrapolate__
+** (+) Allow expression transfert
+*** __Keep same \(D\) for difference faces \(b^0\)__
+*** __Requires same connectivity__
+::
+
+::[height:25px;]::
+
+* Requires non redundant/interfering poses
+::[font-size:80%;line-height:1.3em;]
+** \(D\) is not an othogonal matrix
+*** Different weights can give the same result
+*** PCA can orthogonalize the matrix 
+**** __but weights are less intuitive (not positive)__
+::
+
+::[height:100px;]::
+
+* To go beyond:
+** ::(.ref) link::assets/star2010.pdf[J.P. Lewis et al. Practice and Theory of Blendshape Facial Models. EG STAR 2014] ::
+
+
+::[position:fixed; top:150px; left:1150px;]
+img::assets/blend_shape_tools.png[width:650px]
+::
+
+::[position:fixed; top:450px; left:1150px;]
+videoplay::assets/blend_shape.mp4[width:650px]{controls}
+::
+
+
+
