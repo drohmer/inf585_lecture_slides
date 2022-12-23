@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="141"
+   inkscape:export-xdpi="141"
+   inkscape:export-filename="C:\Dropbox\drive\teaching\2020_2021\2021_01_INF585\2021_01_INF585\lecture\04b_animation_pipeline\slides\src\06_production_pipeline\01_pipeline\assets\pipeline.png"
+   sodipodi:docname="pipeline.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 496.15052 214.03318"
+   height="808.94427"
+   width="1875.2146">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     showguides="false"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-12"
+     inkscape:window-x="-12"
+     inkscape:window-height="2050"
+     inkscape:window-width="3840"
+     units="px"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="499.21723"
+     inkscape:cx="758.11654"
+     inkscape:zoom="0.49497475"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-7.2255955,-45.28181)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       id="text817"
+       y="53.426754"
+       x="6.7295017"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:serif;-inkscape-font-specification:'serif Bold';fill:#000000;stroke-width:0.264583"
+         y="53.426754"
+         x="6.7295017"
+         id="tspan815"
+         sodipodi:role="line">Pre-production</tspan></text>
+    <text
+       id="text817-3"
+       y="53.322662"
+       x="182.86012"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:serif;-inkscape-font-specification:'serif Bold';fill:#000000;stroke-width:0.264583"
+         y="53.322662"
+         x="182.86012"
+         id="tspan815-6"
+         sodipodi:role="line">Production</tspan></text>
+    <text
+       id="text817-3-7"
+       y="53.435928"
+       x="367.93314"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan855"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:serif;-inkscape-font-specification:'serif Bold';fill:#000000;stroke-width:0.264583"
+         y="53.435928"
+         x="367.93314"
+         sodipodi:role="line">Post-Production</tspan></text>
+    <rect
+       y="95.211487"
+       x="14.432554"
+       height="17.907059"
+       width="72.430038"
+       id="rect1067"
+       style="opacity:1;fill:#dbdbe3;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text817-35"
+       y="107.40159"
+       x="18.413626"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan877"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="107.40159"
+         x="18.413626"
+         sodipodi:role="line">Storyboard</tspan></text>
+    <rect
+       y="113.21418"
+       x="35.726334"
+       height="17.907059"
+       width="61.204727"
+       id="rect1067-2"
+       style="opacity:1;fill:#dbdbe3;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881"
+       y="124.92449"
+       x="41.046104"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="124.92449"
+         x="41.046104"
+         id="tspan879"
+         sodipodi:role="line">Animatic</tspan></text>
+    <text
+       id="text885"
+       y="74.761101"
+       x="6.9463062"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:'serif Italic';stroke-width:0.264583"
+         y="74.761101"
+         x="6.9463062"
+         id="tspan883"
+         sodipodi:role="line">Story, script, </tspan><tspan
+         id="tspan1232"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:'serif Italic';stroke-width:0.264583"
+         y="87.990265"
+         x="6.9463062"
+         sodipodi:role="line">concept art</tspan></text>
+    <rect
+       y="149.26411"
+       x="131.68857"
+       height="17.907059"
+       width="72.430046"
+       id="rect1067-7"
+       style="opacity:1;fill:#e5ffd5;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9"
+       y="161.37442"
+       x="139.09637"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="161.37442"
+         x="139.09637"
+         id="tspan879-1"
+         sodipodi:role="line">Modeling</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path1215"
+       d="m 131.4966,48.439322 0,188.157738"
+       style="fill:#4d4d4d;stroke:#808080;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path1215-3"
+       d="m 320.52427,52.448369 0,185.217781"
+       style="fill:#4d4d4d;stroke:#808080;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="131.12125"
+       x="96.931061"
+       height="18.103821"
+       width="261.28491"
+       id="rect1067-28-1"
+       style="opacity:1;fill:#eeffaa;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       y="113.21419"
+       x="96.931061"
+       height="17.907059"
+       width="54.790249"
+       id="rect1067-28"
+       style="opacity:1;fill:#dbdbe3;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-2"
+       y="125.66124"
+       x="106.39894"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="125.66124"
+         x="106.39894"
+         id="tspan879-1-7"
+         sodipodi:role="line">Layout</tspan></text>
+    <rect
+       y="167.19016"
+       x="159.52257"
+       height="17.907059"
+       width="53.721172"
+       id="rect1067-7-9"
+       style="opacity:1;fill:#e5ffd5;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-0"
+       y="179.26038"
+       x="160.25214"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="179.26038"
+         x="160.25214"
+         id="tspan879-1-9"
+         sodipodi:role="line">Rigging</tspan></text>
+    <rect
+       y="167.19016"
+       x="213.24376"
+       height="17.907059"
+       width="72.430046"
+       id="rect1067-5"
+       style="opacity:1;fill:#ffaaaa;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-0-3"
+       y="179.61534"
+       x="220.61638"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;fill:#000000;stroke-width:0.264583"
+         y="179.61534"
+         x="220.61638"
+         id="tspan879-1-9-6"
+         sodipodi:role="line">Animation</tspan></text>
+    <rect
+       y="185.09721"
+       x="159.52258"
+       height="17.907059"
+       width="53.721172"
+       id="rect1067-7-9-7"
+       style="opacity:1;fill:#e5ffd5;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-0-3-0"
+       y="196.71425"
+       x="160.59506"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="196.71425"
+         x="160.59506"
+         id="tspan879-1-9-6-6"
+         sodipodi:role="line">Shading</tspan></text>
+    <rect
+       y="220.91133"
+       x="159.52258"
+       height="17.907059"
+       width="53.721172"
+       id="rect1067-7-9-6"
+       style="opacity:1;fill:#e5ffd5;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-0-3-0-2"
+       y="232.63071"
+       x="161.41635"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="232.63071"
+         x="161.41635"
+         id="tspan879-1-9-6-6-6"
+         sodipodi:role="line">Lighting</tspan></text>
+    <rect
+       y="203.00427"
+       x="159.52257"
+       height="17.907059"
+       width="53.721172"
+       id="rect1067-7-9-3"
+       style="opacity:1;fill:#e5ffd5;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-0-3-0-2-1"
+       y="212.97592"
+       x="161.01071"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="212.97592"
+         x="161.01071"
+         id="tspan879-1-9-6-6-6-8"
+         sodipodi:role="line">Texturing</tspan></text>
+    <rect
+       y="167.19016"
+       x="285.67383"
+       height="17.907059"
+       width="72.430054"
+       id="rect1067-7-1"
+       style="opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-0-3-7"
+       y="179.2066"
+       x="293.79089"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="179.2066"
+         x="293.79089"
+         id="tspan879-1-9-6-9"
+         sodipodi:role="line">Rendering</tspan></text>
+    <rect
+       y="149.22507"
+       x="358.216"
+       height="17.907059"
+       width="72.430054"
+       id="rect1067-7-1-2"
+       style="opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-0-3-7-2"
+       y="161.96928"
+       x="360.10779"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="161.96928"
+         x="360.10779"
+         id="tspan879-1-9-6-9-0"
+         sodipodi:role="line">Compositing</tspan></text>
+    <rect
+       y="149.22507"
+       x="430.64606"
+       height="17.907059"
+       width="72.430054"
+       id="rect1067-7-1-2-9"
+       style="opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:0.60000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       id="text881-9-0-3-7-2-2"
+       y="161.2644"
+       x="444.72797"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264583"
+         y="161.2644"
+         x="444.72797"
+         id="tspan879-1-9-6-9-0-3"
+         sodipodi:role="line">Editing</tspan></text>
+    <text
+       id="text881-9-9"
+       y="142.95757"
+       x="190.15549"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;fill:#000000;stroke-width:0.264583"
+         y="142.95757"
+         x="190.15549"
+         id="tspan879-1-4"
+         sodipodi:role="line">Special Effects</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+= Skinning improvement
+
+* __Avoid linear blending b/w affine transform matrices__
+
+div::[height:25px;]::
+
+* First idea: Split rigid transformation matrices in
+** - rotation part: blend using quaternions (solve candy wrapper)
+** - translation part: blend linearily
+
+div::[height:25px;]::
+
+div::[position:absolute; z-index:3;]
+* But doesn't work for general deformation: Arbitrary center of rotation
+** Rotation and translations are treated separately
+::
+
+div::[position:fixed; top:500px; left:900px; z-index:1;]
+videoplay::assets/skinning_slerp.mp4[width:500px;]
+videoplay::assets/skinning_slerp2.mp4[width:400px;]
+::
+
+div::[height:350px;]::
+
+* Possibility to compute an optimal center of rotation at each frame
+** <div class="ref">link::assets/kavan_spherical_blend_skinning.pdf[Spherical Blend Skinning: A Real-time Deformation of Articulated Models. L. Kavan, J. Zara. I3D 2005.]</div>
+
+
+
+div::[position:fixed; top:150px; right:50px;]
+img::assets/bar_lbs.png[width:500px;]
+::

@@ -1,0 +1,35 @@
+
+
+= Rigid Skinning
+
+* Attach rigidly subset of vertices to specific bones, described by its root joint/frame.
+** __Vertices are following rigid deformation of their associated frame.__
+
+div::[height:25px;]::
+
+== Deformation formulation
+
+div::[font-size:85%; line-height:1.5em;]
+* Consider, at rest pose/initial state
+** - A frame \(\mathrm{T}^0\)
+** - A vertex \(v^0\) attached to this frame
+* After deformation
+** - New frame \(\mathrm{T}\)
+** - New vertex position \(v\)
+::
+
+div::[height:50px;]::
+
+* **Question:** What are the new coordinates \(v\) w/r \(\mathrm{T}\), \(\mathrm{T}^0\), \(v^0\) ?
+
+
+** \(v^0\) and \(v\) have similar local coordinates w/r to \(\mathrm{T}^0\) and \(\mathrm{T}\) 
+** \(\Rightarrow \mathrm{T}^{-1} v = (\mathrm{T}^0)^{-1} v_0\)
+** <div class="border">\(\Rightarrow v = \mathrm{T}\;(\mathrm{T}^0)^{-1} v_0 = \mathrm{M}\,v_0\)</div>
+
+
+div::[position:fixed; top:280px; right:100px;]
+img::assets/humans.jpg[width:225px;]
+div::[display:inline-block;width:25px;]::
+img::assets/elephant_leg_withM.jpg[width:550px;]
+::

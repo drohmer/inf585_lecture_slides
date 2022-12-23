@@ -1,0 +1,30 @@
+= Controlers
+
+div::[line-height:1.3em;]
+* Mix between predefined motions and physics \(\rightarrow\) allow user perturbations
+div::[font-size:85%;]
+** 1 - Define target (\(\theta_{target}(t),\theta'_{target}(t)\)) 
+*** __pre-defined finite state machine (Gait model)__
+** 2 - Add user perturbation to the current state
+** 3 - Use proportional derivative controlers to compute joint torque \(\tau\)
+** 4 - Integrate torque using rigid body simulator
+** 5 - Iterate
+::
+::
+
+div::[height:25px;]::
+
+
+img::assets/controler.svg[width:1700px;]
+
+
+div::[line-height:1.1em;]
+* <div class="ref" style="display:inline-block;"> link::http://www.cs.princeton.edu/courses/archive/spr01/cs598b/papers/raibert91.pdf[M. Raibert and J. Hodgins. Animation of Dynamic Legged Locomotion, ACM SIGGRAPH 2001]</div>
+
+* <div class="ref" style="display:inline-block;"> link::https://www.cs.sfu.ca/~kkyin/papers/Yin_SIG07.pdf[K. Yin et al., SIMBICON: Simple Biped Locomotion Control, ACM SIGGRAPH 2007] </div>
+::
+
+div::[position:fixed; top:175px; right:50px;]
+videoplay::assets/panne_2007.webm[width:450px]
+::
+

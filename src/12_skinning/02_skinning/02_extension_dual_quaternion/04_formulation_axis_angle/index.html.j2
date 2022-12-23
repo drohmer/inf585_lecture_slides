@@ -1,0 +1,23 @@
+= Axis-angle representation with dual quaternion
+
+div::[height:50px;]::
+
+* Similarily to quaternion: "angle/axis" correspondance
+** - \(\displaystyle \hat q=\cos(\hat \theta/2)+ \hat n\, \sin(\hat \theta/2) \)
+
+div::[height:50px;]::
+
+** - \(\hat \theta=\theta_0 + \epsilon \theta_{\epsilon}\)
+*** - \(\theta_0\): angle of rotation
+*** - \(\theta_{\epsilon}=t\cdot n_0\;\): quantity of translation along \(n_0\)
+
+div::[height:50px;]::
+
+** - \(\hat n=n_0+\epsilon\,n_{\epsilon}\)
+*** - \(n_0\): axis of rotation
+*** - \(n_{\epsilon}=\frac{1}{2}\left( (n_0 \times t)\, cotan(\theta_0/2)+t\right) \times n_0\): called the moment of the rotation axis.
+
+
+div::[position:fixed; top:200px; left:1200px;]
+img::assets/screw_motion.png[width:600px]
+::

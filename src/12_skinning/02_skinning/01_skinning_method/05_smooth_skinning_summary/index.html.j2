@@ -1,0 +1,33 @@
+= Smooth skinning - Summary
+
+* \(\displaystyle p=\left(\sum_{k=0}^{N-1} \alpha_k \, \mathrm{M}_k\right)\,p^0 = \left(\sum_{k=0}^{N-1} \alpha_k \; \mathrm{T}_k\,(\mathrm{T}_k^0)^{-1}\right)\,p^0 \)
+* \(\displaystyle \forall k\,,\; \alpha_k\in[0,1]\), and \(\sum_{k=0}^{N-1} \alpha_k=1\)
+
+div::[position:fixed; top:200px; right:50px; ]
+div::[display:flex; justify-content:center; flex-wrap: wrap; width:800px;]
+div::[] img::assets/elephant_01.png[width:350px;] ::
+div::[] img::assets/elephant_02.png[width:350px;] ::
+div::[] img::assets/elephant_03.png[width:250px;] ::
+div::[] img::assets/elephant_04.png[width:250px;] ::
+::
+::
+
+div::[height:75px;]::
+
+div::[line-height:1.3em; width:1000px;]
+* The current **standard** for almost all articulated character deformations
+div::[font-size:90%;]
+** - Intuitive deformation
+** - Controlable shape (__through weights__)
+** - Fast to compute (GPU compatible)
+*** __matrix average, multiplication matrix-vector__
+* \(\Rightarrow\) Heavily used in Animation cinema & Video Game
+::
+::
+
+div::[position:fixed; bottom:50px;]
+
+* <div class="ref">link::assets/thalmann_GI_88.pdf[Joint-Dependent Local Deformations for Hand Animation and Object Grasping. Nadia Magnenat-Thalmann, Rochard Laperière, Daniel Thalmann. Graphics Interface, 1988]</div>
+* <div class="ref">link::assets/lander_game_dev_mag_1998.pdf[Over My Dead, Polygonal Body. Jeff Lander. Game Developer Magazine, 1998]</div>
+
+::

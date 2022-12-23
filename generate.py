@@ -11,7 +11,7 @@ source_root_directory = 'src/'
 site_directory = '_site/'
 
 compile_all = False
-compile_dirs = ['10_surface_deformation/']
+compile_dirs = ['13_skeletal_animation/']
 
 
 

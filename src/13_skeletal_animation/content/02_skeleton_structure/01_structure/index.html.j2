@@ -1,0 +1,52 @@
+= Skeleton structure
+
+div::[line-height:1.6em;]
+
+== Characteristics
+
+
+
+* - Hierarchical representation
+** __All children follow the transformation of the parent__
+** __Need to define a root: usually at the hips/pelvis__
+
+div::[height:25px;]::
+
+* - Convenient to express relative transformation with respect to the parent frame
+** __ex. Ankle is at 20\(^{\circ}\) w/r knee__
+
+
+
+== Converting local to global frames/joint coordinates
+
+div::[height:10px;]::
+
+div::[margin-left:50px]
+
+- With 4x4 matrices \(M\)
+
+div::[height:10px;]::
+
+* \(M^i_{global} = M^{p(i)}_{global}\;M^{i}_{local}\)
+
+div::[height:25px;]::
+
+- With translation \(t\), rotation \(R\)
+
+div::[height:10px;]::
+
+* \(R^i_{global} = R^{p(i)}_{global}\;R^{i}_{local}\)
+div::[height:10px;]::
+* \(t^i_{global} = t^{p(i)}_{global}+ R^{p(i)}_{global}\,t^{i}_{local}\)
+
+::
+
+div::[position:fixed; left:1400px; top:150px;]
+img::assets/root.jpg[width:400px]
+::
+
+div::[position:fixed; left:950px; top:700px;]
+img::assets/local_to_global.svg[width:500px]
+::
+
+::

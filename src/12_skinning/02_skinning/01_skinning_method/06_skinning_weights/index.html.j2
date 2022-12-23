@@ -1,0 +1,33 @@
+= Skinning weights
+
+
+* How to generate skinning weights ?
+
+** - Paint them manually
+** - Automatic computation
+
+* img::assets/skinning_weights.jpg[width:600px;]
+
+
+div::[position:fixed; top:200px; left:800px;]
+
+* ex. Using cartesian distances: \(\alpha_1=d_1^{-1}/(d_1^{-1}+d_2^{-1})\)
+
+div::[height:25px;]::
+
+div::[text-align:center;]
+img::assets/skeleton_weights_automatic.png[width:600px;]
+::
+
+div::[height:50px;]::
+
+
+* Or using diffusion on the volume/surface
+
+* img::assets/weight_diffusion.jpg[width:1050px;]
+
+::
+
+div::[height:200px;]::
+
+* **Rigging**: Associating bones and skinning weights (or any animation handle) to mesh parts

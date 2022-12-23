@@ -1,0 +1,30 @@
+= Skinning improvement: Dual Quaternion
+
+* Second idea: Use of **dual quaternion**
+** \(\hat q = q_0 + \epsilon \,q_\epsilon\;\), \(\;\;\epsilon\) dual element.
+
+div::[height:50px;]::
+
+* Dual quaternion = generalization of quaternion to handle __rigid transformation__
+** __Rotation + translation__
+
+div::[height:50px;]::
+
+* Unit dual quaternion models rigid transformation as **screw motions**
+**  = __rotation about an axis followed by a translation in the direction of this axis__
+
+div::[margin-left:775px;]
+img::assets/screw_motion.jpg[width:500px;]
+::
+
+div::[display:flex; align-items:center;]
+div::[text-align:center; color:gray;]
+img::assets/bar_lbs.png[width:650px;] <br>
+__LBS__
+::
+\(\Rightarrow\)
+div::[text-align:center; color:gray;]
+img::assets/bar_dqs.png[width:650px;] <br>
+__DQS__
+::
+::

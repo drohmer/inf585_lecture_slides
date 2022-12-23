@@ -1,0 +1,35 @@
+= Encoding hierarchical skeleton
+
+div::[line-height:1.6em;]
+
+* - Simplest encoding based on index within vector
+
+div::[margin-left:50px;]
+code::[python]
+Geometry=[M0, M1, M2, M3, M4, M5]
+Parent = [-1,0,1,1,0,4]
+code::[-]
+::
+
+* - Convert local coordinates to global coordinates
+
+div::[margin-left:50px;]
+code::[c++]
+local (Geometry)  <- std::vector of rotation (r), translation (p)
+global (Geometry) <- std::vector of rotation (r), translation (p)
+
+global[0] = local[0];
+for(size_t k=1; k<N; ++k)
+{
+    int parent = Parent[k];
+    global[k].r = global[parent].r * local[k].r;
+    global[k].p = global[parent].r * local[k].p + global[parent].p;
+}
+code::[-]
+::
+
+::
+
+div::[position:fixed; top:200px; left:1400px]
+img::pictures/hierarchy.svg[width:300px]
+::

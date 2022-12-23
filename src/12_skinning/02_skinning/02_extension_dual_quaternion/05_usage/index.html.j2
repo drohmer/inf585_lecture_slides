@@ -1,0 +1,59 @@
+= Dual Quaternion Skinning (DQS)
+
+
+* 1- Encode rigid transformation \((q^i,t^i)\) into dual quaternion 
+** \(\displaystyle \hat q^i = q^i_0 + \frac{\epsilon}{2} q^i_t\,q^i_0 \) , \(\;\;q^i_t=(t^i_x,t^i_y,t^i_z,0)\)
+
+div::[height:25px;]::
+
+* 2- Compute blending in the dual quaternion space (ScLERP)
+** \(\displaystyle \hat q' = \sum_i\,\omega_i\;\hat q^i = q'_0+\epsilon\, q'_\epsilon\)
+
+
+div::[height:25px;]::
+
+* 3- Extract components \((q,t)\) from \(\hat q'\)
+** - \(q=q'_0/\|q_0'\|\)
+** - \((t_x,t_y,t_z,0)=2\,q'_\epsilon\,q^\star\)
+::[font-size:80%;]
+*** \(q^\star\): conjugate of \(q\).
+::
+
+div::[height:25px;]::
+
+* 4- Apply finaly the transformation \((q,t)\) to position \(p_0\)
+
+div::[height:50px;]::
+
+* ::(.ref) link::assets/kavan_I3D_07.pdf[Skinning with Dual Quaternions. Kavan et al. I3D, 2007] ::
+
+
+
+div::[position:fixed; top:100px; left:1200px; font-size:75%; text-align:center; line-height:1.4em;]
+img::assets/bar_lbs.png[width:600px;]
+div::[] LBS ::
+div::[height:50px;]::
+img::assets/bar_dqs.png[width:600px;]
+div::[] DQS ::
+::
+
+div::[height:75px;]::
+
+
+
+div::[position:fixed; top:600px; left:1100px;]
+div::[display:flex; font-size:75%; text-align:center; line-height:1.4em;]
+div::[]
+img::assets/bar_lbs2.png[width:350px;]
+div::[] LBS ::
+::
+div::[]
+img::assets/bar_dqs2.png[width:350px;]
+div::[] DQS ::
+::
+::
+::
+
+
+
+

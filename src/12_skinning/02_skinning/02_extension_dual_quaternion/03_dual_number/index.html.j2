@@ -1,0 +1,21 @@
+= Dual number and dual quaternion
+
+* Dual number \(a=a_0+\epsilon a_\epsilon\)
+** Dual element \(\epsilon\) is nilpotent : \(\epsilon \neq 0\), \(\epsilon^2 = 0\)
+** __\(\epsilon\) commonly used to model infinitesimal quantity (ex. automatic differentiation)__
+
+div::[height:50px;]::
+
+* Dual quaternion \(\hat q\) = Generalization of quaternion to dual numbers
+* \(\hat q = q_0 + \epsilon \, q_{\epsilon}\)
+** - \(q_0\): pure rotation component
+** - \(q_{\epsilon}\): encodes translation component (dual part)
+
+div::[height:50px;]::
+
+* Given a unit quaternion \(q_0\), and a translation \(t=(t_x,t_y,t_z)\), the associated unit dual quaternion is
+** <div class="border">\(\displaystyle \hat q = q_0 + \frac{\epsilon}{2}\,q_t\,q_0\)</div> \(\;\;q_t = (t_x,t_y,t_z,0)\)
+
+div::[height:50px;]::
+
+* Unit dual quaternion (\(\|\hat q\|=1\)) describe the set of rigid transformation as screw motion.

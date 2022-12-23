@@ -1,0 +1,33 @@
+= IK: Heuristic approach
+
+== Fabrik
+
+div::[line-height:1.3em;]
+
+* Iterate between
+** - Forward direction: Match the end-effector target
+*** __propagate changes toward previous position to match bones' length.__
+** - Backward direction: Match the starting position 
+*** __propagate changes toward following positions to match bones' length.__
+
+div::[height:25px;]::
+
+div::[width:1200px;]
+<div class="ref">
+A fast iterative solver for the Inverse Kinematics problem. A. Aristidou. Graphical Models 2011.
+</div>
+::
+
+
+div::[text-align:center; margin-top:25px;]
+img::assets/f1.png[width:550px]
+img::assets/f2.png[width:550px]
+img::assets/f3.png[width:550px]
+::
+
+
+div::[position:fixed; top:75px; left:1400px;]
+img::assets/fabric_demo.gif[]
+::
+
+::

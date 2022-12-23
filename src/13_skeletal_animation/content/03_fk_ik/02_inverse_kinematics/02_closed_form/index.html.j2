@@ -1,0 +1,50 @@
+= IK Example with two bones
+
+div::[font-size:90%;]
+
+div::[display:flex; justify-content:space-around;]
+div::[line-height:1.4em; width:600px;]
+img::assets/ik_two_angles.png[width:550px] 
+<div class="ref">
+link::assets/IK_survey.pdf[Inverse Kinematics Techniques in Computer Graphics: A Survey. A. Aristidou et al. STAR EG. 2017.]
+</div>
+::
+div::[]
+
+* Two solutions defined by
+
+** \(\displaystyle \cos(\theta_1)=\frac{l_1^2+x^2+y^2-l_2^2}{2 l_1 \sqrt{x^2+y^2}}\)
+
+div::[height:25px;]::
+
+** \(\displaystyle \cos(\theta_2)=\frac{l_1^2+l_2^2-(x^2+y^2)}{2 l_1 l_2}\)
+::
+::
+
+div::[height:25px;]::
+
+
+In general the general case \(\displaystyle p_k = f(\theta_i)\)
+
+div::[height:25px;]::
+
+div::[line-height:1.6em;]
+
+* - Look for \(\theta_i = f^{-1}(p_k)\)
+* - \(f\) is a non linear function
+* - There may exists multiple solutions (or none)
+* - Solutions may exhibits discontinuities
+* - Closed form solution are not available
+
+::
+
+
+::
+
+div::[position:fixed; top:500px; right:100px; font-size:90%; width:800px;]
+Some attempts for explicit solutions in specific cases
+* <div class="ref"> link::assets/tolani_2000.pdf[Real-Time Inverse Kinematics Techniques for Anthropomorphic Limbs. D. Tolani et al. Graphical Models, 2000.] </div>
+* <div class="ref"> link::assets/kallmann_2008.pdf[Analytical inverse kinematics with bodyposture control. M. Kallmann. Comp. Anim. & Virt. Worlds, 2008] </div>
+img::assets/analytic.jpg[width:250px;]
+::
+

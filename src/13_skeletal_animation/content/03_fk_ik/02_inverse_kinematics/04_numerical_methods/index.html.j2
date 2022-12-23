@@ -1,0 +1,25 @@
+= IK: Numerical methods
+
+Several possible approaches to solve \(\mathrm{J}\,\Delta \theta = \Delta p\)
+
+* - Pseudo Inverse 
+** \(\Delta \theta = J^{+}\;\Delta p\;\), with \(\;\;\mathrm{J} \mathrm{J}^{+} = \mathrm{I}\)
+** \(\mathrm{J} ^ {+} = \mathrm{J} ^ {T}\left(\mathrm{J}\,\mathrm{J}^{T}\right)^{-1} \)
+
+div::[height:50px;]::
+
+* - Can also be computed using SVD: \(\mathrm{J} ^ {+} = \mathrm{V} \Sigma^{+}\,\mathrm{U}^T\)
+** \(\Sigma_{ii} = \sigma_{i}\), \(\Sigma^+_{ii}=1/\sigma_{i}\) if \(\sigma_i\neq 0\), \(0\) otherwise.
+
+div::[height:50px;]::
+
+* - Adding damping to compensate for singularities
+** \(\Delta \theta = \mathrm{J} ^ {T}\left(\mathrm{J}\,\mathrm{J}^{T}+\lambda^2\,\mathrm{I}\right)^{-1}\;\Delta p\)
+
+div::[height:50px;]::
+
+* - Using Newton's methods
+
+div::[height:50px;]::
+
+* <div class="ref"> link::assets/IK_survey.pdf[Inverse Kinematics Techniques in Computer Graphics: A Survey. A. Aristidou. STAR EG 2017] </div>
