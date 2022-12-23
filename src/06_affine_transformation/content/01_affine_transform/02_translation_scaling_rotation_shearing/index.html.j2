@@ -1,0 +1,68 @@
+= Affine/Linear Deformations
+
+::[font-size:80%; line-height:1.5em;]
+
+
+::[width:600px; display:inline-block;]
+
+== Translation
+
+* \(t(p)=(x+t_x,y+t_y,z+t_z)\)
+
+::[height:25px;]::
+
+* \(\mathrm{T} = \left(\begin{array}{llll} 1 & 0 & 0 & t_x \\ 0 & 1 & 0 & t_y \\ 0 & 0 & 1 & t_z \\ 0 & 0 & 0 & 1 \end{array}\right) \)
+
+::
+
+::[width:550px; display:inline-block; vertical-align:top;]
+== Scaling
+
+* \(s(p)=(s_x\,x, s_y\,y, s_z\,z)\)
+
+::[height:25px;]::
+
+* \(\mathrm{S} = \left(\begin{array}{llll} s_x & 0 & 0 & 0 \\ 0 & s_y & 0 & 0 \\ 0 & 0 & s_z & 0 \\ 0 & 0 & 0 & 1 \end{array}\right) \)
+::
+
+::[width:500px; display:inline-block; vertical-align:top;]
+
+== Rotation
+
+* Several possible representations (see later)
+
+::[height:25px;]::
+
+* __Note: Isometry__
+::
+
+::[height:50px;]::
+
+== Shearing
+
+::[display:flex;]
+div::[]
+* \(sh_{xy}(p)=(x+\lambda y, y, z)\)
+* \(sh_{xz}(p)=(x+\lambda z, y, z)\)
+* \(sh_{yx}(p)=(x, y+\lambda x, z)\)
+* ...
+::
+::[margin-left:50px; font-size:85%;]
+\(\mathrm{Sh}_{xy} = \left(\begin{array}{llll} 1 & \lambda & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right) \)
+\(\mathrm{Sh}_{xz} = \left(\begin{array}{llll} 1 & 0 & \lambda & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right) \)
+\(\mathrm{Sh}_{yx} = \left(\begin{array}{llll} 1 & 0 & 0 & 0 \\ \lambda & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right) \)
+...
+::
+::
+
+::[height:25px;]::
+
+* Usually avoided in Graphics
+
+* __Note: \(\mathrm{det}(\mathrm{Sh})=1 \to \) constant volume (but no isometry)__
+
+::
+
+::[position:fixed; bottom:65px; left:1200px;]
+img::assets/shearing.svg[width:400px;]
+::

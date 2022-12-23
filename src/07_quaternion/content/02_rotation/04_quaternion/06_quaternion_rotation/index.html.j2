@@ -1,0 +1,51 @@
+
+= Relation between quaternion and rotation
+
+div::[font-size:90%; line-height:1.5em;]
+ Consider
+* - a quaternion \(q=(s,w)\) of unit norm \(\|q\|=1\).
+* - a vector \(v=(v_x,v_y,v_z)\) assimilated to the pure quaternion \(q_v=(v,0)=(v_x,v_y,v_z,0)\).
+
+div::[height:25px;]::
+
+Then
+* - \(q_{v'}=\mathcal{R}_q(v)=q\,q_v\,q^{\star}\) is a pure quaternion \(q_{v'}=(v_x',v_y',v_z',0)\) 
+* - And \(v'=(v_x',v_y',v_z')\) is the rotation of vector \(v\) around the axis \(n=s/\|s\|\), with angle \(2\; acos(w)\).
+
+div::[height:25px;]::
+
+div::[font-size:80%;]
+
+div::[line-height:1.2em;]
+__Demonstration__
+
+div::[height:25px;]::
+
+* \(\mathcal{R}_q(v)=(s,w)\;(v,0)\;(-s,w)= \; ... \; =((w ^ 2-s ^ 2)\, v + 2 (s \cdot v)\,s + 2 w\,(s\times v),0)\)
+
+div::[height:25px;]::
+
+* As \(\|q\|=1\),  we can write \(q=(s,w)=(n\sin(\phi),\cos(\phi))\), where \(\|n\|=1\)
+
+div::[height:25px;]::
+
+* Then \(\displaystyle \mathcal{R}_q(v) = (\underbrace{(\cos ^ 2(\phi)-\sin ^ 2(\phi))}_{\cos(2\phi)}\,v + \underbrace{2 \sin ^ 2 (\phi)}_{1-\cos (2 \phi)} (n \cdot v)\,n + \underbrace{2\, \cos(\phi) \sin(\phi)}_{\sin(2\phi)}\;n\times v\,,\;0)\)
+
+div::[height:25px;]::
+
+* \(\Rightarrow\) Rodrigues formula for axis \(n\) and angle \(2 \phi\).
+
+::
+::
+
+div::[height:25px;]::
+
+div::[text-align:center;]
+div::[display:inline-block; border-width:3px; border-color:red; border-style:solid;padding:10px;]
+The unit quaternion \(q=(n\,\sin(\theta/2),\cos(\theta/2))\) represents the rotation of angle \(\theta\) around the axis \(n\).
+::
+::
+::
+
+
+

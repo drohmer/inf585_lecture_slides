@@ -1,0 +1,26 @@
+
+= Rotation: Focus Axis Angle as Matrix
+
+
+
+div::[font-size:85%; line-height:1.5em;]
+div::[height:25px;]::
+
+\(v'=\cos(\theta)\,v+\sin(\theta)\,n\times v + (1-\cos(\theta))\,(v\cdot n)\,n = R(n,\theta)\,v\)
+
+div::[height:25px;]::
+
+\(v'=
+\cos(\theta) v + \sin(\theta)\,\left(\begin{array}{l}n_x \\ n_y \\ n_z\end{array}\right)\times v + (1-\cos(\theta))\;(\begin{array}{ccc}n_x & n_y & n_z\end{array})\,v\,\left(\begin{array}{c}n_x \\ n_y \\ n_z \end{array}\right)\)
+
+div::[height:25px;]::
+
+\(v'=
+\cos(\theta)\,v  + \sin(\theta)\,\underbrace{\left(\begin{array}{ccc}0 & -n_z & n_y \\ n_z & 0 & -n_x \\ -n_y & n_x & 0\end{array}\right)}_{\mathrm{K}}\,v + (1-\cos(\theta))\,\underbrace{\left(\begin{array}{ccc} n_x^2 & n_x\,n_y & n_x\,n_z \\ n_x\,n_y & n_y^2 & n_y\,n_z \\ n_x\,n_z & n_y\,n_z & n_z^2 \end{array}\right)}_{\mathrm{K^2}}\,v
+\)
+
+div::[height:50px;]::
+
+\(v'= \left( \begin{array}{ccc} \cos(\theta)+n_x^2 (1-\cos(\theta)) & n_x n_y  (1-\cos(\theta))-n_z \sin(\theta) & n_x n_z (1-\cos(\theta))+n_y \sin(\theta) \\ \\ n_x n_y (1-\cos(\theta)) + n_z \sin(\theta) & \cos(\theta)+n_y^2 (1- \cos(\theta)) & n_y n_z (1-\cos(\theta))-n_x \sin(\theta)  \\ \\ n_x n_z (1-\cos(\theta))-n_y \sin(\theta) & n_y n_z (1-\cos(\theta))+n_x \sin(\theta) & \cos(\theta) + n_z^2  (1-\cos(\theta)) \end{array} \right)\,v \)
+
+::

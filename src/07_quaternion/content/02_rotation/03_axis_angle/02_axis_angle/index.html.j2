@@ -1,0 +1,40 @@
+
+= Rotation: Focus Axis Angle
+
+
+
+div::[line-height:1.5em;]
+Any 3D rotation can be represented by
+
+* - A unit axis \(n\)
+* - An angle \(\theta\)
+
+
+div::[height:50px;]::
+
+**Pro.**
+
+div::[height:25px;]::
+
+* - Concise representation: 3 DOF
+* - Meaningfull parameters
+* - Describes well the rotation between two vectors
+
+div::[margin-left:50px; margin-top:30px; font-size:80%;]
+
+Ex. Rotation between \(u_1\) and \(u_2\)
+
+* - Axis of rotation \(n=(u_1 \times u_2)/\|u_1 \times u_2\|\)
+* - Angle of rotation \(\theta = \mathrm{acos}(u_1 \cdot u_2)\)
+* - Twist around \(u_2\) can be arbitrarily chosen
+
+::
+
+div::[position:fixed; top:220px; left:600px]
+img::assets/axis_angle.png
+::
+
+div::[position:fixed; top:700px; left:825px]
+img::assets/two_vectors.svg[width:1050px]
+::
+::

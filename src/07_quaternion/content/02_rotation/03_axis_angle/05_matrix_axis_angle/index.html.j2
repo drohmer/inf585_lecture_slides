@@ -1,0 +1,36 @@
+= Rotation: Focus Axis Angle - Summary
+
+div::[font-size:85%; line-height:1.3em;]
+
+div::[line-height:1.5em;]
+* Given a rotation \((n,\theta)\) - Corresponding rotation matrix 
+
+div::[height:25px;]::
+
+* \(R(n,\theta)=\mathrm{I}+\sin(\theta)\,\mathrm{K}+(1-\cos(\theta))\,\mathrm{K}^2\)
+
+div::[height:25px;]::
+
+* \(R(n,\theta)= \displaystyle  \left( \begin{array}{ccc} \cos(\theta)+n_x^2 (1-\cos(\theta)) & n_x n_y  (1-\cos(\theta))-n_z \sin(\theta) & n_x n_z (1-\cos(\theta))+n_y \sin(\theta) \\ \\ n_x n_y (1-\cos(\theta)) + n_z \sin(\theta) & \cos(\theta)+n_y^2 (1- \cos(\theta)) & n_y n_z (1-\cos(\theta))-n_x \sin(\theta)  \\ \\ n_x n_z (1-\cos(\theta))-n_y \sin(\theta) & n_y n_z (1-\cos(\theta))+n_x \sin(\theta) & \cos(\theta) + n_z^2  (1-\cos(\theta)) \end{array} \right) \)
+
+div::[height:25px;]::
+
+
+**Pro**
+
+* - Concise and general representation
+* - Expressive parameters in 3D space (axe, angles)
+* - Efficient rotation and correspondance with matrix
+
+div::[height:25px;]::
+
+**Cons**
+
+* - No simple composition expression between two rotations.
+* - No direct interpolation
+
+(well handled by quaternion representation)
+
+::
+
+::

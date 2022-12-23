@@ -1,0 +1,37 @@
+
+= Composition of rotations
+
+* Consider two rotation \((R_1,R_2)\) associated to their unit quaternions \((q_1,q_2)\).
+
+div::[height:25px;]::
+
+div::[display:inline-block; border-width:3px; border-color:red; border-style:solid;padding:10px;]
+* The product \(q_1 \, q_2\) represents the composition \(R_1 \circ R_2\).
+::
+
+div::[height:75px;]::
+
+div::[line-height:1.5em;]
+__Demonstration__
+
+div::[height:25px;]::
+
+* We show that \(\mathcal{R}_{q_1\,q_2}(v)=\mathcal{R}_{q_1}\circ\mathcal{R}_{q_2}(v)\).
+
+div::[height:50px;]::
+
+* \(\mathcal{R}_{q_1\,q_2}(v)=(q_1 q_2)\;v\;(q_1 q_2)^{\star}\)
+
+div::[height:25px;]::
+
+* \(\mathcal{R}_{q_1\,q_2}(v)=(q_1\,q_2)\;v\;(q_2^{\star}\,q_1^{\star})\), as \((q_1 q_2)^{\star}=q_2 ^ {\star} \,q_1^{\star}\)
+
+div::[height:25px;]::
+
+* \(\mathcal{R}_{q_1\,q_2}(v)=q_1\,(q_2\;v\;q_2^{\star})\,q_1^{\star}\)
+
+div::[height:25px;]::
+
+* \(\mathcal{R}_{q_1\,q_2}(v)=q_1\,\mathcal{R}_{q_2}(v)\, q_1^{\star} = \mathcal{R}_{q_1}\circ\mathcal{R}_{q_2}(v)\)
+
+::

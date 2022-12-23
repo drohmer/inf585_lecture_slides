@@ -1,0 +1,32 @@
+= Interpolating rotation
+
+Do not use componentwise-interpolation on rotation matrix
+* \(\Rightarrow\) interpolate in **quaternion** space
+
+::[height:1em;]::
+
+__Can use either:__
+
+* - **SLERP** - Spherical Linear Interpolation
+::[font-size:85%;margin-top:0.5em;]
+** \(\displaystyle q(t) = \frac{\sin((1-t)\Omega)}{\sin(\Omega)}\,q_1 + \frac{\sin(t\Omega)}{\sin(\Omega)}\,q_2,\;\;\;\) with \(\cos(\Omega)=q_1 \cdot q_2\)
+::
+** __Between two unit quaternions \(q_1,q_2\)__
+
+::[height:1em;]::
+
+* - **LERP** - Linear Interpolation
+::[font-size:85%;margin-top:0.5em;]
+** \(\displaystyle q(t) = \frac{\sum_j \alpha_j \, q_j}{\|\sum_j \, \alpha_j q_j\|}\)
+::
+** __When blending multiple quaternions \(q_j\) with weights \(\alpha_j\)__
+
+::[height:1.0em;]::
+
+Rem. 
+* When interpolating b/w rotations and positions:
+** Use quaternion with rotation, componentwise-interpolation on position
+
+::[position:fixed; top:300px; left:1600px;]
+img::assets/slerp.png[width:250px;]
+::

@@ -1,0 +1,33 @@
+= Interpolating rotation
+
+::[font-size:90%; line-height:1.3em;]
+
+* Problem: Given 2 rotations \(r_1, r_2\)
+** - Find rotation \(r(t)\) st \(r(0)=r_1\), \(r(1)=r_2\), and varies smoothly along \(t\)
+
+::[height:25px;]::
+
+* **Matrix representation **
+** Componentwise interpolation not adapted
+*** ex. \(t\,R_1 + (1-t)\,R_2\) is not a rotation: introduce scaling/shearing
+** The correct formulation to interpolate on the manifold would be \(R1 \,exp(t \log(R_1^T\,R_2))\)
+*** But matrix exponential is complex to compute
+
+::[height:25px;]::
+
+* **Euler angle**
+** Can interpolate the 3 angles separately
+** (+) Leads to a rotation
+** (-) Doesn't necessarily follows simplest trajectory
+
+::[height:25px;]::
+
+* **Axis-Angle**
+** No trivial interpolation scheme with different axes
+
+::[height:25px;]::
+
+* **Quaternion**
+** Well adapted (see later)
+
+::

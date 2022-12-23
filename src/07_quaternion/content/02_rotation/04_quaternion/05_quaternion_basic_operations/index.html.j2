@@ -1,0 +1,48 @@
+= Basics operations on quaternions
+
+div::[font-size:90%; line-height:1.5em;]
+
+* - Conjugated quaternion \(q^{\star}=(-x,-y,-z,w)\)
+
+div::[height:50px;]::
+
+* - Quaternion norm \(\|q\|=\sqrt{q\,q^{\star}} = \sqrt{x^2+y^2+z^2+w^2}\). Unit quaternion satisfies \(\|q\|=1\).
+
+div::[height:50px;]::
+
+* - Quaternion product
+
+div::[height:25px;]::
+
+** \(q_1\;q_2=(x_1\,{\bf i}+ y_1 \, {\bf j} + z_1 \, {\bf k} + w_1)\;(x_2\,{\bf i}+ y_2 \, {\bf j} + z_2 \, {\bf k} + w_2) = \; ...\) <br>
+
+div::[height:50px;]::
+
+
+\(
+q_1 \; q_2 = 
+\left( 
+\begin{array}{r} 
+x_1 w_2 + w_1 x_2 + y_1 z_2 - z_1 y_2 \\ 
+y_1 w_2 + w_1 y_2 + z_1 x_2 - x_1 z_2 \\ 
+z_1 w_2 + w_1 z_2 + x_1 y_2 - y_1 x_2 \\ 
+w_1 w_2 - x_1 x_2 - y_1 y_2 - z_1 z_2 
+\end{array} 
+\right) 
+\)
+
+div::[height:75px;]::
+
+
+* Sometimes interesting to separate __real part__ \(w\) from __pure quaternion__ part \(s=(x,y,z)\).
+** - Shorthand vector form \(q=(s,w)\)
+** - Quaternion product in vector form \(q_1\;q_2=(s_1\,w_2+s_2\,w_1+s_1\times s_2 \;,\;w_1\,w_2-s_1\cdot s_2)\)
+
+
+div::[position:fixed; top:550px; left:900px;]
+Note: Quaternion product is
+*  - associative: \((q_1 q_2) q_3 = q_1 (q_2 q_3) = q_1\, q_2\, q_3\)
+*  - **non-commutative**: \(q_1\, q_2 \neq q_2\, q_1\)
+::
+
+::

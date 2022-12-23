@@ -1,0 +1,37 @@
+
+= Rotation: Focus Axis Angle - Rodrigues
+
+div::[line-height:1.5em;]
+
+Applying a rotation \((n,\theta)\) to a vector \(v\)
+
+div::[height:50px;]::
+
+* \(v = v_{\parallel} + v_{\perp}\)
+* \(v' = v' _ {\parallel} + v'_{\perp}\)
+* \(\Rightarrow v' = v_{\parallel} + (\cos(\theta) \, v _ {\perp} + \sin(\theta) \, n\times v _ {\perp}) \)
+
+div::[height:50px;]::
+
+* \(v_{\parallel} = (v\cdot n)\,n\)
+* \(v_{\perp} = v-(v\cdot n)\,n\)
+
+div::[height:50px;]::
+
+* \(v' = (v\cdot n)\,n + \cos(\theta)(v-(v\cdot n)\,n) + \sin(\theta) \, n\times(v-(v\cdot n)\,n)\)
+
+div::[height:75px;]::
+
+div::[border-width:3px;border-style:solid;border-color:red; padding:15px; display:inline-block;]
+* \(\Rightarrow v' = \cos(\theta)\,v + \sin(\theta)\,n\times v + (1-\cos(\theta))\,(v\cdot n)\,n\)
+::
+
+div::[height:25px;]::
+
+* **Rodrigues' rotation Formula**
+
+div::[position:fixed; top:100px; left:1100px;]
+img::assets/rotation.svg[width:700px]
+::
+
+::

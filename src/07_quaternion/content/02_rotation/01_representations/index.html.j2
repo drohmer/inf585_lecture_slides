@@ -1,0 +1,77 @@
+= Rotations
+
+* 3D rotations have 3 dof, No unique representation
+
+div::[font-size:80%; line-height:1.5em;]
+
+div::[width:450px; display:inline-block;]
+== Matrix
+
+div::[height:25px;]::
+::[font-size:75%;]
+* \(R=\left(\begin{array}{ccc}R_{xx} & R_{xy} & R_{xz} \\ R_{yx} & R_{yy} & R_{yz} \\ R_{zx} & R_{zy} & R_{zz} \end{array}\right)\)
+::
+
+div::[height:25px;]::
+
+* \(R^T\,R=\mathrm{I}\)
+* \(\mathrm{det}(R)=1\)
+
+div::[height:25px;]::
+
+::
+
+div::[width:450px; display:inline-block; vertical-align:top;]
+== Euler Angles
+
+div::[height:25px;]::
+
+* 3 angles: \((\alpha,\beta,\gamma)\)
+
+div::[height:25px;]::
+
+* Composition of rotation around basic axes
+
+div::[height:25px;]::
+
+
+
+div::[height:25px;]::
+
+
+
+::
+
+div::[width:400px; display:inline-block; vertical-align:top;]
+== Axis angle
+
+div::[height:25px;]::
+
+* \(({\bf n}, \theta)\)
+
+
+
+::
+
+div::[width:400px; display:inline-block; vertical-align:top;]
+== Quaternion
+
+div::[height:25px;]::
+
+* \(q=(x,y,z,w)\)
+* \(=\left({\bf n}\,\sin\left(\frac{\theta}{2}\right),\cos\left(\frac{\theta}{2}\right)\right)\)
+
+div::[height:25px;]::
+
+
+
+::
+::
+
+div::[position:fixed; bottom:40px; left:550px;]
+img::assets/euler.jpg[width:250px;]
+::
+
+div::[position:fixed; bottom:50px; left:950px;]
+img::assets/axis_angle_character.jpg[width:450px;]
+::

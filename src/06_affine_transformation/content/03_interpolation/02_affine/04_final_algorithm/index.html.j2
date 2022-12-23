@@ -1,0 +1,37 @@
+= Handling affine transformation
+
+div::[line-height:1.6em; font-size:85%;]
+Algorithm to interpolate between two general \(4\times 4\) matrices \(M_1, M_2\)
+
+div::[height:50px;]::
+
+* 1. Extract translation \(p_1, p_2\) from \(M_1, M_2\).
+
+div::[height:25px;]::
+
+* 2. Compute \(R_1\), \(R_2\) (\(3 \times 3\) rotation matrices), and \(D_1\), \(D_2\) (\(3 \times 3\) scaling/shearing matrices) from \(M_1, M_2\)
+
+div::[height:25px;]::
+
+* 3. Interpolate linearly position and scaling/shearing \(p(t)=(1-t)\,p_1+t\, p_2\), \(D(t)=(1-t)\, D_1+t\, D_2\)
+
+div::[height:25px;]::
+
+* 4. Compute quaternions \(q_1\), \(q_2\) from \(R_1\), \(R_2\)
+
+div::[height:25px;]::
+
+** Note \(M\to q\) with \(q=\left( \frac{M_{zy}-M_{yz}}{2 r}, \frac{M_{xz}-M_{zx}}{2 r}, \frac{M_{yx}-M_{xy}}{2 r}, \frac{r}{2}\right)\), \(r=\sqrt{1+M_{xx}+M_{yy}+M_{zz}}\)
+
+div::[height:25px;]::
+
+* 5. Compute \(q(t) = \)SLERP\((q_1,q_2,t)\)
+
+div::[height:25px;]::
+
+* 6. Convert back to matrix \(q(t)\to R(t)\)
+
+div::[height:25px;]::
+
+* 7. Compute final matrix \(M(t)=R(t)\,D(t)\) with translation \(p(t)\).
+::

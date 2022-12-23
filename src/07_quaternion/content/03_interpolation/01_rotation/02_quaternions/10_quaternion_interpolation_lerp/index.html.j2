@@ -1,0 +1,26 @@
+= Interpolation of Quaternion - LERP
+
+Linear interpolation (with normalization) in quaternion space (**LERP**)
+
+div::[height:25px;]::
+
+* - Consider two rotations with corresponding quaternion \(q_1\), \(q_2\).
+* - The __linearly interpolated__ quaternion at parameter \(t\in[0,1]\) is
+
+div::[height:25px;]::
+
+** \(\displaystyle q(t) = \frac{(1-t)\, q_1 + t\, q_2}{\|(1-t)\, q_1 + t\, q_2\|}\)
+
+div::[position:fixed; top:150px; left:1200px;]
+img::assets/lerp.svg[width:600px;]
+::
+
+div::[height:50px;]::
+
+* (+) Follows a shortest path (great circle on 4D sphere)
+* (+) Can be generalized to more general parametric curves (Splines, etc)
+
+div::[height:25px;]::
+
+* (-) Angular speed of orientation is not-constant
+** __ex. extreme case of two opposite quaternions__

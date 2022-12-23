@@ -1,0 +1,29 @@
+= Affine/Linear Transformation
+
+* Most used deformations \(p'=f(p)\)
+** can be represented by a matrix \(\rightarrow\) can be sent as uniform parameter to the shader.
+
+
+::[height:25px;]::
+
+* - In standard 3D coordinates \(p=(x,y,z)\)
+** \(p'=\mathrm{L}\,p+t\)
+*** \(\mathrm{L}\): linear component (3\(\times\)3 matrix)
+*** \(t\): translation
+
+::[height:25px;]::
+
+* - In homogeneous coordinates \(p=(x,y,z,1)\)
+** \(p'=\mathrm{A}\,p\)
+*** \(\mathrm{A}\): 4 \(\times\) 4 matrix
+
+::[height:25px;]::
+
+* __Properties__:
+** - \(\mathrm{det}(\mathrm{L})\): Change of volume when applying \(L\) to a shape
+** - \(\mathrm{L}^{T}\,\mathrm{L}=1\) \(\Rightarrow\) Isometry
+
+
+::[position:fixed; top:600px; left:1000px;]
+\(\mathrm{A}=\left(\begin{array}{c|c} \mathrm{L} & t \\ \hline 0 & 1\end{array} \right)= \scriptsize \left(\begin{array}{ccc|c} \mathrm{L}_{xx} & \mathrm{L}_{xy} & \mathrm{L}_{xz} & t_x \\ \mathrm{L}_{yx} & \mathrm{L}_{yy} & \mathrm{L}_{yz} & t_y \\ \mathrm{L}_{zx} & \mathrm{L}_{zy} & \mathrm{L}_{zz} & t_z \\ \hline 0 & 0 & 0 & 1  \end{array} \right)\)
+::

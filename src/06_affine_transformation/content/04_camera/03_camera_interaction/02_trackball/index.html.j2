@@ -1,0 +1,46 @@
+::[font-size:85%;]
+= Interacting with camera - ArcBall/Trackball metaphore
+::
+
+* Other approach: **ArcBall/Trackball behavior**
+** __3 dof: left/right, top/down, but also twist__
+
+::[position:fixed; top:150px; left:1400px;]
+img::assets/trackball_arrow.png[width:400px;]
+::
+
+::[height:1em;]::
+
+* **Idea**: Use the 2D cursor position as "3D point on the trackball"
+** Motion between 2 cursor positions = 3D Rotation applied to the ball
+** ::(.ref) link::https://graphicsinterface.org/wp-content/uploads/gi1992-18.pdf[K. Shoemake. A User Interface for Specifying Three-Dimensional Orientation Using a Mouse. Graphics Interface, 1992.] ::
+
+
+::[position:fixed; top:500px; left:1100px;]
+img::assets/arcball.png[width:625px;]
+::
+
+::[height:1.5em;]::
+
+::[font-size:75%; line-height:1.2em;]
+
+* **Algorithm: **
+** Inputs \(p_1=(p_{1x},p_{1y})\), \(p_2=(p_{2x},p_{2y})\) in screen coord.
+** \(q_{1/2}\) = ArcBallProjection\((p_{1/2})\)
+** \(R\)= rotation between vectors \((q_1,q_2)\)
+
+::[height:1.0em;]::
+
+** __ArcBallProjection(p)__
+** \(d=\)norm(p)
+** if(d<\(1/\sqrt{2}\))
+*** \(q=(p,\sqrt{1-d^2})\)
+** else // hyperbola
+*** \(q=(p,1/(2 d))\)
+** return q
+::
+
+::[font-size:75%; color:gray; font-style:italic;]
+* Note: the hyperbola smoothly extends the sphere in the entire screen.
+::
+

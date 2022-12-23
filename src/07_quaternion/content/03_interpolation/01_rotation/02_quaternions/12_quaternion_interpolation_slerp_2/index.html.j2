@@ -1,0 +1,34 @@
+= Interpolation of Quaternion - SLERP
+
+
+div::[font-size:90%; line-height:1.6em;]
+
+Spherical Linear interpolation (**SLERP**)
+
+* - Consider two rotations with corresponding quaternion \(q_1\), \(q_2\).
+* - The __spherical linear interpolated__ quaternion at parameter \(t\in[0,1]\) is
+
+div::[height:25px;]::
+
+** \(\displaystyle q(t) = \frac{\sin ((1-t)\Omega)}{\sin(\Omega)} q_1 + \frac{\sin (t\Omega)}{\sin(\Omega)} q_2 \;\;\;\) with \(\cos(\Omega)=q_1 \cdot q_2\)
+
+
+div::[position:fixed; top:150px; left:1200px;]
+img::assets/slerp.svg[width:600px;]
+::
+
+div::[height:75px;]::
+
+
+
+div::[height:50px;]::
+
+* (+) Follows a shortest path (great circle on 4D sphere)
+* (+) Constant angular speed
+
+div::[height:25px;]::
+
+* (-) Cannot be generalized to more general curves.
+** __Cannot interpolates between more than two quaternions__
+
+::

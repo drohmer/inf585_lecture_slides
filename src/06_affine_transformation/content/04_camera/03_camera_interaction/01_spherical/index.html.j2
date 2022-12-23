@@ -1,0 +1,38 @@
+= Interacting with camera
+
+* Camera orientation has 3 degrees of freedom (+ 3 dof in position)
+* How to handle a camera orientation using a mouse (2-dof) ?
+** __Assuming a freely oriented camera__
+
+::[height:1.5em;]::
+
+**Common approaches**
+
+::[height:1.0em;]::
+
+* "Spherical camera"/coordinates \((\theta,\phi)\)
+::[font-size:85%; line-height:1.3em;]
+** (+) Good to easily "turn around" oriented structure
+** (-) Lacks a dof: No "twist": position on the unit sphere force the __angle__
+*** Not adapted to turn around non-oriented/badly-oriented objects.
+::
+
+::[height:1.5em;]::
+
+* Spherical coordinates + twist (ex. roll, pitch, yawn)
+::[font-size:85%; line-height:1.3em;]
+** (+) Precise and complete control
+** (-) Require an additional key/controler to the mouse to control the 3 dof
+::
+
+::[position:fixed; top:100px; left:1300px;]
+Example of "Spherical camera"
+::[font-size:75%; line-height:1.3em;]
+* __Correct orientation__
+videoplay::assets/spherical_01.mp4[width:400px;]{controls}
+::[height:0.5em;]::
+* __Bad orientation of the shape__ 
+** spherical camera is "stuck" in this orientation
+videoplay::assets/spherical_02.mp4[width:400px;]{controls}
+::
+::

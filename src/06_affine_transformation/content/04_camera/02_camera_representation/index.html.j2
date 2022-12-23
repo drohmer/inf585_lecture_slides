@@ -1,0 +1,52 @@
+= View representation as matrix
+
+Camera parameterized by:
+* A center \(c\); right, up, front unit vectors 
+** __expressed in global coordinates__
+
+::[height:2.5em;]::
+
+**Frame** matrix: 
+::[font-size:85%; line-height:1.3em;]
+* __Transform unit coordinates into camera vectors__
+::[height:0.5em;]::
+::[font-size:85%;]
+* \(Frame\times(1,0,0,0)=right\)
+* \(Frame\times(0,1,0,0)=up\)
+* \(Frame\times(0,0,1,0)=-front\)
+* \(Frame\times(0,0,0,1)=c\)
+::
+::[height:0.5em;]::
+* Matrix of column-oriented vectors of camera directions
+::[height:1em;]::
+::[font-size:85%;]
+* Frame=\(\left(\begin{array}{cccc} | & | & | & | \\  right & up & -front & c  \\ | & | & | & | \\ 0 & 0 & 0 & 1\end{array}\right)=\left(\begin{array}{cc} O & c \\ 0 & 1 \end{array} \right)\)
+::
+::
+
+
+::[position:fixed; left:1000px; top:425px;]
+
+**View** matrix: inverse of the Frame matrix
+::[font-size:85%; line-height:1.3em;]
+* __Transforms the camera vectors into the unit coordinates__
+::[height:0.5em;]::
+::[font-size:85%;]
+* \(View\times right = (1,0,0,0)\)
+* \(View\times up = (0,1,0,0)\)
+* \(View\times -front = (0,0,1,0)\)
+* \(View\times c = (0,0,0,1)\)
+::
+::[height:0.5em;]::
+* Orientation \(O\) can be read on the rows
+::[height:1em;]::
+::[font-size:85%;]
+** View=\(\left(\begin{array}{cccc} ( \cdots & right & \cdots ) & | \\ ( \dots & up & \cdots )  & - O^{T}\,c \\ ( \cdots & -front & \cdots ) & | \\  0 & 0 & 0 & 1 \end{array}\right)\)
+::
+::
+
+::
+
+::[position:fixed; top:50px; left:1300px;]
+img::assets/camera_space.png[width:500px]
+::

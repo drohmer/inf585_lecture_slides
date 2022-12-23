@@ -1,0 +1,12 @@
+= Camera in shader - Question
+
+* **Q.** In a vertex shader the View matrix is passed as uniform parameter
+** How can you compute the position of the camera ?
+
+::[height:1em;]::
+
+* A usefull function to set a point of view is the standard __look_at(eye, center, up)__
+** - eye: position of the viewer
+** - center: position that the viewer is looking at
+** - up: a direction representing the "vertical direction" of the viewer.
+* **Q.** How to compute the __View__ matrix from the __look_at__ parameters ?

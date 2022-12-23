@@ -1,0 +1,42 @@
+
+= Rotation: Focus Euler angles
+
+div::[font-size:85%; line-height:1.5em;]
+
+* Three consecutive rotations along fixed axis along \((x,y,z)\) coordinates.
+
+div::[height:25px;]::
+
+* Can use basic rotation matrices composition
+
+div::[height:25px;]::
+
+div::[font-size:80%;] 
+* \(R_x=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos(\alpha) & \sin(\alpha)  \\ 0 & -\sin \alpha) & \cos(\alpha)\end{array}\right) \;\;\) \(R_y= \left( \begin{array}{ccc} \cos(\beta) & 0 & \sin(\beta)  \\ 0 & 1 & 0 \\ -\sin(\beta) & 0 & \cos(\beta)   \end{array} \right) \;\;\)  \(R_z= \left( \begin{array}{ccc} \cos(\gamma) & \sin(\gamma) & 0 \\-\sin(\gamma) & \cos(\gamma) & 0 \\0 & 0 & 1 \end{array} \right) \)
+::
+
+div::[height:50px;]::
+
+* Multiple Euler angles conventions
+** - __Proper Euler : z-x-z', x-y-x', y-z-y',__ ...
+** - __Trait-Bryan : x-y-z, z-y-x, x-z-y,__ ...
+** __Take care when exporting/importing/parsing between Softwares__
+
+div::[position:fixed; top:450px; left:1100px;]
+img::assets/euler.png[width:700px]
+::
+
+div::[height:50px;]::
+
+* **Pro**
+
+** - Combination of rotation around known axis
+** - Comprehensive parameters (3 dof)
+** - Animators can interact with angular curves
+** - __Widely used in robotics__
+
+div::[position:fixed; top:700px; left:1000px;]
+img::assets/gimbal.png[width:250px]
+::
+
+::

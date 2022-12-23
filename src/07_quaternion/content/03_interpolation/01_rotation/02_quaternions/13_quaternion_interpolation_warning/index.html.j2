@@ -1,0 +1,49 @@
+= Care with quaternion negation
+
+div::[font-size:90%; line-height:1.5em;]
+
+div::[height:50px;]::
+
+* \(+q\) and \(-q\) correspond to the same rotation (\(n\to-n\), \(\theta\to 2\pi-\theta)\)
+div::[height:10px;]::
+** __Warning \(-q\) **does not** corresponds to the rotation matrix \(-R\).__
+div::[height:15px;]::
+* But to a **different path** when interpolated in the 4D quaternion space.
+
+div::[height:50px;]::
+
+div::[position:fixed; top:75px; left:1350px;]
+img::assets/negative.svg[width:400px;]
+::
+
+* \(\Rightarrow\) path \(q_1 \to -q_2\) is shorter than \(q_1 \to q_2\) when \(q_1\cdot q_2<0\).
+
+div::[height:50px;]::
+
+* In practice we check for the shorter path before applying SLERP.
+
+div::[height:75px;]::
+
+* __Algorithm__
+
+div::[height:25px;]::
+
+div::[margin-left:75px;]
+
+div::[font-size:90%; line-height:1.3em;]
+code::[c++]
+if( dot(q1,q2)<0 )
+    q2 = -q2
+
+q(t) = SLERP(q1,q2,t)
+code::[-]
+::
+
+::
+
+::
+
+
+div::[position:fixed; top:500px; left:1200px;]
+videoplay::assets/shortest_path.mp4[width:500px;]
+::

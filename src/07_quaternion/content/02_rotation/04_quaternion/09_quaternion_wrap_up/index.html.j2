@@ -1,0 +1,36 @@
+= Summary - Correspondance quaternion / matrix-vector
+
+
+== Representation and Operations
+
+div::[font-size:90%; line-height:1.6em;]
+
+<table>
+<tr>
+
+<td> div::[display:inline-block; width:500px;] :: </td> <td>div::[display:inline-block; width:500px;]**3D space** :: </td> <td> div::[display:inline-block; width:500px;] **Quaternion space** :: </td>
+</tr>
+<tr>
+<td>__Vector__</td> <td>\(v=(v_x,v_y,v_z)\)</td> <td>\(q_v=(v,0)=(v_x,v_y,v_z,0)\)</td>
+</tr>
+<tr>
+<td>__Rotation__</td> <td>\(R\) (\(3\times 3\) matrix)</td> <td>\(q=(x,y,z,w)\), \(\|q\|=1\)</td>
+</tr>
+<tr>
+<td>__Apply rotation to vector__</td> <td>\(R v\) </td> <td>\(q\;q_v\;q^{\star}\)</td>
+</tr>
+<tr>
+<td>__Rotation composition__</td> <td>\(R_1\; R_2\) </td> <td>\(q_1\;q_2\)</td>
+</tr>
+</table>
+
+
+== Rotation to Quaternion
+
+* Rotation of axis \(n\) and angle \(\theta\) \(\Rightarrow q=(n\sin(\theta/2),\cos(\theta/2))\)
+
+== Quaternion to Rotation
+
+* Unit quaternion \(q=(x,y,z,w)\) \(\Rightarrow R= \left( \begin{array}{ccc} 1-2(y ^ 2+z ^ 2) & 2 (x y - w z) & 2 (x z + w y) \\ 2 (x y + w z) & 1 - 2 (x ^ 2 + z ^ 2) & 2 (y z - w x) \\ 2 (x z - w y) & 2 (y z + w x) & 1- 2 (x ^ 2 + y ^ 2) \end{array} \right)\)
+
+::

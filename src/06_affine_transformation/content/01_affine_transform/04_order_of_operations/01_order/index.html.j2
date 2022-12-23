@@ -1,0 +1,53 @@
+= Cautions with transformations order
+
+::[font-size:95%;]
+
+::[line-height:1.3em;]
+* Take care, order of operation does matter !
+** Rotation \(r\), Translation \(t\): \(\;\;r\circ t \neq t\circ r\) \(\;\;\Rightarrow\; \mathrm{M}_1= \mathrm{T}\,\mathrm{R} \;\neq\; \mathrm{R}\,\mathrm{T} = \mathrm{M}_2\)
+
+::[height:25px;]::
+
+* Take care (2): transformation matrices applied to coordinates from right to left.
+::
+
+div::[height:100px;]::
+
+
+* \(\mathrm{M}_1=\mathrm{T}\mathrm{R}=\left(\begin{array}{c|c} 1 & t \\ \hline 0 & 1 \end{array}\right)\,\left(\begin{array}{c|c} R & 0 \\ \hline 0 & 1 \end{array}\right) = \left(\begin{array}{c|c} R & t \\ \hline 0 & 1 \end{array}\right)\)
+
+div::[height:25px;]::
+
+div::[line-height:1.3em; font-size:85%;]
+* First rotates, then translates
+::
+
+::[height:100px;]::
+
+* \(\mathrm{M}_2=\mathrm{R}\mathrm{T}=\left(\begin{array}{c|c} R & 0 \\ \hline 0 & 1 \end{array}\right)\,\left(\begin{array}{c|c} 1 & t \\ \hline 0 & 1 \end{array}\right) = \left(\begin{array}{c|c} R & \mathrm{R}\,t \\ \hline 0 & 1 \end{array}\right)\)
+
+::[height:25px;]::
+
+div::[line-height:1.3em; font-size:85%;]
+* First translates, then rotates
+** __Rotation always happens around the origin.__
+::
+
+div::[position:fixed; top:100px; right:50px;]
+img::assets/order_initial.svg[height:200px]
+::
+
+div::[position:fixed; top:350px; right:50px;]
+img::assets/order_m1.svg[height:250px]
+::
+
+div::[position:fixed; top:700px; right:50px;]
+img::assets/order_m2.svg[height:250px]
+::
+
+div::[font-size:80%; font-style:italic; color:gray; position:fixed; left:50px; bottom: 1em;]
+Beware: Some libraries (old OpenGL, Three.js) apply transformation from "left to right" using transposed matrix multiplication
+::
+
+
+::

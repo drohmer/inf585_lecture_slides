@@ -1,0 +1,43 @@
+= Rotation: Focus Euler angles
+
+**Limitations of Euler Angle**
+
+div::[font-size:90%;]
+
+div::[height:50px;]::
+
+* - __Gimbal Lock__ when composing b/w some rotations
+** __Loose one degree of freedom in specific configuration__
+
+::[height:25px;]::
+
+::[font-size:60%;]
+ex. \(R_x(\alpha)\,R_y(\pi/2)\,R_z(\gamma) = \left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & \cos(\alpha) & -\sin(\alpha) \\ 0 & \sin(\alpha) & \cos(\alpha) \end{array}\right) \left(\begin{array}{ccc} 0 & 0 & 1 \\ 0 & 1 & 0 \\ -1 & 0 & 0 \end{array}\right) \left(\begin{array}{ccc} \cos(\gamma) & -\sin(\gamma) & 0 \\ \sin(\gamma) & \cos(\gamma) & 0 \\ 0 & 0 & 1 \end{array}\right) \)
+
+::[height:25px;]::
+
+=\(\left(\begin{array}{ccc} 0 & 0 & 1 \\ \sin(\alpha)\cos(\gamma)+\cos(\alpha)\sin(\gamma) & -\sin(\alpha)\sin(\gamma)+\cos(\alpha)\cos(\gamma) & 0 \\ -\cos(\alpha)\cos(\gamma)+\sin(\alpha)\sin(\gamma) & \cos(\alpha)\sin(\gamma)+\sin(\alpha)\cos(\gamma) & 0 \end{array}\right)\) 
+
+::[height:25px;]::
+
+=\(\left(\begin{array}{ccc} 0 & 0 & 1 \\ \sin(\alpha+\gamma) & \cos(\alpha+\gamma) & 0 \\ -\cos(\alpha+\gamma) & \sin(\alpha+\gamma) & 0 \end{array}\right)\)
+** Expect 2-dof, but get 1-dof
+::
+
+div::[height:25px;]::
+
+div::[position:fixed; top:110px; left:1200px;]
+img::assets/gimbal_lock.png[]
+::
+
+div::[height:25px;]::
+
+::[width:1000px;]
+* - Interpolation of 3 angles possible but not necessarily with the simplest trajectory.
+::
+
+div::[position:fixed; top:750px; left:1200px;]
+img::assets/interpolation.jpg[width=800px]
+::
+
+::

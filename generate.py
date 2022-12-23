@@ -10,8 +10,8 @@ cache_video_directory = '../cache_video/'
 source_root_directory = 'src/'
 site_directory = '_site/'
 
-compile_all = True
-compile_dirs = ['05_facial_animation/']
+compile_all = False
+compile_dirs = ['08_volume_deformation_I/']
 
 
 

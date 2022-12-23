@@ -1,0 +1,52 @@
+= Interpolation of Quaternion - SLERP
+
+div::[font-size:90%; line-height:1.6em;]
+
+Spherical Linear interpolation (**SLERP**)
+
+* - Consider two units vectors (arbitrary dimensions) \(v_1\), \(v_2\).
+* - The __spherical linear interpolation__ at parameter \(t\in[0,1]\) is
+
+div::[height:25px;]::
+
+** \(\displaystyle v(t) = \frac{\sin ((1-t)\Omega)}{\sin(\Omega)} v_1 + \frac{\sin (t\Omega)}{\sin(\Omega)} v_2 \;\;\;\) with \(\cos(\Omega)=v_1 \cdot v_2\)
+
+
+div::[position:fixed; top:550px; left:1200px;]
+img::assets/slerp.svg[width:600px;]
+::
+
+div::[height:75px;]::
+
+
+
+div::[font-size:80%;]
+
+div::[line-height:1.2em;]
+
+__Demonstration__
+
+div::[height:25px;]::
+
+* Consider
+** - Two unit vectors (arbitrary dimensions) \(v_1\), \(v_2\).
+** - \(\Omega\): angle b/w  \(v_1\) and \(v_2\)
+** - The interpolated vector \(v\) at angle \(\theta=\Omega t\), \(t\in[0,1]\).
+
+div::[height:25px;]::
+
+* \(v=v_1\cos(\theta)+v_1^{\perp}\sin(\theta)\), and \(v_1^{\perp}=\frac{v_2-\cos(\Omega)\,v_1}{\sin(\Omega)}\)
+
+div::[height:25px;]::
+
+* \(\Rightarrow v =  \left(\frac{\sin(\Omega)\,\cos(\theta)-\cos(\Omega)\,\sin(\theta)}{\sin(\Omega)}\right)v_1+\frac{\sin(\theta)}{\sin(\Omega)}v_2 \)
+
+div::[height:25px;]::
+
+* \(\Rightarrow v = \frac{\sin(\Omega-\theta)}{\sin(\Omega)} v_1 + \frac{\sin(\theta)}{\sin(\Omega)} v_2\)
+
+::
+
+::
+
+::

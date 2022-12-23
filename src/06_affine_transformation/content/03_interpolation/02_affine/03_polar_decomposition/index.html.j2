@@ -1,0 +1,48 @@
+div::[font-size:90%;] 
+= Handling affine transformation : Polar Decomposition 
+::
+
+div::[line-height:1.3em; font-size:85%;]
+div::[width:1000px;]
+* Key-pose transforms are often given as \(4\times 4\) matrices.
+* How can we interpolate b/w affine transforms?
+::[font-size:85%; line-height:1.3em;]
+** - Splitting linear \(\mathrm{M}\)/translation part is easy.
+** - __Problem__: interpolating the linear part \(\mathrm{M}\) 
+*** mixes rotation, scaling, shearing
+::
+
+div::[height:25px;]::
+
+* \(\Rightarrow\) Split \(\mathrm{M}\) into: rotation part, and scaling/shearing.
+::[font-size:85%; line-height:1.3em;]
+** - Interpolate rotation with quaternion (ex. SLERP/LERP) 
+** - Scaling/shearing using componentwise interpolation (ex. linear).
+::
+
+
+div::[height:25px;]::
+
+* - Polar decomposition: \(\mathrm{M} = \mathrm{R}\;\mathrm{D}\)
+** - \(\mathrm{R}\): Rotation matrix
+** - \(\mathrm{D}\): Positive semi-definite matrix
+* ::(.ref) link::http://research.cs.wisc.edu/graphics/Courses/838-s2002/Papers/polar-decomp.pdf[K. Shoemake and T. Duff, Matrix Animation and Polar Decomposition. Graphics Interface 92.] ::
+
+
+div::[height:25px;]::
+
+* - Polar decomposition is obtained from SVD
+** \(\mathrm{SVD}(\mathrm{M}) = W \Sigma \, V^{T}\) with <div class="border">\(\mathrm{R}=\mathrm{W}\mathrm{V}^T\)</div>, \(\;\;\mathrm{D}=\mathrm{V} \Sigma \mathrm{V}^T\)
+
+* - Or numerically, \(\mathrm{R}\) can be computed using the following iterative scheme
+**  <div class="border">\(R_0 = \mathrm{M}\,,\; R _ {i+1}=0.5 \, (R _ i+(R_i^{-1}) ^ {T})\)</div>
+
+::
+
+
+
+div::[position:fixed; top:130px; left:1150px;]
+img::assets/linear.png[width:700px]
+img::assets/polar.png[width:700px]
+::
+::

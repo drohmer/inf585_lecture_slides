@@ -1,0 +1,43 @@
+
+= Interpolating rigid motion
+
+div::[line-height:1.2em; font-size:85%; ]
+3D objects have orientation \(r\) and position \(p\).
+* \(\Rightarrow\) Need to interpolate both, usually handled separately.
+
+div::[height:25px;]::
+
+div::[width:1000px;]
+Given two key-positions \((p_1,r_1)\) and \((p_2,r_2)\) __in-betweens__ computed at time \(t\in[0,1]\) as
+
+
+* - Linear interpolation of positions \(p(t) = (1-t)\, p_1 + t\, p_2\)
+
+
+* - Interpolate rotation with SLERP on quaternions 
+
+
+div::[margin-left:30px;]
+** - Convert \((r_1,r_2) \to (q_1,q_2)\)
+** - Compute \(q(t) = SLERP(q_1,q_2,t)\)
+** - Convert back \(q(t) \to r(t)\)
+::
+
+::
+
+div::[height:25px;]::
+
+img::assets/rigid.png[width:520px]
+
+div::[position:fixed; top:550px; left:800px;]
+img::assets/slerp_01.png[height:450px]
+img::assets/slerp_02.png[height:450px]
+img::assets/slerp_03.png[height:450px]
+::
+
+
+div::[position:fixed; top:50px; left:1375px;]
+<iframe style="overflow:hidden; border:0; width:480px; height:750px;" frameBorder="0" scrolling="no" src="data/slerp/index.html"></iframe>
+::
+
+::
