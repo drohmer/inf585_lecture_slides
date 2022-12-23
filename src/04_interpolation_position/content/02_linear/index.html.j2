@@ -1,0 +1,38 @@
+
+
+= Linear Interpolation
+
+* - Simplest solution: linear interpolation between each sample pairs \((p_i,p_{i+1})\)
+
+div::[height:25px;]::
+
+* - \(\forall t\in[t_i,t_{i+1}]\,,\;\; \left\{\begin{array}{l} p(t)=(1-\alpha(t))\,p_i+\alpha(t)\,p_{i+1} \\ \displaystyle \alpha(t)=\frac{t-t_i}{t_{i+1}-t_i} \end{array} \right. \)
+
+
+
+div::[height:25px;]::
+
+div::[position:fixed; top:250px; left:1200px;]
+videoplay::assets/linear_interpolation.mp4[width:650px;]
+::
+
+div::[height:50px;]::
+
+div::[line-height:1.6em;]
+
+Pros
+
+* - Simple
+* - Constant speed between keyframes
+** __Easy to ajust__
+
+::[height:25px;]::
+
+Cons
+
+* - Non smooth trajectory
+* - Generates straight segments
+** __Artists prefer non straight trajectories for "real" looking motion__
+
+::
+

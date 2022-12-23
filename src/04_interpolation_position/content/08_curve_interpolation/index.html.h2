@@ -1,0 +1,28 @@
+
+
+= Cardinal Spline
+
+* Our initial problem: set of multiple keyframes position+time
+
+div::[height:25px;]::
+
+div::[line-height:1.6em;]
+* Two solutions
+* - **Hermite representation**: Set explicitely derivatives for each keyframe - can be __teadious__.
+* - **Cardinal Spline**: Compute automatically plausible derivatives from surrounding samples (finite differences)
+::
+
+
+div::[height:50px;]::
+
+* Set \(\displaystyle d_i=\mu\; \frac{p_{i+1}-p_{i-1} }{t_{i+1}-t_{i-1}}\) 
+
+::[height:25px;]::
+
+** - \(\mu\) curve tension \(\in[0,2]\)
+** - \(\mu=1\) commonly used 
+*** __Called: Catmull Rom Spline__
+
+div::[position:fixed; left:800px; top:500px;]
+img::assets/tension.png[width:950px]
+::

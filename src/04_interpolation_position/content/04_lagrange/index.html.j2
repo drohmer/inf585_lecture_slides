@@ -1,0 +1,34 @@
+
+
+= Lagrange polynomial interpolation
+
+== Naive idea: Interpolate all points at once
+
+* \(\forall t\in[t_0,t_{N-1}]\;,\;\;\displaystyle p(t)=\sum_{i=0}^{N-1} \alpha_i(t)\;p_i\) div::[display:inline-block;width:50px;]::  \(\forall i\in[0,N-1]\;\; p(t_i)=p_i\)
+
+* Degree of polynomial : \(N-1\)
+
+div::[height:25px;]::
+
+* - Known solution: **Lagrange polynomial**
+
+div::[height:25px;]::
+
+** \(\displaystyle p(t)=\sum_{i=0}^{N-1} \alpha_i(t)\;p_i\) div::[display:inline-block;width:100px;]:: \(\displaystyle \alpha_i(t) = \prod_{k=0, k\neq i}^{N-1} \frac{t-t_k}{t_i-t_k}\)
+
+div::[height:25px;]::
+
+* - Explanation: By construction \(\alpha_i(t_i)=1\) and \(\alpha_i(t_k)=0\)
+
+div::[height:25px;]::
+
+div::[line-height:1.4em; font-size:90%;]
+
+* span::[color:green] (+) Interpolate all points ::
+* span::[color:red] (-) Large oscillations between samples for large degree. ::
+* span::[color:red] (-) Non local influence ::
+
+div::[height:25px;]::
+
+** => Not used in practice
+::

@@ -1,0 +1,44 @@
+
+
+= Hermite interpolation
+
+div::[font-size:90%; line-height:1.4em;]
+Hermite interpolation : cubic curve interpolating points and derivatives at extremities
+
+<br> <br>
+
+Consider the following constraints <br>
+
+div::[height:25px;]::
+
+\(\left\{\begin{array}{l} p(s) = c_3 s^3 + c_2 s^2 +c_1 s +c_0 \\ p(0)=p_0, \; p(1)=p_1, \;p'(0)=d_0, \;p'(1)=d_1\end{array}\right.\)
+
+
+<br> <br>
+
+\(\Rightarrow\) System of equations <br> <br>
+
+div::[font-size:85%;]
+
+\(\left\{\begin{array}{rrrr} &&& c_0 & = p_0 \\ c_3\,+& c_2\,+& c_1\,+& c_0 & = p_1 \\ && c_1\;\;\;\,&& = d_0 \\ 3\, c_3\, +& 2\, c_2\, + & c_1\,\;\;\;&& = d_1 \\ \end{array} \right.\)
+div::[display:inline-block;width:50px;]:: \(\Rightarrow\) div::[display:inline-block;width:50px;]::
+\(\left\{\begin{array}{llll} c_0=p_0 \\ c_1=d_0 \\ c_2 = -3 p_0 +3 p_1 -2 d_0 - d_1 \\ c_3 = 2 p_0 -2 p_1 + d_0 + d_1 \end{array}\right.\)
+
+::
+
+<br> <br>
+
+* \(\forall s\in[0,1]\;,\;\; p(s) = (2s^3-3s^2+1) \; p_0 + (s^3-2s^2+s) \; d_0 + (-2s^3+3s^2) \; p_1 +(s^3-s^2) \; d_1\)
+
+<br>
+
+* For arbitrary \(t\in[t_i,t_{i+1}]\), we set \(\displaystyle s=\frac{t-t_i}{t_{i+1}-t_i}\)
+
+div::[position:fixed;top:200px;left:1400px]
+img::assets/hermite_no_curve.svg[]
+::
+
+div::[position:fixed;top:500px;left:1400px]
+img::assets/hermite.svg[]
+::
+::

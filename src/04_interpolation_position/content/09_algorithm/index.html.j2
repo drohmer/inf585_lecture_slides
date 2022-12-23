@@ -1,0 +1,35 @@
+
+
+= Wrap-up Algorithm
+
+div::[height:50px;]::
+
+div::[font-size:85%; line-height:1.3em;]
+
+
+* Compute \(p(t)\) as a cubic spline interpolation
+
+** - Given keyframes \((p_i,t_i)_{i\in[0,N-1]}\)
+** - Given time \(t\in[t_1,t_{N-2}]\)
+
+div::[height:75px;]::
+
+* 1. Find \(i\) such that \(t\in[t_{i},t_{i+1}]\)
+
+div::[height:50px;]::
+
+* 2. Compute \(\;\;\displaystyle d_i=\mu\,\frac{p_{i+1}-p_{i-1}}{t_{i+1}-t_{i-1}}\), and   \(\displaystyle d_{i+1}=\mu\,\frac{p_{i+2}-p_{i}}{t_{i+2}-t_{i}}\)
+
+
+div::[height:50px;]::
+
+* 3. Compute \(\;\;p(t) = (2s^3-3s^2+1) \, p_i + (s^3-2s^2+s) \, d_i +(-2s^3 +3s^2)\, p_{i+1}+(s^3-s^2)\,d_{i+1}\) 
+
+** with \(\displaystyle s=\frac{t-t_{i}}{t_{i+1}-t_i}\).
+
+div::[position:fixed;top:50px;left:1350px;]
+videoplay::assets/cubic.mp4[width:500px]
+::
+
+
+::

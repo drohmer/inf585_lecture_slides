@@ -1,0 +1,24 @@
+
+
+= Limitation of cubic curve interpolation
+
+div::[height:50px;]::
+
+* - Only \(C^1\), but not \(C^2\) at junctions : Curvature/acceleration discontinuity
+
+div::[height:25px;]::
+
+** - __Force \(C^2\) continuity for cubic polynomial (global linear system to solve - loose local structure)__
+** - __Consider higher degree polynomial__
+
+div::[height:50px;]::
+
+* - Non constant speed along each polynomial
+
+div::[height:25px;]::
+
+** - __Reparametrization with curvilinear length__
+
+div::[margin-top:50px; text-align:center;]
+img::assets/resampling.png[]
+::
