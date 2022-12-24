@@ -1,0 +1,25 @@
+
+
+= Rigid body kinematics
+
+== Similarily to particles
+* - Position of the com: \(p(t)\)
+* - Velocity of the com: \(v(t)=p'(t)\) 
+** __Linear Momentum__: <div class="border">\(P(t) = m\,v(t)\)</div> span::[color:gray;] \(\displaystyle \;\;\left(= \int_{\Omega} \rho\,v_i(t)\;\mathrm{d}\Omega) \right)\) ::
+
+div::[height:50px;]::
+
+== Specific to rigid body
+* - Orientation of the body: \(\mathrm{R}(t)\in\mathbb{R}^{3\times 3}\)
+* - Angular velocity of the body: \(\omega(t)\) such that \(\hat \omega = \mathrm{R}'(t) \, \mathrm{R}^T(t)\)
+** __Angular Momentum__: <div class="border">\(L(t)=\mathrm{I}(t)\,\omega(t)\)</div>
+div::[line-height:1.3em; margin-top:25px; color:gray; font-size:85%;]
+*** with \(\mathrm{I}(t)\): Inertia tensor
+**** \(\displaystyle \mathrm{I}(t)=\mathrm{R}(t)\,\mathrm{I}_0\,\mathrm{R}^T(t) \)
+**** \(\displaystyle \mathrm{I}_0=\int_{r\in\Omega} \rho(r)\,(r^T\,r\,\mathrm{I}_d-r\,r^T)\,\mathrm{d}\Omega \)
+::
+
+div::[position:fixed; top:800px; right:75px; font-size:90%;]
+* Mass: resistance to change of speed (of the com)
+* Inertia: resistance to change of angular speed
+::

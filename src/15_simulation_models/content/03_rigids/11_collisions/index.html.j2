@@ -1,0 +1,33 @@
+
+
+= Collisions in rigid bodies
+
+div::[height:50px;]::
+
+* Collisions at position \(p\) change both linear and angular velocity
+* Use of impulse (sudden change of velocity) \(J\).
+** \(J=\int_{t_0}^{t_0+\Delta t}\,F(t)\mathrm{d}t \)
+* Impulse split into 
+** - __Force impulse__ \(\Delta P=m\,\Delta v=J\)
+** - __Torque impulse__ \(\Delta L=I\,\Delta \omega=(p-p_{com})\times J\)
+
+div::[height:50px;]::
+
+
+* Elastic collision between two solids at position \(p_i\):
+** \(J=j\,n\), \(n\): normal of the separating planes
+** \(j=(v_1(p_i)-v_2(p_i))\cdot n / K\)
+** \(K=1/m_1+1/m_2+n\cdot\left( I_1^{-1} (r_1 \times n) \times r_1 + I_2^{-1} (r_2 \times n) \times r_2\right)\)
+
+
+div::[position:fixed; bottom:100px;]
+* More details link::https://www.cs.cmu.edu/~baraff/sigcourse/[[D. Barff. Physically Based Modeling. SIGGRAPH Course Notes 1999]]
+::
+
+div::[position:fixed; top:100px; left:1400px;]
+img::assets/collision.svg[width:350px;]
+::
+
+div::[position:fixed;top:600px; left:1450px;]
+img::assets/collisions.jpg[width:400px;]
+::

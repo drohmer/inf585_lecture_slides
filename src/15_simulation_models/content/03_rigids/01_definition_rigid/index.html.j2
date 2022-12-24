@@ -1,0 +1,29 @@
+
+
+= Rigid body description
+
+* - Solid defined within a domain \(\Omega\subset \mathbb{R}^3\)
+
+* - With a density of mass \(\rho(p_i)\) at each point \(p_i\in\Omega\)
+
+div::[height:50px;]::
+
+* - Total mass of the solid \(m\)
+** \(\displaystyle m=\int_{p_i\in\Omega} \rho(p_i)\,\mathrm{d}\Omega\)
+
+div::[height:50px;]::
+
+* - Position of the center of mass (com) \(p\) 
+** \(\displaystyle p=\frac{1}{m}\int_{p_i\in\Omega}\,\rho(p_i)\,p_i\;\mathrm{d}\Omega\)
+
+div::[height:50px;]::
+
+* - Relative position of a position \(p_i\) with respect to com
+** \(r = p_i-p\)
+
+
+
+
+div::[position:fixed; top:250px; left:1200px;]
+img::assets/body.svg[width:550px;]
+::

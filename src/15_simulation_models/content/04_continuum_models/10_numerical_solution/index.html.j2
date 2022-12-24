@@ -1,0 +1,46 @@
+
+= Numerical solutions
+
+div::[font-size:85%; line-height:1.4em;]
+* Lagrangian and Euler description leads to PDE (Partial Differential Equations)
+** In general: no explicit solutions \(\Rightarrow\) approximate numerical solution
+
+div::[height:25px;]::
+
+* **Finite Differences** (FD)
+
+** - Discretize in space on a grid \(\Delta x\) and time \(\Delta t\)
+** - Use numerical approximation of derivatives using masks in space and time
+
+div::[margin-left:75px; line-height:1.4em;]
+* (+) Very general, simple to setup
+* (+) Works well with rectangular grid (ex. Euler description)
+* (-) Difficult to handle shape boundaries
+* (-) Instabilities
+::
+
+
+div::[height:25px;]::
+
+* **Finite elements method** (FEM)
+
+** - Discretize the shape into simple elements. Build continuous function on each element.
+*** In CG: Elements are tetrahedron (in volume). Continuous function are barycentric coordinates (linear interpolation functions).
+** - Integrate PDE over each element (weak formulation), leads to a linear system
+
+div::[margin-left:75px; line-height:1.4em;]
+* (+) Handle boundaries (ex. Deforming solid)
+* (+) Guarantee on accuracy
+* (-) Complex to set up, and computationally heavy
+* (-) Requires good quality meshing
+::
+
+::
+
+div::[position:fixed; top:200px; left:1300px;]
+img::assets/finite_difference.gif[width:500px;]
+::
+
+div::[position:fixed; top:800px; left:1350px;]
+img::assets/nesme.png[width:400px;]
+::

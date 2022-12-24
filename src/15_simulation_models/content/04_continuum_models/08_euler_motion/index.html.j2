@@ -1,0 +1,25 @@
+
+= Equation of motion for a fluid
+
+* - Fundamental principle of dynamics on linear momentum
+
+** \(\displaystyle \rho\frac{\mathrm{d}u}{\mathrm{d}t}=F+\mathrm{div}(\sigma)\)
+** \(\Rightarrow \displaystyle \rho\,\frac{\partial u}{\partial t}=F+\mathrm{div}(\sigma)-\rho \, (u\cdot \nabla) u\). span::[display:inline-block; width:50px;] :: The term \((u\cdot \nabla) u\) is called __advection__.
+
+div::[height:50px;]::
+
+* - External force: weight \(F=\rho\,g\)
+
+* - Stress decomposed into
+** \(\sigma=\sigma_{viscous}+\sigma_{pressure}\)
+** \(\sigma_{pressure}=-p\,\mathrm{Id}\)  __(pressure acts along normal of surface elements)__
+
+
+div::[height:50px;]::
+
+* \(\displaystyle \rho\,\frac{\partial u}{\partial t}=\rho\,g-\rho\, u\cdot\nabla u+\mathrm{div}\left(\sigma_{viscous}-p\,\mathrm{Id}\right)\)
+
+div::[height:25px;]::
+
+* \(\Rightarrow \displaystyle \rho\,\frac{\partial u}{\partial t}=\rho\,g-\rho\, u\cdot\nabla u-\nabla p+\mathrm{div}\left(\sigma_{viscous}\right)\)
+

@@ -1,0 +1,21 @@
+
+= Deformation the Lagrangian description
+
+* Deformation map \(\varphi:\mathbb{R}^3\to\mathbb{R}^3\) such that \(p=\varphi(P)\)
+** \(P\) position in the reference undeformed shape
+** \(p\) position in the deformed configuration.
+
+div::[height:50px;]::
+
+* **Deformation Gradient** \(F\)
+
+div::[height:25px;]::
+
+** - \(\displaystyle F(P)=\frac{\partial \varphi}{\partial P}(P)=\frac{\partial p}{\partial P}\in\mathbb{R}^{3\times 3}\)
+** - Characterizes the local deformation associated to \(\varphi\)
+*** Position \(P+\mathrm{d}P\) is mapped into \(\displaystyle \varphi(P+\mathrm{d}P)\simeq p+\frac{\partial \varphi}{\partial P}\,\mathrm{d}P\)
+** - \(\displaystyle F(P)=\left(\begin{array}{ccc}\frac{\partial \varphi_x}{\partial X} & \frac{\partial \varphi_x}{\partial Y} & \frac{\partial \varphi_x}{\partial Z} \\ \frac{\partial \varphi_y}{\partial X} & \frac{\partial \varphi_y}{\partial Y} & \frac{\partial \varphi_y}{\partial Z} \\ \frac{\partial \varphi_z}{\partial X} & \frac{\partial \varphi_z}{\partial Y} & \frac{\partial \varphi_z}{\partial Z} \end{array}\right)\)
+
+div::[position:fixed; top:200px;left:1100px;]
+img::assets/lagrange_description.svg[width:700px;]
+::

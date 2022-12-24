@@ -1,0 +1,46 @@
+
+
+= Rigid solid dynamics in practice
+
+* **1. Initial condition**
+** - \(p(t_0)\), \(v(t_0)\), \(\mathrm{R}(t_0)\), \(\omega(t_0)\) given as initial condition
+** - Precompute \(I_0=I(t_0)\)
+** - Compute \(L(t_0) = I_0\;\omega(t_0)\)
+
+div::[height:50px;]::
+
+* **2. Temporal Evolution**
+
+* Iterate over time \(t_k\)
+** - Compute total force \(F(t_k)\) and torque \(\tau(t_k)\) 
+** - Compute \(I(t_k)=\mathrm{R}(t_k)\,I_0\,\mathrm{R}^T(t_k)\)
+** - Compute \(\omega(t_k)= I(t_k)^{-1}\,L(t_k)\)
+
+div::[height:25px;]::
+
+** - Numerical integration updating state vector
+*** \(\rightarrow\) \((p(t_{k+1}), P(t_{k+1}), \mathrm{R}(t_{k+1}), L(t_{k+1}))\)
+
+div::[height:25px;]::
+
+div::[color:gray;]
+** - __Handle collision__
+::
+
+div::[position:fixed; top:550px; left:1100px;]
+\(\displaystyle \left(\begin{array}{c}p'(t) \\ P'(t) \\ \mathrm{R}'(t) \\ L'(t) \end{array}\right)=\left(\begin{array}{c}v(t) \\ F(t) \\ \hat \omega(t)\,\,\mathrm{R}(t) \\ \tau(t) \end{array}\right)\)
+
+div::[font-size:85%; margin-top:25px; line-height:1.4em;]
+* \(I(t)=\mathrm{R}(t)\,I_0\,\mathrm{R}^T(t)\)
+* \(L(t)=I(t)\,\omega(t)\)
+* \(P(t)=m\,v(t)\)
+::
+
+::
+
+
+
+div::[position:fixed; top:100px; left:1300px;]
+img::assets/cereals.png[width:450px;]
+::
+

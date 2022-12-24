@@ -1,0 +1,29 @@
+
+= Strain
+
+
+* Deformation gradient \(F\) describe both
+** - Rigid transformation (rotation) - not related to material effort
+** - Any other deformation inducing local length change - related to material effort
+
+
+div::[height:50px;]::
+
+* **Strain** \(\epsilon\) is a measure of deformation ignoring rigid transformation.
+
+div::[height:25px;]::
+
+* Several possible measure of strain
+** - Green strain tensor \(\epsilon=\frac{1}{2}\,(F\,F^T-\mathrm{Id})\)
+*** __(+) If \(\varphi\) is a rotation \(F=R\) \(\Rightarrow\) \(\epsilon=0\)__
+*** __(-) Non linear in \(p\)__
+
+div::[height:25px;]::
+
+** - Linearized Cauchy strain \(\epsilon=\frac{1}{2} (F^T+F)-\mathrm{Id}\)
+*** __Used for small deformations__
+
+div::[position:fixed; top:500px; left:1100px;]
+img::assets/strain.png[width:700px]
+::
+

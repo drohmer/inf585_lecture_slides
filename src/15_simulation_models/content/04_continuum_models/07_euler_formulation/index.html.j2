@@ -1,0 +1,37 @@
+
+= Euler formulation
+
+
+
+* In Euler formulation quantities are expressed at fixed position in 3D space.
+div::[line-height:1.6em;]
+* Deformation described by velocity \(u(p,t)\) at a given 3D fixed point \(p=(x,y,z)\) at time \(t\). 
+div::[font-size:85%; line-height:1.3em;]
+** - Do not require anymore a reference shape
+** - Usefull for heavily deforming shapes (ex. fluids, gaz).
+::
+::
+
+div::[height:50px;]::
+
+* - Change of speed during \(\mathrm{d}t\)
+** \(\displaystyle \frac{\mathrm{d}u}{\mathrm{d}t}(p,t)=\frac{\partial u}{\partial t}+\sum_i \frac{\partial u}{\partial p_i}\,\underbrace{\frac{\mathrm{d}p_i}{\mathrm{d}t}}_{u_i} = \frac{\partial u}{\partial t}+ (u\cdot \nabla) u\)
+** Called __material derivative__.
+
+div::[height:50px;]::
+
+* - Similarily to Lagrangian derivation:
+div::[font-size:85%; line-height:1.3em;]
+** - Strain-rate tensor \(\epsilon\) (rate of change of deformation in a neighborhood of a point) 
+*** expressed with respect to \(u\): \(\epsilon=\frac{1}{2}\left(\nabla u+\nabla u^T\right)\)
+** - Stress-rate tensor \(\sigma\) (rate of change of direction force per area in a neighborhood of a point).
+::
+div::[height:25px;]::
+
+
+
+div::[position:fixed; top:350px; left:1400px;]
+img::assets/euler.svg[width:350px]
+::
+
+

@@ -1,0 +1,24 @@
+
+= Dynamics: Forces and torques on a solid
+
+* - Given a local force \(f(p_i)\) acting on a position \(p_i\in\Omega\)
+* - Contribute to 2 global components applied on the body:
+
+div::[height:25px;]::
+
+** - Total **net force** \(F\) applied on the shape
+*** __Induce change of linear momentum (a displacement of COM)__
+*** <div class="border">\(\displaystyle F=\int_{p_i\in\Omega} f(p_i)\,\mathrm{d}\Omega\)</div>
+
+div::[height:50px;]::
+
+** - **Torque** \(\tau\) applied on the body 
+*** __Induce change of angular momentum (spin of the solid)__
+
+*** <div class="border">\(\displaystyle \tau=\int_{p_i\in\Omega} (p_i-p)\times f(p_i)\,\mathrm{d}\Omega\)</div>
+
+
+
+div::[position:fixed; top:500px; left:1150px;]
+img::assets/body.svg[width:700px;]
+::

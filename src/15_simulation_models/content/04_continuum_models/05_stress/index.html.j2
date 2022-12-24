@@ -1,0 +1,35 @@
+
+= Stress
+
+
+
+div::[width:1300px;]
+
+* **Stress** \(\;\sigma\in\mathbb{R}^{3 \times 3}\) describes internal forces (per area unit) induced by the local deformation (strain) in any direction
+* **Constitutive Relation**: Relation between stress and strain, characterize a type of material. 
+
+div::[height:50px;]::
+
+* For linear constitutive relation:
+** \(\displaystyle \sigma_{ij}=\sum_{k,l} C_{ijkl}\,\epsilon_{kl}\;\;\), \(\;C\): stiffness tensor (81 coefficients)
+
+* Strain energy/elastic potential energy: span::[font-size:75%;] \(\displaystyle U= \frac{1}{2} \sum_{i,j,k,l} \sigma_{ij}(\epsilon) \epsilon_{kl} = \frac{1}{2}\sum_{i,j,k,l}C_{ijkl}\,\epsilon_{ij}\,\epsilon_{kl}\) ::
+
+div::[height:25px;]::
+
+div::[font-size:85%; line-height:1.5em;]
+* For homogeneous isotropic elastic material, constitutive relation simplifies to
+** \(\sigma = 2\mu\,\epsilon + \lambda \mathrm{tr}(\epsilon)\,\mathrm{Id}\), \((\mu,\lambda)\): Lamé parameters
+** Related to common mechanical modulus : Young' modulus \(Y\) and Poisson's ratio \(\nu\) 
+*** \(\mu=\frac{Y}{2(1+\nu)}\), \(\lambda=\frac{Y\nu}{(1+\nu)(1-2\nu)}\)
+::
+::
+
+div::[position:fixed; top:100px; left:1400px;]
+img::assets/stress.svg[width:450px]
+::
+
+div::[position:fixed; top:600px; left:1500px;]
+img::assets/poisson_young_modulus.svg[width:250px]
+::
+

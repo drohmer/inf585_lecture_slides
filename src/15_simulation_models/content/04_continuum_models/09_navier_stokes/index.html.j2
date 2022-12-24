@@ -1,0 +1,32 @@
+
+= Navier-Stokes equation
+
+
+* - Isotropic Newtonian fluid \(\Rightarrow \) Linear (scalar) relation between strain-rate \(\epsilon\) and stress-rate \(\sigma_{viscous}\)
+** - \(\sigma_{viscous}=2\mu\,\epsilon = \mu\left(\nabla u+\nabla u^{T}\right)\), \(\mu\) constant viscosity parameter
+* - Incompressible fluid \(\Rightarrow \) \(\mathrm{div}(u)=0\)
+
+div::[height:50px;]::
+
+* **Equation of motion**
+
+* \(\Rightarrow \displaystyle \rho\,\frac{\partial u}{\partial t}=\rho\,g-\rho \,u\cdot\nabla u-\nabla p+\mathrm{div}\left(\mu\left(\nabla u+\nabla u^{T}\right)\right)\)
+
+div::[height:25px;]::
+
+div::[line-height:1.4em;]
+** - Noting that \(\mathrm{div}(\nabla u^{T})=\nabla \, \mathrm{div}(u) = 0\)
+** - And \(\mathrm{div}(\nabla u)=\triangle u\)
+** - Set \(\nu=\mu/\rho\)
+::
+
+
+div::[height:25px;]::
+
+div::[display:inline-block; border-width:3px; border-color:red; border-style:solid;padding:10px;]
+* \(\Rightarrow \displaystyle \frac{\partial u}{\partial t}=g-(u\cdot\nabla) u-\frac{1}{\rho}\nabla p+\nu\triangle u\)
+::
+
+div::[height:25px;]::
+
+** Navier-Stokes equation for incompressible Newtonian fluid.

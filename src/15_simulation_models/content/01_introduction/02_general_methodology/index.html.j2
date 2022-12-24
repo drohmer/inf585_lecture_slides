@@ -1,0 +1,40 @@
+
+
+= General methodology
+
+
+
+* **1. Description of the system** 
+div::[font-size:85%; line-height:1.3em;]
+** __Describe system by some parameters (positions, speed, orientation, etc).__
+** - State of the system is known at time \(t=0\) - __Initial value problem in time__
+** - State of the system may be constrained in space - __Boundary value problem in space__
+::
+
+
+div::[height:25px;]::
+
+* **2. Evolution** 
+div::[font-size:85%; line-height:1.3em;]
+** __Link the evolution of the system to forces or constraints using dynamic principles and conservation laws__
+** \(\Rightarrow\) Differential equation
+::
+
+div::[height:25px;]::
+
+* **3. Numerical Solution** 
+div::[font-size:85%; line-height:1.3em;]
+** __Solve the differential equation using numerical iterative approaches.__
+
+
+div::[height:50px;]::
+
+
+* __Note:__ Fundamentally different that direct approach controling the trajectories at key-frames
+** - The system is set at an initial step
+** - We let the numerical solution build the space-time trajectory for us
+
+** (+) Allows to model complex behavior
+** (-) Lack of control on the result
+::
+

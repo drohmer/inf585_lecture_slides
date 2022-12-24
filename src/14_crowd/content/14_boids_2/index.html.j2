@@ -1,0 +1,38 @@
+
+
+= Boids Model - Basic model.
+
+div::[font-size:85%; line-height:1.3em;]
+
+* - Set random initial position/speed to \(N\) particles.
+
+div::[height:50px;]::
+
+* - Set attraction/repulsion force depending on pairwise distances
+div::[height:25px;]::
+** \(\displaystyle F(p_i)=\sum_j f(\|p_j-p_i\|) \frac{p_j-p_i}{\|p_j-p_i\|} \)
+div::[height:25px;]::
+
+** __Example__
+*** - Inverse of distance \(\displaystyle f(x) = \frac{\alpha_1}{x^2}-\frac{\alpha_2}{x^4}\)
+*** - Exponential/Gaussian \(\displaystyle f(x) = \alpha_1 \exp\left(-k\left(\frac{x-x_0}{x_0}\right)^2\right)-\alpha_2 \exp\left(\frac{x}{x_0}\right) \)
+
+div::[height:50px;]::
+
+* - Integrate position and speed through time
+
+div::[height:25px;]::
+
+** \(v^{t+\Delta t}(p_i)=v^{t}(p_i)+\Delta t\;F(p_i^t)\)
+** \(p^{t+\Delta t}(p_i)=p^{t}(p_i)+\Delta t\;v^{t+\Delta t}(p_i)\)
+
+
+div::[position:fixed; top:150px; left:1400px;]
+img::assets/distance_inverse.svg[width:400px;]
+::
+
+div::[position:fixed; top:500px; left:1400px;]
+img::assets/distance_exponential.svg[width:400px;]
+::
+
+::

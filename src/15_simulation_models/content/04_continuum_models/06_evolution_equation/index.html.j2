@@ -1,0 +1,33 @@
+
+= Evolution equation
+
+div::[font-size:85% line-height:1.3em;]
+
+* Fundamental principle of dynamics in the entire volume \(\Omega\)
+* Change of momentum = External forces (in volume) + Traction (stress applied on exterior surface normals)
+
+div::[height:25px;]::
+
+* \(\Rightarrow \displaystyle \underbrace{\int_{\Omega} \rho\,\,p''(t)\,\mathrm{d}\Omega}_{\scriptsize{Change \; of \; momentum}} = \underbrace{\int_{\Omega} F(t)\,\mathrm{d}\Omega}_{\scriptsize{External\; forces}}+\underbrace{\int_{\partial \Omega}\,\sigma\,n\,\mathrm{d}S}_{\scriptsize{Traction\; force\; on\; the\; boundary}}\)
+
+div::[height:25px;]::
+
+* Using divergence theorem \(\displaystyle \int_{\partial \Omega} \sigma\,n\,\mathrm{d}S=\int_{\Omega}\,div(\sigma)\,\mathrm{d}\Omega\)
+
+div::[height:50px;]::
+
+* Equation in volume satisfied at each position \(p\in\Omega\)
+
+div::[display:flex; justify-content:center; align-items:center; font-size:90%;]
+div::[display:inline-block; border-width:3px; border-color:red; border-style:solid;padding:10px;]
+\(\rho\;p''(t) = F(t)+div(\sigma(t))\)  
+::
+div::[]
+* \(\sigma=\left(\begin{array}{c}\sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\ \sigma_{yx} & \sigma_{yy} & \sigma_{yz} \\ \sigma_{zx} & \sigma_{zy} & \sigma_{zz} \end{array} \right)\)
+::
+div::[]
+* \(div(\sigma)=\left(\begin{array}{c}\frac{\partial \sigma_{xx}}{\partial x}+\frac{\partial \sigma_{yx}}{\partial y}+\frac{\partial \sigma_{zx}}{\partial z} \\ \frac{\partial \sigma_{xy}}{\partial x}+\frac{\partial \sigma_{yy}}{\partial y}+\frac{\partial \sigma_{zy}}{\partial z} \\ \frac{\partial \sigma_{xz}}{\partial x}+\frac{\partial \sigma_{yz}}{\partial y}+\frac{\partial \sigma_{zz}}{\partial z} \end{array} \right)\)
+::
+::
+
+::

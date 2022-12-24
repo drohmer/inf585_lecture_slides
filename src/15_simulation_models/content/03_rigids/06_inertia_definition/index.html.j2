@@ -1,0 +1,19 @@
+= Inertia tensor properties
+
+div::[height:25px;]::
+
+* \(\displaystyle I = \int_{r\in\Omega}\,\rho(r) \left(\begin{array}{ccc} r_y^2+r_z^2 & -r_x r_y & -r_x r_z \\ -r_x r_y & r_x^2+r_z^2 & -r_y r_z \\ -r_x r_z & -r_y r_z & r_x^2+r_y^2 \end{array}\right)\,\mathrm{d}\Omega \;\; = \;\; \int_{r\in\Omega} \rho(r)\,(r^T r\;\mathrm{Id}-r\,r^T)\,\mathrm{d}\Omega\)
+
+div::[height:75px;]::
+
+* - \(I\) is usually expressed at the center of mass \(p\)
+
+div::[height:25px;]::
+
+* - \(I\) depends on the body orientation. Given a rotation \(\mathrm{R}\): \(I=\mathrm{R}\,I_0\,\mathrm{R}^{T}\)
+** \(\Rightarrow\) compute once \(I_0\) in a rest position, then update it using \(\mathrm{R}\)
+
+div::[height:25px;]::
+
+* - There exist a frame in which \(I\) is diagonal (principle axes of inertia). 
+** __Corresponds to eigenvectors of matrix \(I\).__

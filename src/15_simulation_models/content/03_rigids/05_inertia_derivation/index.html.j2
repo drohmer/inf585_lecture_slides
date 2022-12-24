@@ -1,0 +1,17 @@
+= Inertia tensor
+
+* __Defining inertia tensor formulation from angular momentum definition__
+
+div::[height:50px;]::
+
+* Angular momentum expressed with respect to an arbitrary point \(p_0\): \(r(p_i)=p_i-p_0\)
+** \(\displaystyle L=\int_{\Omega} r \times (\rho\,r')\,\mathrm{d}\Omega=\int_{\Omega} \rho \; r \times \left(p'+\omega \times r\right)\,\mathrm{d}\Omega\;\;\) __(first part sum to 0)__
+
+** \(\displaystyle \Rightarrow L=\int_{\Omega} \rho \; r \times \omega \times r\,\mathrm{d}\Omega= \int_{\Omega}  \rho \; r \times (-r \times \omega) \,\mathrm{d}\Omega\)
+** \(\displaystyle \Rightarrow L =  \underbrace{\left(\int_{\Omega} \rho \;\hat r\;\hat r^T \mathrm{d}\Omega\right)}_{I}  \, \omega \; = \; I\,\omega \;\;\) with \(\hat r=\left(\begin{array}{c}0 & -r_z & r_y \\ r_z & 0 & -r_x \\ -r_y & r_x & 0\end{array}\right)\)
+
+div::[height:50px;]::
+
+* Changing the reference frame
+** \(\displaystyle \Rightarrow L =  \left(\int_{\Omega} \rho \;(\mathrm{R} \hat r_0)\;(\mathrm{R} \hat r_0)^T \mathrm{d}\Omega\right)  \, \omega \;\; = \;\; \mathrm{R} \underbrace{\left(\int_{\Omega} \rho(r) \, \hat r_0 \; \hat r_0^T \mathrm{d}\Omega \right)}_{I_0} \mathrm{R}^T\;\omega = \mathrm{R}\,I_0\,\mathrm{R}^T\;\omega\)
+

@@ -1,0 +1,48 @@
+
+
+= Boids Model - Complexity.
+
+div::[font-size:90%; line-height:1.3em;]
+
+* Trivial implementation:
+
+div::[margin-left:75px; margin-top:25px; font-size:80%; line-height:1.3em;]
+code::[c++]
+struct particle { vec3 p, v, f; };
+
+std::vector<particle> boids;
+
+// Initialize N boids ...
+// ...
+
+// compute pairwise force
+for(int i=0; i<N; ++i)
+{
+    for(int j=0; j<N; ++j)
+    {
+        if( i!=j )
+        {
+            const vec3& pi = boids[i].p;
+            const vec3& pj = boids[j].p;
+
+            boids[i].f += force( norm(pi,pj)) / (pi-pj)/norm(pi-pj);
+        }
+    }
+}
+
+// integration
+for(int i=0; i<N; ++i)
+{
+    boids[i].v = boids[i].v + dt * boids[i].f;
+    boids[i].p = boids[i].p + dt * boids[i].v;
+}
+code::[-]
+::
+
+div::[position:fixed; top:350px; left:900px;]
+* - What is the complexity (wrt. \(N\)) of this algorithm ?
+* - Can you think of a way to be more efficient for large \(N\) ?
+::
+
+
+::

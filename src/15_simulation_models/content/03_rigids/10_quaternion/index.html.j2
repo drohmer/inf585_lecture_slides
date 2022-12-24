@@ -1,0 +1,21 @@
+
+
+= Side note: Use of quaternion
+
+
+* Relation \(\mathrm{R}'(t)=\hat\omega(t)\,\mathrm{R}(t)\) may lead to numerical drift from rotation matrix
+** ex. \(\mathrm{R}^{k+1}=(\mathrm{Id}+h\,\hat \omega^k)\,\mathrm{R}^k\;\;\) (explicit scheme)
+
+div::[height:50px;]::
+
+* Using quaternion leads to more robust behavior
+
+div::[height:25px;]::
+
+* - Quaternion expression: \(q'(t)=\frac{1}{2}\,q_{\omega}(t)\,q(t)\),  with \(q_{\omega}(t)=(\omega(t)\,,\;\;0))\)
+
+div::[height:25px;]::
+
+* - Quaternion is forced to keep a unit norm
+div::[height:25px;]::
+** ex.  \(\left\{\begin{array}{l}q^{k+1}=q^k+\frac{1}{2}\,q_{\omega}^k\,q^k \\ q^{k+1}=q^{k+1}/\|q^{k+1}\| \end{array}\right.\)

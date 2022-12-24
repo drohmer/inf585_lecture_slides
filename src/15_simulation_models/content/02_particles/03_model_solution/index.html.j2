@@ -1,0 +1,32 @@
+
+
+= Physically-based particle system
+
+
+
+== 3. Numerical Solution
+
+
+* **ODE** (Ordinary Differential Equation) formulated as an **Initial Value Problem**
+
+div::[height:25px;]::
+
+** ex. \(\left\{\begin{array}{l}p'(t)=v(t) \\ m v'(t) = F(p,v,t)\end{array}\right.\;\;\;,\;\;\) with \(v(0)=v_0,\; p(0)=p_0\) 
+
+div::[height:75px;]::
+
+* - Discretize in time \(t^k=k\,h\),\(\;\;\) \(h=\Delta t=\) time step.
+** \(\Rightarrow\) Build a discrete numerical solution \(p^k=p(t^k), v^k=v(t^k)\).
+
+div::[height:50px;]::
+
+* - We can consider initially the following iterative scheme
+
+div::[height:25px;]::
+
+** \(\left\{\begin{array}{l}v^{k+1} = v^{k} + h\,F(p^k, v^k, t^k) \\ p^{k+1}=p^k+h\,v^{k+1}  \end{array}\right.\)
+
+div::[height:25px;]::
+
+** __Simple to implement, reasonably OK for simple examples (more details later).__
+
