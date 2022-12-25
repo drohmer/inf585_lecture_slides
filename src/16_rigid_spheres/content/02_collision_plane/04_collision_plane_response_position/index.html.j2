@@ -1,0 +1,28 @@
+
+
+= Collision response with plane : position
+
+* In real case (discrete time) no exact contact, but penetration \( (p_i-a)\cdot n_i < r_i \)
+* \(\Rightarrow\) Need to compute collision response at contact point.
+
+div::[height:50px;]::
+
+div::[width:850px;]
+* Three possibilities
+** (1) Correct position in projecting on the constaint
+div::[font-size:80%;line-height:1.4em;]
+*** __(+) Simple to implement__ 
+*** __(-) Physically incorrect position__
+::
+** (2) Approximate the correct position
+** (3) Go backward in time to find exact instant of collision
+div::[font-size:80%;line-height:1.4em;]
+*** __Continuous Collision Detection__
+*** __(+) Physically correct__
+*** __(-) Computationally heavy (binary search, etc.)__ 
+::
+::
+
+div::[position:fixed; top:150px; left:900px;]
+img::assets/plane_collision.svg[width:950px]
+::

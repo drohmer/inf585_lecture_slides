@@ -1,0 +1,48 @@
+= Detecting self collision
+
+div::[width:1100px;]
+* Handled as moving point in collision with moving triangle
+
+* **Inputs**
+div::[font-size:85%; line-height:1.3em;]
+* - Triangle \(P_1(t) P_2(t) P_3(t)\) , a point \(P(t)\)
+* - Each position \(P_k(t)=P_k(0)+t\,v_{P_k}\)
+::
+
+div::[height:25px;]::
+
+* **Computing intersection**
+
+
+div::[font-size:85%; line-height:1.3em;]
+* __Necessary condition__
+* - Find \(t_i\in[0,h]\) such that \(P(t_i)\) is in triangle plane 
+** \( (P(t_i)-P_1(t_i))\times n(t_i) = 0\)
+** \(n(t_i)\): normal of the triangle at time \(t_i\)
+
+div::[height:25px;]::
+
+* __Sufficient condition__
+* - Check \(P(t_i)\) is inside the triangle
+** \(P(t_i)=\alpha P_1(t_i)+\beta P_2(t_i)+ \gamma P_3(t_i)\)
+** \((\alpha,\beta,\gamma)\in[0,1]^3\), \(\alpha + \beta + \gamma = 1\)
+::
+
+::
+
+div::[height:50px;]::
+
+* ::(.ref) link::https://graphics.stanford.edu/courses/cs468-02-winter/Papers/Collisions_vetements.pdf[X. Provot. Collision and self-collision handling in cloth model dedicated to design garments. Graphics Interface 1997.] ::
+* ::(.ref) link::https://graphics.stanford.edu/papers/cloth-sig02/cloth.pdf[R. Bridson et al. Robust Treatment of Collisions, Contact and Friction for Cloth Animation. ACM SIGGRAPH 2002] ::
+
+
+
+div::[position:fixed; top:100px; left:1300px;]
+img::assets/self_collision.svg[width:500px]
+::
+
+
+div::[position:fixed; top:600px; left:1300px;]
+img::assets/bridson.png[width:500px]
+::
+

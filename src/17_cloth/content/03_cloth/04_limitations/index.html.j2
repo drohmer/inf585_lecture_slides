@@ -1,0 +1,31 @@
+= Limitation of mass spring model and continuous model
+
+
+div::[line-height:1.6em;]
+* - Does mass-spring system converge toward a unique solution when sampling increase ?
+** \(\Rightarrow\) No :(  
+*** Depends on the connectivity \(\rightarrow\) bad for physical accuracy
+
+div::[height:25px;]::
+
+* __Corollary__
+** - Mass-springs work well for grid-mesh structure (draping)
+** - Less for arbitrary triangular meshes
+
+div::[height:50px;]::
+
+div::[width:1000px;]
+* 1st improvment: Change toward energy formulation for bending springs (limits locking effect)
+** \(\displaystyle F=\frac{\partial E}{\partial p}\)
+** \(\displaystyle E=\frac{1}{2}K\,L\,\kappa^2\), \(\kappa\): curvature
+div::[font-size:80%;]
+*** link::http://graphics.snu.ac.kr/~kjchoi/publication/cloth.pdf[ [Cho et al, Stable but Responsive Cloth, ACM SIGGRAPH 2002] ]
+::
+::
+
+div::[position:fixed; top:400px; left:1200px;]
+img::assets/cho_01.png[height:550px;]
+img::assets/cho_02.png[height:550px;]
+::
+
+::

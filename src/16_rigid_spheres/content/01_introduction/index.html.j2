@@ -1,0 +1,29 @@
+
+
+= System modeling
+
+* Particles modeling the center of hard spheres.
+** - Spheres can collide with surrounding obstacles
+** - Spheres can collide with each others
+
+div::[height:50px;]::
+
+* - __System__: N particles with position \(p_i\), velocity \(v_i\), mass \(m_i\), modeling a sphere of radius \(r_i\).
+** - Initial conditions \(p_i(0)=p_i^0\), \(v_i(0)=v_i^0\)
+
+div::[height:25px;]::
+
+* - __Forces__: Single gravity forces \(F_i=m_i\,g\). Collisions handled by __impulses__.
+
+div::[height:25px;]::
+
+* - __Temporal evolution__: Fundamental principle of dynamics \(v_i(t)=p'_i(t)\), \(v'_i(t)=g\)
+
+div::[height:25px;]::
+
+* - __Numerical solution__
+** \(\left\{\begin{array}{l}v^{k+1}=v^k + h\, g \\ p^{k+1}=p^{k}+h\,v^{k+1}\end{array}\right.\)
+
+div::[position:fixed; top:110px; left:1200px;]
+img::assets/sphere_system.svg[width:400px]
+::

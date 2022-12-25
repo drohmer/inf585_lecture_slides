@@ -1,0 +1,27 @@
+
+
+= Collision response with plane
+
+* Suppose exact contact: \( (p_i-a)\cdot n=r_i \)
+
+
+* Collision response = **Update velocity**
+
+div::[height:50px;]::
+
+* Split \(v=v_{/\!/}+v_{\perp}\)
+** - \(v_{\perp} = (v\cdot n)\,n\)
+** - \(v_{/\!/}=v-(v\cdot n)n\)
+
+div::[height:50px;]::
+
+* **New velocity** 
+* \(v^{new}=\alpha\; v_{/\!/} - \beta\;v_{\perp} \)
+div::[font-size:85%; line-height:1.3em;]
+** \(\alpha \in [0,1]\) Restitution coefficient in \(//\) direction (friction)
+** \(\beta  \in [0,1]\) Restitution coefficient in \(\perp\) direction (impact)
+::
+
+div::[position:fixed; top:200px; left:1100px;]
+img::assets/collision_response_speed.svg[width:600px]
+::

@@ -1,0 +1,28 @@
+= Spring structure
+
+div::[line-height:1.6em;]
+
+* How to model spring connectivity ?
+
+
+* - **Structural springs**: 1-ring neighbors springs (\(\simeq\) mesh edges)
+div::[font-size:80%;]
+** (+) Limit elongation/contraction, (-) Allows shearing, and bending
+::
+
+
+div::[text-align:center;]
+img::assets/shearing_bending.svg[width:1100px;]
+::
+
+* \(\Rightarrow\) Add extra springs connectivity
+
+* - **Shearing springs**: Diagonal links
+* - **Bending springs**: 2-ring neighborhood
+
+div::[text-align:center;]
+img::assets/extra_springs.svg[width:1100px;]
+::
+
+::
+

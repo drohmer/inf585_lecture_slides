@@ -1,0 +1,37 @@
+
+
+= Collision with a plane
+
+* Plane \(\mathcal{P}\): parameterized using a point \(a\) and its normal \(n\).
+** \(\{p\in\mathbb{R}^3 \in \mathcal{P} \Rightarrow (p-a)\cdot n=0\}\)
+
+div::[height:25px;]::
+
+* - Sphere above plane : \((p_i-a)\cdot n > r_i\)
+* - Sphere in collision: \((p_i-a)\cdot n \leq r_i\)
+
+div::[height:50px;]::
+
+* - Collision detection algorithm
+
+div::[font-size:75%; margin-left:75px; line-height:1.3; margin-top:25px;]
+code::[c++]
+for(int i=0; i<N; ++i)
+{
+    float detection = dot(p[i]-a, n);
+    if (detection <= r[i])
+    {
+        // ... collision response
+    }
+}
+code::[-]
+::
+
+div::[height:50px;]::
+
+* __What should we do when a collision is detected__
+
+
+div::[position:fixed; top:200px; left:1200px;]
+img::assets/plane_collision.svg[width:500px;]
+::

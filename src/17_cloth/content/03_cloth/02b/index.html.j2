@@ -1,0 +1,23 @@
+= Note on Mass-Spring numerical solution
+
+
+
+div::[line-height:1.6em; font-size:95%;]
+* - Non-linear ODE
+div::[height:25px;]::
+* - Large \(K_{ij}\) : good length preservation, but stiff ODE 
+** \(\Rightarrow\) divergence of explicit schemes.
+* - Avoid explicit Euler (divergence)
+div::[height:25px;]::
+* - Semi-implicit Euler/Verlet works fine for low \(K_{ij}\)
+** __Semi-implicit Euler + PBD allows simple integration + stable stiff springs__
+** __[Muller et al. link::http://matthias-mueller-fischer.ch/publications/posBasedDyn.pdf[PBD] , link::http://matthias-mueller-fischer.ch/publications/sca2012cloth.pdf[Inextensible clothing in Computer Games] ]__
+div::[height:25px;]::
+* - RK4 more accurate (but higher complexity than Verlet)
+div::[height:25px;]::
+* - Implicit Euler : requires linearization, but very stable
+::
+
+div::[position:fixed; top:250px; left:1300px;]
+img::assets/diverged.png[width:500px;]
+::

@@ -1,0 +1,28 @@
+
+
+= Summary
+
+* 1. Detect collision \(\|p_1-p_2\|\leq r_1+r_2\)
+
+div::[height:50px;]::
+
+* 2-a. If collision (relative speed \(>\epsilon\) )
+** Elastic collision (/bouncing) \(v_{1/2}= \alpha\, v_{1/2} \pm \beta\,J/m_{1/2}\)
+
+div::[height:25px;]::
+
+* 2-b. If __static__ contact (relative speed \(\leq\epsilon\))
+** Friction \(v_{1/2} = \mu\;v_{1/2}\,\), \(\;\;\mu\in[0,1]\)
+** __Avoids jittering__
+
+div::[height:50px;]::
+
+* 3. Correct position (project on contact surface)
+** \(p=p \pm d/2\,u\)
+** \(d=r_1+r_2-\|p_1-p_2\|\): Collision depth
+
+
+
+div::[position:fixed; top:200px; right:50px;]
+videoplay::assets/spheres_collision.mp4[width:650px;]
+::

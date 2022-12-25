@@ -1,0 +1,26 @@
+= Forces
+
+
+* - On each particle: gravity + drag + spring forces
+
+::[font-size:85%;]
+* - \(\displaystyle F_i(p,v,t)=m_i\,g - \mu\,v_i(t) + \sum_{j\in\mathcal{V}_i} K_{ij}\,\left(\|p_j(t)-p_i(t)\|-L_{ij}^0\right)\frac{p_j(t)-p_i(t)}{\|p_j(t)-p_i(t)\|}\)
+::
+
+div::[line-height:1.6em;]
+** - \(\mathcal{V}_i\): neighborhood of particle \(i\)
+** - \(L_{ij}^0\): rest length of spring \(ij\)
+::
+
+div::[height:25px;]::
+
+* Associated ODE \(\;\forall i, \left\{\begin{array}{l}p_i'(t)=v_i(t) \\ v_i'(t)=F_i(p,v,t)/m_i \end{array}\right.\)
+
+
+::[position:fixed; top:900px;]
+* Q. How can we model the effect of the wind ?
+::
+
+div::[position:fixed; top:350px; left:1000px;]
+videoplay::assets/cloth.webm[width:800px;]{controls}
+::

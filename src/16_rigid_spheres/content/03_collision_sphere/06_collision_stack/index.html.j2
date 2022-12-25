@@ -1,0 +1,49 @@
+
+
+= Multiple collisions
+
+* Pairwise collisions \(\Rightarrow\) no global collision free state
+div::[line-height:1.3em;]
+** - Correcting one collision may induce new collisions.
+** - Order of correction does matter
+::
+
+div::[height:0.5em;]::
+
+::[line-height:1.3em; font-size:85%; font-style:italic;]
+* Reducing time-step help, Iterating over mutliple pass help
+::
+
+div::[height:0.5em;]::
+
+* But correct solution in all cases is complex \(\rightarrow\) global approach
+
+** - Precompute contact graph 
+::[line-height:1.3em; font-size:85%]
+*** __explicit shock propagation management__
+::
+** - Global constraint-based method
+::[font-size:80%; line-height:1.1em;]
+*** Impulse: \(n_i \cdot (v_i-v_j) \geq 0\)
+*** Momentum preservation: \(m_i v_i-m_j v_j=0\)
+*** Energy preservation/dissipation
+*** \(\Rightarrow\) Linear Complementarity Program, Gauss Seidel, etc.
+::
+
+::[height:1.0em;]::
+
+* ::(.ref) link::assets/hahn_1988.pdf[Realistic Animation of Rigid Bodies. J. Hahn. SIGGRAPH 1988.] ::
+* ::(.ref) link::assets/moore_1988.pdf[Collision Detection and Response for Computer Animation. M. Moore and J. Wilhelms. Computer Graphics 1988.] ::
+* ::(.ref) link::assets/smith_siggraph_2012.pdf[Reflections on Simultaneous Impact. B. Smith et al. SIGGRAPH 2012] ::
+* ::(.ref) link::assets/vouga_siggraph_2017.pdf[Guaranteed Resolution of Simultaneous Rigid Body Impact. E. Vouga. ACM SIGGRAPH 2017] ::
+
+::[position:fixed; top:50px; left:1150px;]
+img::assets/balls_stack.png[width:680px;]
+::
+
+
+div::[position:fixed; top:500px; right:100px; width:550px;]
+img::assets/stack_collision.png[width:550px;]
+
+
+::

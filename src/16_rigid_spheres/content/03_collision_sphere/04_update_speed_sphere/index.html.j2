@@ -1,0 +1,24 @@
+= Two spheres in collision
+
+* \( v_1^{new}\;=\;v_1 + j/m_1\,u \;=\; v_1 + 2 \frac{m_2}{m_1+m_2}((v_2-v_1)\cdot u)\;u\)
+* \( v_2^{new}\;=\;v_2 - j/m_2\,u \;=\; v_2 - 2 \frac{m_1}{m_1+m_2}((v_2-v_1)\cdot u)\;u\)
+
+div::[height:50px;]::
+
+* Rem. If \(m_1=m_2\): Switch their \(\perp\) speeds
+** \(v_1^{new} \;=\; v_1 + ((v_2-v_1)\cdot u)\;u \;=\;  v_{1{/\!/}} +  v_{2{\perp}}\)
+** \(v_2^{new} \;=\; v_2 - ((v_2-v_1)\cdot u)\;u \;=\;  v_{2{/\!/}} +  v_{1{\perp}} \)
+
+div::[height:50px;]::
+
+* Can use restitution coefficient and attenuation \((\alpha,\beta)\in[0,1]\)
+** \(v_1^{new} \;=\; \alpha\, v_{1{/\!/}} +  \beta\, v_{2{\perp}}\)
+** \(v_2^{new} \;=\; \alpha\, v_{2{/\!/}} +  \beta\, v_{1{\perp}}\)
+
+div::[position:fixed; top:200px; right:100px;]
+videoplay::assets/elastic_bounce.mp4[width:500px;]{controls}
+::
+
+div::[position:fixed; top:550px; right:100px;]
+img::assets/sphere_collision.svg[width:500px;]
+::

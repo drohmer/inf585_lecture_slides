@@ -1,0 +1,31 @@
+= Two spheres in collision
+
+* Impulse orthogonal to the separating plane between the two surfaces
+** \(J=j\,u\), \(\;\;\;u=(p_1-p_2)/\|p_1-p_2\|\)
+
+div::[height:50px;]::
+
+* The system with the two spheres is preserving its linear momentum
+** \(\Rightarrow\) Respective impulses \(j\) are equals in magnitude, and opposed in direction
+div::[font-size:80%; line-height:1.3em; color:gray;]
+*** \(m_1 v_1 + m_2 v_2 = m_1 v_1^{new} + m_2 v_2^{new}\) \(\Rightarrow m_1 (v_1^{new}-v_1) = -m_2 (v_2^{new}-v_2)\) \(\Rightarrow J_1 = -J_2 \)
+::
+
+div::[height:50px;]::
+
+* Assume collision of "hard spheres" \(=\) "Elastic collision"
+** \(=\) No loss of energy, conservation of kinetic energy of the system
+** \(\displaystyle \Rightarrow j = 2 \frac{m_1\,m_2}{m_1+m_2}\,(v_2-v_1)\cdot u\)
+
+div::[height:25px;]::
+
+div::[font-size:80%; line-height:1.3em; color:gray;]
+*** \(1/2\,m_1\,v_1^2+1/2\,m_2\,v_2^2=1/2\,m_1\,{(v_1^{new}})^2+1/2\,m_2\,{(v_2^{new}})^2\)
+*** \(\Rightarrow m_1 v_1^2 + m_2 v_2^2 = m_1\left(v_1+\frac{j}{m_1}u\right)^2+m_2\left(v_2-\frac{j}{m_2}u\right)^2\)
+*** \(\Rightarrow 0 = 2\,j\; v_1\cdot u + \frac{j^2}{m_1}-2\,j\; v_2\cdot u+\frac{j^2}{m_2}\)
+*** \(\Rightarrow j = \frac{2}{1/m_1+1/m_2}\,(v_2-v_1)\cdot u\)
+::
+
+div::[position:fixed; top:100px; right:50px;]
+img::assets/sphere_collision.svg[width:550px;]
+::
