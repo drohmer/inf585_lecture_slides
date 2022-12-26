@@ -1,0 +1,18 @@
+
+= PIC/FLIP Method
+
+div::[line-height:1.3em; font-size:85%;]
+* - Transfert particle velocity to the MAC grid (Store velocity \(u^k\) on grid)
+* - Evolve velocity on grid (pressure, forces, viscosity) excepted advection to \(u^{k+1}\)
+* - Add velocity difference \(\Delta u = u^{k+1}-u^{k}\) to particles using interpolation (FLIP approach)
+
+* - Blend particle velocity with interpolated grid velocity (PIC/FLIP)
+* - Advect particles along their new velocity
+::
+
+div::[height:1.5em;]::
+
+div::[text-align:center;]
+videoplay::assets/nbflip.webm[width:750px]
+div::[font-size:80%;] link::http://www.in.tum.de/fileadmin/w00bws/cg/Research/Publications/2016/NBFlip/nbflip.pdf[[F. Ferstl et al., EUROGRAPHICS 2016]] ::
+::

@@ -1,0 +1,46 @@
+= PIC/FLIP (Material Point Method)
+
+* Mix between particles and grid based approach.
+div::[font-size:85%; line-height:1.3em;]
+** - Particles: good for advection 
+** - Grid: forces, pressure, viscosity
+::
+
+
+div::[height:2em;]::
+
+div::[font-size:85%; line-height:1.3em;]
+* \(u_p\): velocity on particle
+* \(u_g\): velocity on grid
+::
+
+div::[height:25px;]::
+
+* - **PIC** approach - Transfert velocity from grid to particles
+** span::[font-size:75%;] \(u_p^{k+1}=interp(u_g^{k+1},p^{k+1})\) ::
+* - **FLIP** approach - Add velocity difference from grid to particles.
+** span::[font-size:75%;] \(u_p^{k+1}=v_p^k+(interp(u_g^{k+1}, p^{k+1})-interp(u_g^{k},p^{k}))\) ::
+* - **PIC/FLIP** : blending b/w two approaches
+
+::[height:2em;]::
+
+div::[font-size:80%;]
+**  ::(.ref) link::https://www.cs.ubc.ca/~rbridson/docs/zhu-siggraph05-sandfluid.pdf[Y. Zhu and R. Bridson, Animating Sand as a Fluid, ACM SIGGRAPH 2005] ::
+::
+
+
+
+div::[position:fixed; top:150px; left:1400px; text-align:center; font-size:75%; font-style:italic; line-height:1.0em;]
+
+img::assets/flip.jpg[width:350px;] <br>
+PIC: Stable, smoothed-out
+
+<br><br>
+
+img::assets/pic.jpg[width:350px;] <br>
+FLIP: Details, few dissipation
+::
+
+::[position:fixed; left:800px; top:250px;]
+img::assets/grid.svg[width:250px;]
+::

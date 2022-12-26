@@ -1,0 +1,28 @@
+= 2 - Computing advection
+
+__Advecting generic value \(f\) along \(u\)__
+
+div::[height:25px;]::
+
+div::[width:900px;]
+
+* __Idea__ Compute value of \(f\) at time \(t\) at fixed position grid \(p\) in moving back at \(t-\Delta t\).
+
+div::[height:50px;]::
+
+* Value of \(f\) advected at point \(p\) at time \(t\) was at position \(p_{prev}=p-\Delta t\;v(p,t)\) at time \(t-\Delta t\).
+** \(\Rightarrow f(p,t)=f(p_{prev},t-\Delta t)\)
+
+::
+
+div::[height:50px;]::
+
+* \(p_{prev}\) is not a grid point coordinates: Use interpolation
+* Can use Bilinear interpolation
+** \(f(p_{prev})= (1-\alpha)\,(1-\beta)\;p_{00}+(1-\alpha)\,\beta\, p_{01}+\alpha\,(1-\beta)\;p_{10}+\alpha\,\beta\; p_{11} \)
+
+
+
+div::[position:fixed; top:125px; right:75px;]
+img::assets/advection.svg[width:750px;]
+::

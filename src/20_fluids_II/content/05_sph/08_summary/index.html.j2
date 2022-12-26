@@ -1,0 +1,25 @@
+= SPH Summary
+
+* Set initial conditions \(v_i\)
+
+::[height:0.5em;]::
+
+* Compute values
+** - Density: \(\rho_i = \sum_j m_j \, W_h^{poly6}(\|p_i-p_j\|)\)
+** - Pressure: \(\mathrm{p}_i = s\,(\rho_i-\rho_0)\)
+
+::[height:1em;]::
+
+* Compute forces
+** - \(F_{weight}=m_i\;g\)
+** - \(F_{pressure}=-\frac{m_i}{\rho_i} \, \sum_{j}^{j\neq i} m_j \, \frac{\mathrm{p}_i+\mathrm{p}_j}{2\,\rho_j} \; \nabla  W_h^{spiky}(\|p_i-p_j\|)\)
+** - \(F_{viscosity}=m_i\,\nu \, \sum_{j}^{j\neq i} m_j \frac{(\mathrm{v}_j-\mathrm{v}_i)}{\rho_j}\;\triangle W_h^{spiky}(\|p_i-p_j\|)\)
+
+::[height:1.5em;]::
+
+* Time integration: \(v_i^{k+1}=v_i^k + \Delta t\;\left(F_{weight}+F_{pressure}+F_{viscosity}\right)/m_i\)
+
+
+::[position:fixed; top:200px; left:1300px;]
+videoplay::assets/sph.webm[width:500px;]
+::

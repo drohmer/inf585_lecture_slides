@@ -1,0 +1,30 @@
+= 1 - Diffusion
+
+div::[line-height:1.3em;]
+* Use finite difference on span::[font-size:85%;] \(\displaystyle \frac{\partial f}{\partial t} = \nu\,\triangle f\) ::
+** Notation: \(f^{t}_{x,y}=f(k_x\,\Delta x,\;k_y\,\Delta y,\;k_t\,\Delta t)\)
+::
+
+div::[height:25px;]::
+
+* Explicit schemes may oscillates/diverge for large time steps
+* \(\Rightarrow\) Use implicit scheme for unconditional stability
+div::[font-size:75%;]
+** \(\displaystyle \frac{f^{k+1}_{x,y}-f^{k}_{x,y}}{\Delta t}=\nu \left(\frac{f^{k+1}_{x+1,y}-2\,f^{k+1}_{x,y}+f^{k+1}_{x-1,y}}{(\Delta x)^2} + \frac{f^{k+1}_{x,y+1}-2\,f^{k+1}_{x,y}+f^{k+1}_{x,y+1}}{(\Delta y)^2}\right)\)
+::
+* Assuming \(\Delta x = \Delta y = 1\)
+** \( (1+4\,\nu \Delta t)\,f^{k+1}_{x,y}-\nu\,\Delta t (f^{k+1}_{x+1,y}+f^{k+1}_{x-1,y}+f^{k+1}_{x,y+1}+f^{k+1}_{x,y-1}) = f^{k}_{x,y} \)
+
+div::[height:50px;]::
+
+* Use Gauss-Seidel iterative method to solve the sparse linear system
+
+<div style="border: 2px solid gray; border-radius:10px; padding:15px; display:inline-block;">
+** Initialize \(f^{k+1}=f^{k}\)
+** for \(i=1..N_{\max}\)
+*** \(f^{k+1}_{x,y} = \frac{1}{1+4\,a}(f^{k}_{x,y}+a(f^{k+1}_{x-1,y}+f^{k+1}_{x+1,y}+f^{k+1}_{x,y-1}+f^{k+1}_{x,y+1}))\) \(\,,\;\;\) \(a=\nu\,\Delta t\)
+</div>
+
+div::[position:fixed; top:100px; right:75px;]
+videoplay::assets/diffusion.mp4[width:500px;]
+::

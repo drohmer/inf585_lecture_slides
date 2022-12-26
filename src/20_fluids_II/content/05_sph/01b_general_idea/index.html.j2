@@ -1,0 +1,27 @@
+= SPH - Smoothed Particle Hydrodynamics
+
+* Pure Lagrangian approach.
+::[font-size:85%; line-height:1.3em;]
+** - Sample the fluid volume with particles
+** - Build a continuous field from local averaging around samples
+*** __Use some local weighting kernel \(W\)__
+** - Express derivatives/Navier-Stokes on the continuous field
+::
+
+div::[height:2em;]::
+
+* Advantages
+::[font-size:85%; line-height:1.3em;]
+** (+) Particle based - can interact with other models
+** (+) Scalable
+::
+
+div::[height:6em;]::
+
+
+* Initial proposed in Astronomy field
+** ::(.ref) link::assets/lucy_77.pdf[ L. Lucy, A numerical approach to the testing of the fission hypothesis. The Astronomical Journal, 1977.] ::
+
+::[position:fixed; top:250px; left:1400px;]
+img::assets/kernel.svg[width:300px;]
+::

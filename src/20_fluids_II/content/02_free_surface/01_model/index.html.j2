@@ -1,0 +1,43 @@
+= Procedural models for free surface water
+
+* Often based on **Shallow water equation** 
+div::[font-size:90%; line-height:1.3em;]
+** __neglect depth velocity component__
+** ::(.ref) link::https://dl.acm.org/citation.cfm?id=15894[A. Fournier, W. T. Reeves. A simple Model of Ocean Waves, ACM SIGGRAPH 1986] ::
+** ::(.ref) link::https://hal.inria.fr/inria-00537490/document[D. Hinsiger et al. Interactive Animation of Ocean Waves. SCA 2002] ::
+** ::(.ref) link::https://people.cs.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf[Jerry Tessendorf, Simulating Ocean Water, ACM SIGGRAPH Course Notes 2004] ::
+::
+
+
+div::[height:2em;]::
+
+* ex. __Trochoid/Gerstner models__ 
+div::[font-size:70%; line-height:1.4em;]
+** Particles following circular trajectories, waves propagates
+
+*** \({\bf x}-{\bf x}_0 = \sum_i a_i {\bf k}_i/\|{\bf k}_i\| \;\sin({\bf k}_i\cdot {\bf x}_0-\omega_i\,t+\phi_i)\)
+*** \(z-z_0 = \sum_i a_i \cos({\bf k}_i\cdot {\bf x}_0-\omega_i\,t+\phi_i)\)
+*** \(\omega_i^2=g\,k_i\) - __dispersion__
+::
+
+
+div::[position:fixed; top:750px; left:900px;]
+img::assets/trochoidal_wave.svg[width:850px;]
+::
+
+
+div::[height:2em;]::
+
+div::[line-height:1.6em;]
+* Used for procedural ocean modeling
+** (+) Simple and scalable
+** (-) Interaction with other objects
+::
+
+div::[position:fixed; top:200px; left:1400px;]
+img::assets/waves.png[width:400px]
+::
+div::[position:fixed; top:450px; left:1400px;]
+img::assets/tessendorf.png[width:400px]
+::
+

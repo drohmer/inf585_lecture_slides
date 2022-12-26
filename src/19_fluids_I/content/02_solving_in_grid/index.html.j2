@@ -1,0 +1,22 @@
+= Solving Navier-Stokes on grid
+
+__"Brute force" approach__
+
+* - Rectangular grid filled with fluid
+* - Use finite differences on the grid for Navier-Stokes equation
+
+div::[height:25px;]::
+
+** \(\displaystyle \frac{\partial u}{\partial t}=-\frac{1}{\rho}\nabla \mathrm{p}+f-(u\cdot \nabla) u+\nu\triangle u\)
+** \(div(u)=0\)
+
+div::[height:100px]::
+
+
+* (-) Stability conditions
+* (-) Loose advection details on the grid
+
+div::[position:fixed; top:250px; right:75px; width:600px;]
+img::assets/grid.jpg[width:550px;]
+::(.ref) link::http://graphics.cs.cmu.edu/nsp/course/15-464/Spring07/papers/fosterGas.pdf[Modeling the Motion of a Hot, Turbulent Gas. N Foster and D. Metaxas. SIGGRAPH 1997] ::
+::

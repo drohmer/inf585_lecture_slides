@@ -1,0 +1,23 @@
+= 3 - Projection to divergence free vector field
+
+* Consider a general vector field \(w\)
+* Helmoltz decomposition: \(w = u + v\)
+** - \(u\): Divergence free vector field such that \(div(u)=0\)
+** - \(v\): Gradient field \(v=\nabla q\;\), \(\;\;q\) scalar field.
+
+div::[height:25px;]::
+
+* \(q\) satisfies a Poisson equation
+** \(div(w) = \underbrace{div(u)}_{=0} + div(v) \Rightarrow div(w) = \underbrace{div(\nabla q)}_{\triangle q}\)
+
+div::[height:25px;]::
+
+* Method- Given an input field \(w\)
+** 1. Compute \(q\) as solution of \(\triangle q=div(w)\)
+** 2. Compute \(u = w - \nabla q\)
+
+
+div::[position:fixed; top:200px; right:75px;]
+videoplay::assets/projection.mp4[width:600px;]
+::
+

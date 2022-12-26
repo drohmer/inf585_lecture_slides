@@ -1,0 +1,26 @@
+= 2 - Advection
+
+Advection = move some function along given velocity \(u\).
+
+div::[height:25px;]::
+
+* - Advecting a scalar field \(f\) along \(u\) 
+** \(\displaystyle \frac{\partial f}{\partial t}(p,t) + u(p,t) \cdot \nabla f = 0\)
+
+div::[height:25px;]::
+
+* - Advecting a vector field \(f\) along \(u\) 
+** \(\displaystyle \frac{\partial f}{\partial t}(p,t) + (u(p,t) \cdot \nabla)\, f = 0\)
+
+div::[height:25px;]::
+
+div::[position:fixed; top:250px; left:1000px; width:700px;]
+* - In Navier-Stokes advect the velocity itself \(f=u\)
+* - Can also advect density, color, texture coordinates, etc. to visualize the motion.
+::
+
+img::assets/advection.png[width:1200px;]
+
+div::[position:fixed; bottom:75px; right:50px;]
+videoplay::assets/advection.mp4[width:500px;]
+::

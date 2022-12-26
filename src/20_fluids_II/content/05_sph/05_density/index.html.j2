@@ -1,0 +1,27 @@
+= Density
+
+* \(\rho_i\): Replace A(p) as \(\rho\)
+
+::[height:1em;]::
+
+
+** \(\rho(p_i) = \sum_j \rho(p_j) \, m_j / \rho_j \; W_h(\|p_i-p_j\|)\)
+
+::[height:1em;]::
+
+** \(\Rightarrow\) ::(.border) \(\displaystyle \rho_i = \sum_j m_j \, W_h(\|p_i-p_j\|)\) ::
+
+::[height:3em;]::
+
+* Choice of weight functions
+
+** __Use a smooth polynomial:__
+** ex. \(W_h^{poly6}(d)=\frac{315}{64\,\pi\,h^9}\;(h^2-d^2)^3\;\;\;\;0\leq d \leq h\)
+
+::[position:fixed; top:150px; left:1200px;]
+img::assets/kernel.svg[width:400px;]
+::
+
+::[position:fixed; top:650px; left:1200px;]
+img::assets/smooth_kernel.png[width:300px;]
+::

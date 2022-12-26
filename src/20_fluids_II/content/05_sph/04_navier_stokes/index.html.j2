@@ -1,0 +1,31 @@
+= SPH for Navier Stokes
+
+* Lagrangian representation on particle \(i\)
+** \(\displaystyle m_i \frac{\mathrm{d}v_i}{\mathrm{d}t}=\underbrace{m_i\, g}_{F_{weight}} - \underbrace{\frac{m_i}{\rho_i}\,\nabla \mathrm{p}_i}_{F_{pressure}} + \underbrace{m_i\,\nu\triangle v_i}_{F_{viscosity}}\)
+
+::[height:0.5em;]::
+
+* **Objective**:
+** 1. Express \(\rho_i, \nabla \mathrm{p}_i, \triangle v_i\) using SPH formulation
+** 2. Then integrate: ex. \(v_i^{k+1}=v_i^{k}+\Delta t\left(F_{weight}+F_{pressure}+F_{viscosity}\right)/m_i\)
+
+::[height:1.5em;]::
+
+* **Generic SPH representation:**
+::[font-size:85%;]
+* Arbitrary field \(A\) at position \(p_i\): \(A(p_i)=\sum_j A(p_j)\,W_h(p_i-p_j)\,V_j\)
+* For a particle of total mass \(m_i\) in the volume \(V_i\): \(\rho_i V_i = m_i\) \(\;\;\;\Rightarrow\;\) \(A(p_i)=\,\sum_j A(p_j)\,m_j/\rho_j\,W_h(p_i-p_j)\) 
+
+::[height:1em;]::
+
+* Usually \(W_h\) are distance function :  ::(.border) \(\displaystyle A(p_i)=\sum_j A(p_j)\,m_j/\rho_j\,W_h(\|p_i-p_j\|)\)  ::
+::
+
+
+div::[position:fixed; top:80px; left:950px; line-height:1.3em; font-size:85%; ]
+* ::(.ref) link::https://hal.inria.fr/inria-00537534/document[Desbrun and Cani, Smoothed Particles: A new paradigm for animating highly deformable bodies, EGCAS 1996] ::
+* ::(.ref) link::http://matthias-mueller-fischer.ch/publications/sca03.pdf[M. Muller et al., Particle-Based Fluid Simulation for Interactive Applications, SCA 2003] ::
+* ::(.ref) link::https://cg.informatik.uni-freiburg.de/publications/2014_EG_SPH_STAR.pdf[M. Ihmsen et al., SPH Fluids in Computer Graphics, EG STAR 2014] ::
+::
+
+

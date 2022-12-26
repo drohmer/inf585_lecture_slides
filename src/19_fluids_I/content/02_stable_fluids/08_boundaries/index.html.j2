@@ -1,0 +1,29 @@
+= Handling boundaries 
+
+div::[width:1000px;]
+
+* Boundaries \(x=0\), \(x=N_x-1\), \(y=0\), \(y=N_y-1\) need special care
+
+div::[height:50px;]::
+
+* - For density 
+** __Assume value \(C^0\) continuity on the boundary__
+*** Row/Column \(f_{x,0}=f_{x,1}\), \(f_{0,y}=f_{1,y}\) etc.
+
+div::[height:50px;]::
+
+* - For velocity: \(f=(f^x,f^y)\)
+** __Assume reflexion on walls__
+*** Row: \(f_{x,0}=(f^x_{x,1},-f^y_{x,1})\)
+*** Column: \(f_{0,y}=(-f^x_{1,y},f^y_{1,y})\)
+
+div::[height:50px;]::
+
+* - In all cases: Average value for corners
+** \(f_{0,0}=(f_{1,0}+f_{0,1})/2\), etc.
+
+::
+
+div::[position:fixed; top:250px; right:75px;]
+img::assets/boundary.svg[width:750px;]
+::

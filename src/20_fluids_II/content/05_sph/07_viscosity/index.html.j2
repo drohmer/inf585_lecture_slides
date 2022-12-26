@@ -1,0 +1,28 @@
+= Viscosity
+
+* \(F_{viscosity}= m_i\,\nu \; \triangle {v}_i\)
+
+::[height:1em;]::
+
+* 1. Use symetric laplacian b/w (i,j) 
+** \(F_{viscosity}= m_i\,\nu \, \triangle (\mathrm{v}_j-\mathrm{v}_i)\) \(\;\;\;\)-\(\;\) __viscosity depends on velocity differences__
+** \(F_{viscosity}= m_i\,\nu \, \sum_j m_j \frac{(\mathrm{v}_j-\mathrm{v}_i)}{\rho_j}\;\triangle W_h(\|p_i-p_j\|)\) 
+
+
+::[height:2em;]::
+
+* 2. Weight function
+** Second derivative should remain positive.
+** Can use the spiky kernel
+::[font-size:85%;]
+** \(W_h^{spiky}(d)=\frac{15}{2 \pi h^6}\left(h-d\right)^3\;\;\;0\leq d \leq h\)
+** \(\triangle W_h^{spiky}(d)=\frac{45}{\pi h^6}\left(h-d\right)\;\;\;0\leq d \leq h\)
+::
+
+::[position:fixed; top:600px; left:900px; text-align:center; font-size:85%;]
+videoplay::assets/visc_00.mp4[width:300px;]
+videoplay::assets/visc_01.mp4[width:300px;]
+videoplay::assets/visc_02.mp4[width:300px;]
+<br>
+__Increasing viscosity \(\nu\)__
+::

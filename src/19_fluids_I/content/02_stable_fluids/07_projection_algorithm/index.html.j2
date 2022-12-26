@@ -1,0 +1,40 @@
+=  3 - Projection to divergence free vector field (Algo)
+
+
+* Input vector field \(w=(w^x,w^y)\)
+div::[font-size:85%; line-height:1.3em;]
+div::[font-style:italic;]
+* Note: we assume in the following \(\Delta x = \Delta y = 1\)
+::
+::
+
+
+
+div::[height:25px;]::
+
+* 1 - Compute \(d = \mathrm{div}(w)\)
+** \(d_{x,y} = (w^x_{x+1,y}-w^x_{x-1,y} + w^y_{x,y+1}-w^y_{x,y-1})/2\)
+
+
+div::[height:25px;]::
+
+* 2 - Compute \(q\) in solving \(\triangle q=b\)
+div::[height:10px;]::
+
+div::[font-size:85%; line-height:1.3em;]
+** \((q_{x+1,y}+q_{x-1,y}-2\, q_{x,y}) + (q_{x,y+1}+q_{x,y-1}-2\, q_{x,y})=d_{x,y}\)
+** \(\Rightarrow 4 q_{x,y} = q_{x+1,y}+q_{x-1,y}+q_{x,y+1}+q_{x,y-1} - d_{x,y}\)
+div::[height:10px;]::
+** ex. Numerical iterations using Gauss Seidel
+<div style="border:2px solid gray; padding:15px; border-radius:10px; display:inline-block; margin-left:100px;">
+* Initialize \(q=0\)
+* For \(i=[1..N_{\max}]\)
+** \(q_{x,y} = 1/4 \left(q_{x+1,y}+q_{x-1,y}+q_{x,y+1}+q_{x,y-1} - d_{x,y}\right)\)
+</div>
+::
+
+
+div::[height:25px;]::
+
+* 3 - Compute \(u=w-\nabla q\)
+** \(u_{x,y} = w_{x,y} - \left(q_{x+1,y}-q_{x-1,y}\,,\;q_{x,y+1}-q_{x,y-1}\right)/2 \)

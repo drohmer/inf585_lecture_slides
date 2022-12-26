@@ -1,0 +1,39 @@
+= Sampling and density
+
+__How-to build a continuous field from arbitrary sampled particles ?__
+
+::[height:1em;]::
+
+* Consider arbitrary continuous field \(A(p)\)
+::[font-size:80%; line-height:1.5em;]
+** Def. of convolution: \(A(p) = (A\star\delta)(p)=\int_\Omega A(q)\,\delta(p-q)\,\mathrm{d}q\)
+::
+
+::[height:2em;]::
+
+* 1. Consider \(W_h\) a smooth kernel with \(\int_\Omega W_h(p) \, \mathrm{d}p=1\)
+::[font-size:80%; line-height:1.6em;]
+** \(A(p) \simeq (A\star W_h)(p)=\int_\Omega A(q)\,W_h(p-q)\,\mathrm{d}q\)
+** __Low pass filter applied to A__
+::
+
+::[height:1em;]::
+
+* 2. Discrete sampling on \(p_j\)
+::[font-size:80%; line-height:1.6em;]
+** \(A(p) = \sum_j  A(p_j) W_h(p-p_j) V_j\)
+*** __\(V_j\): small volume associated to \(p_j\)__
+::
+
+
+div::[position:fixed; top:650px; left:1450px; text-align:center;]
+img::assets/volume.svg[width:300px;]
+::
+
+div::[position:fixed; top:625px; left:900px;]
+img::assets/kernel_continuous.svg[width:200px;] 
+::
+
+div::[position:fixed; top:150px; left:1300px;]
+img::assets/convolution.svg[width:500px;]
+::

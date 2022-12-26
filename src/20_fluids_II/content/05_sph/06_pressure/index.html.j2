@@ -1,0 +1,32 @@
+= Pressure
+
+* \(F_{pressure}=-\frac{m_i}{\rho_i}\, \nabla \mathrm{p}_i\)
+
+::[height:1em;]::
+
+* 1. Use symetric gradient b/w (i,j) \(\;\;\;F_{pressure}=-\frac{m_i}{\rho_i}\, \nabla (\mathrm{p}_i+\mathrm{p}_j)/2\)
+** \(F_{pressure}=-\frac{m_i}{\rho_i} \, \sum_j m_j \, \frac{\mathrm{p}_i+\mathrm{p}_j}{2\,\rho_j} \; \nabla  W_h(\|p_i-p_j\|)\)
+
+::[height:1em;]::
+
+* 2. Express the pressure as a function of the density \(\rho\)
+** Simple approximation: \(\mathrm{p}_i=s\,(\rho_i-\rho_0)\)
+::[font-size:85%; line-height:1.3em;]
+*** - \(s\): Stiffness property
+*** - \(\rho_0\): Rest density of the fluid
+::
+
+::[height:1em;]::
+
+* 3. Weight function
+** Pressure is used to avoid particles to group together
+*** Avoid local maxima \(\Rightarrow\) non smooth "spiky" function at \(0\)
+::[font-size:85%;]
+*** \(W_h^{spiky}(d)=\frac{15}{\pi\,h^6}\,(h-d)^3\;\;\;\;0\leq d \leq h\)
+*** \(\nabla W_h^{spiky}(p_i-p_j) = -\frac{45}{\pi \,h^6} (h-\|p_i-p_j\|)^2\frac{p_i-p_j}{\|p_i-p_j\|}\;\;\;\;0\leq \|p_i-p_j\| \leq h\)
+::
+
+
+::[position:fixed; top:650px; left:1400px;]
+img::assets/spiky_kernel.png[width:300px;]
+::

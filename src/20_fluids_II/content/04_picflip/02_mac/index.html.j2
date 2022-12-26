@@ -1,0 +1,17 @@
+= MAC grid
+
+* MAC = Marker And Cell
+** Staggered grid b/w scalar and velocity
+** __Widely used grid storage to handle velocity and scalar values.__
+
+::[height:1em;]::
+
+* - Store scalar (pressure, density), in the center of the cell
+* - Store velocity components \((u^x,u^y)\) on the cell edges
+** __Improves accuracy and stability__
+
+::[height:1em;]::
+
+::[position:fixed; top:250px; left:1200px]
+img::assets/mac_grid.svg[width:600px;]
+::

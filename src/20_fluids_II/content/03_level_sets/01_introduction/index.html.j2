@@ -1,0 +1,23 @@
+= Level Set methods introduction
+
+* Eulerian models (ex. stable fluids) do not handle natively free boundaries such as fluid/air.
+* __Idea: Track surface boundary using implicit surfaces__
+
+div::[height:1em;]::
+
+::[font-size:80%; line-height:1.3em;]
+** - Encode fluid volume by \(\Omega=\{p\in\mathbb{R}^3, \varphi(p)=0\}\), \(\varphi\) stored within a 3D grid.
+** - Solve Navier-Stokes equation within \(\Omega\)
+** - Deform fluid volume using implicit surface deformation \(\displaystyle \frac{\partial \varphi}{\partial t}+u\cdot \nabla \varphi=0\) 
+::
+
+div::[height:1em;]::
+
+div::[font-size:80%;]
+* Introduced by Ronald Fedkiw, Nick Foster, Stanley Osher (ex. link::http://physbam.stanford.edu/~fedkiw/papers/stanford2001-02.pdf[ [Practical Animation of Liquids, ACM SIGGRAPH 2001] ])
+::
+
+
+div::[text-align:center;]
+img::assets/foster.jpg[width:1500px;]
+::

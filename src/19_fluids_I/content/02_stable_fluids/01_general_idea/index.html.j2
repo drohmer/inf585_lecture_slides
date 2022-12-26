@@ -1,0 +1,37 @@
+= Stable Fluids - Idea
+
+* Well known improvement: **link::https://05f43270-a325-4aeb-a1d8-39e42f0e9fcc.filesusr.com/ugd/cf1fd6_898fe9b63df946689101b8d074f8efba.pdf[Jos Stam, Stable Fluids, ACM SIGGRAPH 1999]** 
+
+div::[height:25px;]::
+
+**  \(\displaystyle \frac{\partial u}{\partial t}=f-(u\cdot \nabla) u+\nu\triangle u -\frac{1}{\rho}\nabla \mathrm{p}\)
+div::[font-size:85%; line-height:1.3em;]
+** - \(1/\rho\;\nabla \mathrm{p}\): Pressure term only used to ensure divergence free
+** - Similar to Lagrange multipler for constraints
+::
+
+div::[height:50px;]::
+
+* 1st Idea 
+div::[font-size:85%; line-height:1.3em;]
+** Remove pressure term
+** Replace by explicit projection on divergence free vector field \(\mathrm{P}\)
+** \(\displaystyle \Rightarrow \frac{\partial u}{\partial t}=\mathrm{P}(f-(u\cdot \nabla) u+\nu\triangle u)\)
+::
+
+div::[height:50px;]::
+
+* 2nd Idea
+div::[font-size:85%; line-height:1.3em;]
+** Compute each terms one after the other
+** \(u^{k} \underbrace{\to}_{ \small{add forces} \atop f}  u_1^k \underbrace{\to}_{\small diffuse \atop \nu \triangle u} u_2^k \underbrace{\to}_{\small project \atop \mathrm{P}} u_3^k \underbrace{\to}_{\small advect \atop (u \cdot \nabla) u } u^{k+1}\)
+::
+
+div::[position:fixed; top:250px; right:75px; width:550px;]
+img::assets/result_01.png[width:550px;]
+img::assets/result_03.png[width:550px;]
+
+* ::(.ref) link::assets/stable_fluids.pdf[Stable Fluids. J. Stam. SIGGRAPH 1999] ::
+* ::(.ref) link::assets/real_time_fluid.pdf[Real Time Fluid Dynamics for Games. J. Stam. Game Dev. Conf. 2003] ::
+::
+

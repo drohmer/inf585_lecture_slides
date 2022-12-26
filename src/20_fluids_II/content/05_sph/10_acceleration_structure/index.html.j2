@@ -1,0 +1,22 @@
+= Acceleration structure
+
+* SPH based on pair-wise interation \(\Rightarrow\) spatial sorting acceleration structure
+
+div::[height:25px;]::
+
+div::[line-height:1.6em;]
+** - Uniform grid: simple and efficient.
+** - Verlet lists (wider neighborhood, updated every \(n\) steps only)
+** - List of vertices per cell, hash table for cell storage
+** - Spatial sorting for cache efficiency
+::
+
+div::[height:50px;]::
+
+div::[text-align:center;]
+img::assets/grid.png[width:600px;]
+img::assets/sorting.png[width:900px;]
+
+
+div::[font-size:80%;]M. Teschner ::
+::
