@@ -1,0 +1,29 @@
+
+
+= Existence of solution
+
+
+Solving the physical system = Solving the **Initial Value Problem** (IVP)
+
+* - Find the solution of \(u'(t)=\mathcal{F}(u,t)\), \(t\geq 0\)
+* - With initial condition \(u(t=0)=u_0\)
+
+
+
+div::[height:50px;]::
+
+
+__Cauchy-Lipschitz__ (/Picard-Lindelof) theorem states that
+* If \(\mathcal{F}\) is Lipschitz with respect to \(u\) and continuous with respect to \(t\)
+* Then there exists a unique solution \(u(t)\). 
+
+div::[height:50px;]::
+
+The solution is called the **integral curve** of the IVP.
+* - \(\mathcal{F}\) can be seen as a vector field
+** (Vector field in 6D for \(p(t)\in\mathbb{R}^3,v(t)\in\mathbb{R}^3\))
+* - Solution is a path along this vector field passing by \(u_0\)
+
+div::[position:fixed; top:550px; left:1200px;]
+img::assets/integral_curve.png[width:450px;]
+::

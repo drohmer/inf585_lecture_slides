@@ -1,0 +1,20 @@
+
+
+= Example: Free fall under gravity
+
+* - Force \(F(t)=m\,g\)
+* - Second order differential equation: \(p''(t)=g\)
+* - First order system \(\displaystyle \underbrace{\left(\begin{array}{c}p \\ v\end{array}\right)'(t)}_{u'(t)}=\underbrace{\left(\begin{array}{c}v(t) \\ g\end{array}\right)}_{\mathcal{F}(u,t)}\)
+* - Linear system \(\displaystyle \underbrace{\left(\begin{array}{c}p \\ v\end{array}\right)'(t)}_{u'(t)}=\underbrace{\left(\begin{array}{cc} 0 & 1 \\ 0 & 0\end{array}\right)}_{\mathrm{A}}\,\underbrace{\left(\begin{array}{c}p \\ v\end{array}\right)(t)}_{u(t)} + \underbrace{\left(\begin{array}{c}0 \\ g\end{array}\right)}_{b(t)}\)
+
+div::[height:50px;]::
+* - Exact solution known: \(\displaystyle p(t)=\frac{1}{2}g\,t^2+v_0\,t+p_0\)
+
+
+div::[position:fixed; top:100px; left:1350px;]
+img::assets/gravity.svg[width:500px;]
+::
+
+div::[height:50px;]::
+
+* __Note: variables are vectors - matrix can be expressed by block, or per components.__

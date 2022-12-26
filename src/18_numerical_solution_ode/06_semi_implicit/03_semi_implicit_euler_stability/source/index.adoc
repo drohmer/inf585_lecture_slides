@@ -1,0 +1,30 @@
+
+
+= Stability on oscillatory system
+
+* 1D spring system: \(F(p^k,v^k,t^k)=-K\,p^{k}\)
+* \(p^{k+1}= 2\, p^k - p^{k-1} - h^2\,K/m\,p^k\)
+* \(\Rightarrow p^{k+1}= (2-h^2\,K/m)\, p^k - p^{k-1}\)
+
+* **Stable and permanent oscillation** when \(h<\frac{2}{\sqrt{K/m}}\)
+
+
+div::[height:50px;]::
+
+div::[font-size:85%; line-height:1.6em;]
+
+* __Demonstration__
+
+
+* - Study the roots of the associated caracteristic equation
+* - \(x^2+(y-2)x+1=0\), with \(y=h^2\,K/m\)
+* - Discriminant \(\Delta=y(y-4)\), with roots \(r=\frac{(2-y)\pm\sqrt{y(y-4)}}{2}\)
+div::[height:25px;]::
+* - Two cases: 
+** \(\Delta < 0 \Rightarrow y\in]0,4[\) : \(r=\frac{(2-y)\pm i\sqrt{y(4-y)}}{2}\) \(\Rightarrow |r|=1/2\,\sqrt{(2-y)^2+y(4-y)}=1 \Rightarrow \) Permanent oscillations (stable)
+** \(\Delta \geq 0 \Rightarrow y\leq 0, \; or \;  y\geq 4\) : \(|r|>1\) Unstable solution
+
+div::[height:25px;]::
+
+* - Finally, stable for \(y\in]0,4[ \Rightarrow h^2 K/m <4 \Rightarrow h < \frac{2}{\sqrt{K/m}}\), and system oscillate permanently
+::

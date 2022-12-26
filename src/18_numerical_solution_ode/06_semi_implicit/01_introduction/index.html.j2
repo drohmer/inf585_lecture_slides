@@ -1,0 +1,37 @@
+
+
+= Introduction to symplectic methods
+
+div::[font-size:85%; line-height:1.3em;]
+== Standard approaches trade-off
+
+* - Explicit methods: (+) Simple to compute, (-) limited stability
+* - Implicit methods: (-) Hard to compute (especially on non linear functions), (+) very stable
+* - Oscillatory systems are not easy to model
+** (-) Numerical solution either diverge or converge.
+
+
+== Symplectic approach
+
+* - __Remark__: Mechanical systems have position and velocity variables
+** - Derivative of position is linear w/r velocity 
+** - Derivative of velocity is more complex (forces - non linear)
+
+* \(\Rightarrow\) __General idea__: separate treatment of velocity and position
+
+div::[height:25px;]::
+
+* Semi-implicit: 
+** - Implicit scheme for position \(p^{k+1}\) (linear part)
+** - Explicit scheme for velocity \(v^{k+1}\) (non linear part)
+
+
+* \(\Rightarrow\) In practice: use velocity \(v^{k+1}\) to evaluate \(p^{k+1}\).
+
+**Pro** 
+* (+) As simple as explicit method to implement
+* (+) Improved stability
+* (+) Well adapted to oscillatory systems
+::
+
+

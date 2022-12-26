@@ -1,0 +1,30 @@
+
+
+= Implicit Euler - study case
+
+
+== 1D spring
+
+* - True solution: permanent oscillations 
+
+div::[height:25px;]::
+
+::[font-size:85%;]
+* - Numerical scheme: \(\left(\begin{array}{c}p \\ v\end{array}\right)^{k+1} = \left(\begin{array}{cc}1 & -h \\ K/m\,h  & 1 \end{array}\right)^{-1}\left(\left(\begin{array}{c}p \\ v\end{array}\right)^k+\left(\begin{array}{c}0 \\ K/m\,h\,l^0\end{array}\right)\right)\)
+
+* \(\Rightarrow \left(\begin{array}{c}p \\ v\end{array}\right)^{k+1} = \frac{1}{1+h^2\,K/m}\left(\left(\begin{array}{cc}1 & h \\ -K/m\,h  & 1 \end{array}\right)\left(\begin{array}{c}p \\ v\end{array}\right)^k+\left(\begin{array}{c}K/m\,h^2\,l^0 \\ K/m\,h\,l^0\end{array}\right)\right)\)
+::
+
+div::[height:75px;]::
+
+* Eigenvalues of \((\mathrm{I}-\mathrm{A}h)^{-1}\) are \(\frac{1\pm i\sqrt{\frac{K}{m}}h}{1+\frac{K}{m}h^2}\)
+* \(\Rightarrow \left|\frac{1\pm i\sqrt{\frac{K}{m}}h}{1+\frac{K}{m}h^2} \right| =\frac{1}{\sqrt{1+\frac{K}{m}h^2}} < 1\) \(\Rightarrow\) always converge
+
+div::[height:25px;]::
+
+* __Even if the true solution oscillates__
+
+
+div::[position:fixed; left:1050px; top:600px;]
+img::assets/trajectory.png[width:700px;]
+::

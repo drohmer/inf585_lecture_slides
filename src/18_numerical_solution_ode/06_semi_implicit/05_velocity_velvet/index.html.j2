@@ -1,0 +1,29 @@
+
+
+= Higher order symplectic 
+
+* **2nd order Velocity Verlet**
+
+div::[height:25px;]::
+
+* \(\left\{\begin{array}{ll}v^{k+1/2}&=v^k+\frac{h}{2}\,F(p^k,v^k,t^k)/m \\ p^{k+1}&=p^k+h\,v^{k+1/2} \\ v^{k+1}&=v^{k+1/2}+\frac{h}{2}\,F(p^{k+1},v^{k+1/2},t^{k+1})/m\end{array}\right.\)
+
+
+div::[height:25px;]::
+
+* - Remains stable with permanent oscillation for \(h\leq \frac{2}{\sqrt{K/m}}\)
+* - Still simple to implement
+
+div::[margin-left:50px; margin-top:50px;]
+__Example for 1D elastic spring__
+div::[line-height:1.4em;]
+code::[c++]
+for(int k=0; k<N; ++k) {
+    v = v + h/2 * (-K/m*p);
+    p = p + h*v;
+    v = v + h/2 * (-K/m*p);
+}
+code::[-]
+::
+::
+

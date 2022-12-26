@@ -1,0 +1,16 @@
+
+
+= Accuracy of a numerical method - general definition
+
+* - Define the **local truncation error** \(\tau\):
+**  Error accumulated during one step, assuming perfect knowledge of the true solution
+** \(\tau_k=\|\tilde u(t^k)-u^{k}\|\), assuming \(u^{k-1}=\tilde u (t^{k-1})\)
+
+
+div::[height:50px;]::
+
+* - A numerical scheme is said to be accurate of order \(k\), if its local truncation error is in \(\mathcal{O}(h^{k+1})\).
+
+div::[height:50px;]::
+
+* __Explicit Euler is of order \(1\), at every step we add an error in \(\mathcal{O}(h^2)\). __

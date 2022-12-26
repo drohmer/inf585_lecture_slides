@@ -1,0 +1,49 @@
+
+
+= Numerical integration of ODE
+
+General formulation: \(u'(t)=\mathcal{F}(u,t)\), \(u(t)=(p(t),v(t))\).
+
+div::[height:25px;]::
+
+div::[font-size:80%; line-height:1.6em;]
+
+div::[display:inline-block; width:800px; vertical-align:top;]
+
+* **Explicit Euler**
+** \(u^{k+1}=u^{k}+\Delta t\,\mathcal{F}(u^k,t^k)\)
+** (+) Easy to implement
+** (-) Worst scheme in all cases (divergence, low accuracy)
+
+div::[height:25px;]::
+
+* **Explicit Runge-Kutta**
+** \(u^{k+1}=u^{k}+\Delta t\,\sum_j \alpha_j k_j\)
+** (+) Good **accuracy**
+** (+) Efficient to apply
+** (+/-) Stability OK for non-stiff problem, diverge on stiff problem
+** (-) Artificial damping for constant energy system
+
+::
+
+div::[display:inline-block; width:800px;]
+
+* **Implicit methods**
+** \(u^{k+1}=u^{k}+\Delta t\,\mathcal{F}(u^{k+1},t^{k+1})\)
+** (+) Good to deal with **stiff problem** - very stable
+** (-) Add numerical damping (converge even if solution oscillates)
+** (-) Hard/computationally costly to apply on non linear problem
+
+div::[height:25px;]::
+
+* **Symplectic integrator**
+** \(v^{k+1}=v^{k}+\Delta t\,F^k/m\)
+** \(p^{k+1}=p^{k}+\Delta t\,v^{k+1}\)
+** (+) Handle well constant energy system, preserves energy (Hamiltonian systems)
+** (+) Simple and efficient to implement
+** (-) Less accurate than RK
+** (-) Diverge on stiff problem
+
+::
+
+::

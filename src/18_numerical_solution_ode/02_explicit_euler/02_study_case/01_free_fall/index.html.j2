@@ -1,0 +1,27 @@
+
+
+= Explicit Euler - study case
+
+== Free fall under gravity
+
+div::[height:25px;]::
+
+* - True solution \(\tilde u(k\,h)=p_0 + (k\,h) v_0 + \frac{(k\,h)^2}{2}\,g\)
+
+div::[height:25px;]::
+
+* - Numerical scheme: span::[font-size:75%;] \(\left(\begin{array}{c}p \\ v\end{array}\right)^{k+1} = \left(\begin{array}{cc}1 & h \\ 0  & 1 \end{array}\right) \left(\begin{array}{c}p \\ v\end{array}\right)^k+\left(\begin{array}{c}0 \\ h\,g\end{array}\right)\) ::
+
+div::[height:25px;]::
+
+* - Numerical solution: \(p^k= p_0 + k\,h\, v_0 + \frac{k (k-1)}{2}\,h^2\,g \) 
+
+div::[height:25px;]::
+
+\(\Rightarrow\) **Not exact** : Error \(e^k = |u^k-\tilde u(k\,h)| = \frac{g}{2} k\,h^2 \)
+
+div::[position:fixed; left:1200px; top:200px;]
+img::assets/trajectory.png[]
+* __red: true solution__
+* __blue: numerical solution__
+::

@@ -1,0 +1,42 @@
+
+
+= RK4 - Case study
+
+div::[width:1000px;]
+* - Rk4 conditionally stable for oscillating spring
+** span::[font-size:80%;] __Not permanent oscillations: Slight decrease of magnitude through time__ ::
+* - Large improvement of accuracy compared to implicit Euler
+::
+
+div::[font-size:85%;]
+
+div::[height:50px;]::
+
+* Stability region: \(\displaystyle \left|1+h\lambda+\frac{h^2}{2}\lambda+\frac{h^3}{6}\lambda^3+\frac{1}{24}h^4\lambda^4\right| \leq 1\)
+
+div::[height:50px;]::
+
+* In the case of oscillating spring: \(\lambda=i\sqrt{K/m}=i\omega\)
+* Stable if \(\left|1+i h \omega-\frac{h^2}{2}\omega^2-i\frac{h^3}{6}\omega^3+\frac{h^4}{24}\omega^4\right| \leq 1\)
+** \(\Rightarrow 1-\frac{h^6\omega^6}{72}+\frac{h^8 \omega^8}{576} \leq 1\)
+** \(\Rightarrow h^6\,\omega^6\,(h^2\omega^2-8)/576 \leq 0\)
+
+div::[height:1em;]::
+
+** \(\Rightarrow h\leq\frac{2^{3/2}}{\omega}= \frac{2^{3/2}}{\sqrt{K/m}}\simeq \frac{2.8}{\sqrt{K/m}}\)
+
+::
+
+div::[position:fixed; top:50px; left:1100px;]
+img::assets/rk4_vs_implicit.png[width:600px;]
+div::[font-size:80%; line-height:1.4em;]
+* \(h=0.2\), error rk4 \(\simeq 10^{-4}\)
+* __- red: true solution__
+* __- black: rk4__
+* __- magenta: implicit Euler__
+::
+::
+
+div::[position:fixed; top:600px; left:1100px;]
+img::assets/stability.svg[width:450px;]
+::

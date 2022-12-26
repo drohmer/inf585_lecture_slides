@@ -1,0 +1,42 @@
+= Use of semi-implicit
+
+* Ex. Elastic Spring: \(F(p)=-K (p-L_0)\)
+
+div::[height:50px;]::
+
+div::[display:flex; justify-content:space-around;]
+
+div::[]
+**Explicit Euler**
+code::[c++]
+for(int k=0; k<N; ++k) {
+    p = p + h*v;
+    v = v + h * F/m;
+}
+code::[-]
+
+(-) Always diverges for elastic problem
+
+::
+div::[]
+
+
+**Semi-Implicit Euler**
+code::[c++]
+for(int k=0; k<N; ++k) {
+    v = v + h * F/m;
+    p = p + h*v;
+}
+code::[-]
+
+(+) Permanent oscillation for sufficiently small \(h\).
+
+::
+::
+
+div::[height:100px;]::
+
+div::[text-align:center;]
+* \(\Rightarrow\) Extremly simple change !
+** Big gain in stability
+::

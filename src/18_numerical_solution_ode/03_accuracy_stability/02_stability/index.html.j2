@@ -1,0 +1,44 @@
+
+
+= Stability of a numerical method - general definition
+
+div::[font-size:90%;]
+* - Classical stability of a method studied on \(u'(t)=\lambda\,u(t)\), \(\lambda\in\mathbb{C}\).
+
+div::[line-height:1.2em;]
+** - The true solution \(\tilde u(t)=\exp(\lambda\,t)\) converge if \(\mathbb{R}_e(\lambda)\leq 0\).
+** - For linear system, \(\lambda\) refers to eigenvalues of \(\mathrm{A}\).
+** - For non linear system, \(\lambda\) refers to eigenvalues of the Jacobian of \(\mathcal{F}\)
+::
+
+div::[height:1em;]::
+
+div::[line-height:1.3em;]
+* - A numerical method is __unconditionnaly stable__ if \(\mathbb{R}_e(\lambda) \leq 0\) 
+** \(\Rightarrow\) stable discrete solution.
+::
+
+* - Otherwise, it is conditionnally stable/unstable.
+div::[line-height:1.3em;]
+* - Region of stability: 
+** __Set of conditions on \(\lambda\) such that the discrete solution doesn't diverge.__
+::
+
+div::[height:2em;]::
+
+
+div::[font-size:80%; line-height:1.6em;]
+* __Rem.__
+
+* - A numerical solution can diverge even when the true ODE solution converge when using unstable numerical method.
+* - Converseley, a numerical solution can converge even when the true ODE solution diverge when using stable numerical method.
+* - Stability \(!=\) Accuracy.
+::
+
+::
+
+div::[position:fixed; top:200px; left:1200px;]
+img::assets/stability.svg[width:680px]
+::
+
+

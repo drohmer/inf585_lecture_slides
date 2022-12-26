@@ -1,0 +1,43 @@
+
+
+= Comparison Explicit Euler / Implicit Euler
+
+div::[display:flex;]
+
+div::[width:100px;]::
+
+div::[]
+
+**Explicit Euler** 
+
+* - \(u^{k+1}=u^{k}+h\,\mathcal{F}(u^{k},t^{k})\)
+
+* - \(u^{k+1}=(\mathrm{I}+h\,\mathrm{A})\,u^{k}+h\,b(t^k)\)
+
+* - Accuracy: 1st Order
+
+* - Stability: 
+** Conditional \(|1+h\lambda|\geq 1\)
+** Solution to spring model diverges
+
+::
+
+div::[width:100px;]::
+
+div::[]
+
+**Implicit Euler**
+
+* - \(u^{k+1}=u^{k}+h\,\mathcal{F}(u^{k+1},t^{k+1})\)
+
+* - \(u^{k+1}=(\mathrm{I}-h\,\mathrm{A})^{-1}\left(\,u^{k}+h\,b(t^{k+1})\right)\)
+
+* - Accuracy: 1st Order
+
+* - Stability: 
+** Unconditionnaly stable
+** Solution to spring model converge to \(l^0\)
+
+::
+
+::

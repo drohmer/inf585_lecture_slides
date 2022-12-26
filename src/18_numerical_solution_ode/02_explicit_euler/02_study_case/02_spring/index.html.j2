@@ -1,0 +1,28 @@
+
+
+= Explicit Euler - study case
+
+
+== 1D spring
+
+* - True solution: permanent oscillation 
+
+div::[height:25px;]::
+
+* - Numerical scheme: \(\left(\begin{array}{c}p \\ v\end{array}\right)^{k+1} = \left(\begin{array}{cc}1 & h \\ -K/m\,h  & 1 \end{array}\right)\left(\begin{array}{c} p \\ v\end{array}\right)^k+\left(\begin{array}{c}0 \\ K/m\,h\;l^0\end{array}\right)\)
+
+div::[height:50px;]::
+
+div::[width:200px;display:inline-block;]::
+div::[width:500px;display:inline-block; vertical-align:top;]
+img::assets/trajectory.png[width:500px;]
+div::[line-height:1.4em;]
+* __red: true solution__
+* __red: numerical solution__
+::
+::
+
+div::[display:inline-block; vertical-align:top; margin-top:100px;]
+* - Numerical solution diverge to \(\infty\)
+* - Worse than bad accuracy for Graphics
+::

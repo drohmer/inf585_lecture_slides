@@ -1,0 +1,35 @@
+
+
+= Other approach: Implicit Euler
+
+div::[width:650px; display:inline-block; vertical-align:top;]
+
+== Explicit Euler
+
+* \(u^{k+1}=u^k+h\,\mathcal{F}(u^{\color{red}{k}},t^{\color{red}{k}})\)
+
+* \(u^k\) is known to compute \(u^{k+1}\)
+
+div::[height:25px;]::
+
+* - In the linear case
+** \(\displaystyle u^{k+1} = (\mathrm{I}+h\,\mathrm{A})\,u^k+h\,b(t^k)\)
+
+::
+
+div::[display:inline-block; vertical-align:top;]
+
+== Implicit Euler
+
+* \(u^{k+1}=u^k+h\,\mathcal{F}(u^{\color{red}{k+1}},t^{\color{red}{k+1}})\)
+
+* \(u^{k+1}\) appears in RHS
+** \(\Rightarrow\) Need to solve \(\displaystyle u^{k+1}-h\,\mathcal{F}(u^{k+1},t^{k+1}) = u^k\)
+
+div::[height:50px;]::
+
+* - In the linear case : solve a linear system
+** \(\displaystyle u^{k+1}=u^{k}+h\,\left(\mathrm{A} u^{k+1}+b(t^{k+1})\right)\)
+** \(\Rightarrow \displaystyle u^{k+1} = (\mathrm{I}-h\,\mathrm{A})^{-1}\,\left(u^k+h\,b(t^{k+1})\right)\)
+
+::

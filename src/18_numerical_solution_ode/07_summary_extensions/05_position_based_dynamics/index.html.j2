@@ -1,0 +1,41 @@
+
+
+= Position based dynamics (PBD)
+
+
+
+* **PBD** - Use symplectic integrator expressed **using position only**
+** - Velocity is computed implicitly as \((p^{k+1}-p^{k})/h\)
+** - Handle constraints using explicit projection of positions.
+*** - Interesting to handle non-linear/stiff constraints
+
+div::[height:25px;]::
+
+::(.border)
+div::[margin-left:100px; font-size:85%; line-height:1.4em;]
+code::[python]
+PBD algorithm
+For all k
+    Integrate position (without constraints) p[k+1]=integrator(p[k],v[k],t)
+    For all constraints
+        Project p[k+1] on constraints
+    Compute new speed v[k+1]=(p[k+1]-p[k])/h
+code::[-]
+::
+::
+
+div::[height:25px;]::
+
+* (+) Unconditionnaly stable even for stiff constraints
+* (+) Simple to implement
+* (-) Low accuracy, no energy preserving
+
+div::[position:fixed;top:775px; left:1050px;]
+* Very popular in Computer Graphics
+div::[font-size:75%;]
+* ::(.ref) link::http://matthias-mueller-fischer.ch/publications/posBasedDyn.pdf[M. Muller et al. Position Based Dynamics. VRIPHYS 2006] ::
+::
+* __Extensions: XPBD, Projective dynamics, ...__
+::
+
+

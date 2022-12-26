@@ -1,0 +1,25 @@
+
+
+= Stability analysis of explicit Euler
+
+
+* \(u'(t)=\lambda\,u(t)\)
+* \(\Rightarrow u^{k+1}=u^k+\lambda\,u^k\) using explicit Euler
+* \(\Rightarrow u^{k+1}=(1+\lambda\,h)\,u^k\) 
+* \(\Rightarrow\) Stable if \(|1+\lambda\,h|\leq 1\) (conditionnal stability)
+
+div::[height:25px;]::
+
+* \(|1/h+\lambda|\leq 1/h\): Interior of a disc centered on \((-1/h,0)\) with radius \(1/h\)
+
+div::[height:50px;]::
+
+* __Rem.__ For 1D elastic spring
+
+* \(\lambda = \pm i\sqrt{K/m}\)
+* \(\Rightarrow\) \(|1+i\sqrt{K/m} h|=\sqrt{1+K/m\,h^2}>1\)
+* \(\Rightarrow\) Explicit euler is always unstable on the elastic spring problem.
+
+div::[position:fixed; top:100px; left:1350px;]
+img::assets/stability.svg[width:500px]
+::

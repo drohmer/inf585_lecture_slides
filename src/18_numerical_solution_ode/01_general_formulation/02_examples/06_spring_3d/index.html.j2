@@ -1,0 +1,16 @@
+
+
+= Example: 3D mass spring
+
+
+* - Force \(F(t)=m\,g-k\,(\|p(t)\|-l^0)\,\frac{p(t)}{\|p(t)\|}\;\;\), \(k\) spring stiffness, \(l^0\) rest length
+* - Second order differential equation: \(m\,p''(t)=mg-k\,(\|p(t)\|-l^0)\,\frac{p(t)}{\|p(t)\|}\)
+div::[height:25px;]::
+* - First order system span::[font-size:75%;] \(\displaystyle \underbrace{\left(\begin{array}{c}p \\ v\end{array}\right)'(t)}_{u'(t)}=\underbrace{\left(\begin{array}{c}v(t) \\ g-k/m\,(\|p(t)\|-l^0)\,\frac{p(t)}{\|p(t)\|}\end{array}\right)}_{\mathcal{F}(u,t)}\) ::
+* - Not linear
+* - No simple explicit solution
+
+
+div::[position:fixed; top:400px; left:1250px;]
+img::assets/3D_spring.svg[width:600px;]
+::

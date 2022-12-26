@@ -1,0 +1,38 @@
+
+
+= Semi implicit method
+
+div::[font-size:90%;]
+* Simplest semi-implicit method: **Semi-implicit Euler** / **Verlet**
+
+div::[height:25px;]::
+
+* General case
+** \(v^{k+1}=v^{k}+h\,\mathcal{F}_v(p^k,v^k,t^k)\)
+** \(p^{k+1}=p^{k}+h\,\mathcal{F}_p(p^k,v^{k+1},t^k)\)
+
+div::[height:50px;]::
+
+**Application to classical mechanical cases**
+
+div::[display:flex;]
+div::[width:900px;]
+* \(p'(t)=v(t), m\,v'(t)=F(p,t)\)
+::(.border)
+* \(\Rightarrow \left\{\begin{array}{l}v^{k+1} = v^{k} + h\,F(p^k,t^k)/m \\ p^{k+1} = p^k + h\,v^{k+1}\end{array}\right.\)
+::
+
+* __(+) Trivially easy to convert explicit Euler to semi-implicit Euler__
+::
+div::[width:900px;]
+* Expressed using positions only
+** \(p^{k+1}= p^k + h(v^k+h\,F(p^k,t^k))\)
+** \(p^{k+1}=p^k+h\left(\frac{p^k-p^{k-1}}{h}+h\,F(p^k,t^k)/m\right)\)
+** \(\Rightarrow p^{k+1}= 2\, p^k - p^{k-1} + h^2\,F(p,t)/m\)
+::
+::
+
+div::[height:50px;]::
+
+* 1st order accurate (like explicit/implicit Euler) in position and speed.
+::

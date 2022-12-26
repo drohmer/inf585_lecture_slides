@@ -1,0 +1,34 @@
+
+
+= Implicit Euler - study case
+
+== Free fall under gravity
+
+* - True solution \(\tilde u(k\,\Delta t)=p_0 + (k\,\Delta t) v_0 + \frac{(k\,\Delta t)^2}{2}\,g\)
+
+div::[height:25px;]::
+
+* - Numerical scheme: span::[font-size:75%;] \(\left(\begin{array}{c}p \\ v\end{array}\right)^{k+1} = \left(\begin{array}{cc}1 & -h \\ 0  & 1 \end{array}\right)^{-1}\left(\left(\begin{array}{c}p \\ v\end{array}\right)^k+\left(\begin{array}{c}0 \\ g\end{array}\right)\right)\) ::
+
+div::[height:25px;]::
+
+* \(\Rightarrow \left(\begin{array}{c}p \\ v\end{array}\right)^{k+1} = \left(\begin{array}{cc}1 & h \\ 0  & 1 \end{array}\right)\left(\begin{array}{c}p \\ v\end{array}\right)^k+\left(\begin{array}{c}h^2\, g \\ h\,g\end{array}\right)\)
+
+div::[height:25px;]::
+
+* - Numerical solution: \(p^k= p_0 + (k\,\Delta t) v_0 + \frac{k (k+1)}{2}\,(\Delta t)^2\,g \)
+
+div::[height:25px;]::
+
+\(\Rightarrow\) Not exact : Error \(e^k = |u^k-\tilde u(k\,\Delta t)| = \frac{k}{2} (\Delta t)^2 g \)
+
+div::[height:25px;]::
+
+* __Same error magnitude than explicit Euler__
+
+div::[position:fixed; top:200px; left:1300px; font-size:80%; line-height:1.4em;]
+img::assets/trajectory.png[width:500px;]
+* - __red: True solution__
+* - __magenta: Implicit Euler__
+* - __blue: Explicit Euler__
+::

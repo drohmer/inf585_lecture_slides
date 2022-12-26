@@ -1,0 +1,36 @@
+
+
+= Solving the ODE exactly
+
+**Equation is linear**
+
+* Homogeneous, constant coefficients 
+** \(u'(t)=\mathrm{A} u(t)\), \(u(0)=u_0\)
+** \(\Rightarrow u(t) = u_0\,\exp(\mathrm{A}\,t)\)
+
+div::[height:25px;]::
+
+* Non-Homogeneous, constant coefficients
+** \(u'(t)=\mathrm{A} u(t)+b(t)\), \(u(0)=u_0\)
+** \(\Rightarrow \displaystyle u(t) = u_0\,\exp(\mathrm{A}\,t) + \exp\left(\mathrm{A}\,t\right)\int_{t'=0} ^ {t} b(t')\exp\left(-\mathrm{A}\,t'\right)\,\mathrm{d}t' \)
+
+div::[height:25px;]::
+
+* Homogeneous, variable coefficients
+** \(u'(t)=\mathrm{A}(t)\,u(t)\), \(u(0)=u_0\)
+** \(\Rightarrow\) No closed-form solution in the general case
+div::[font-size:80%;]
+** - __Rem.__ Unfortunately, in general, \(u(t)\) is **not** \(\displaystyle u_0\,\exp\left(\int_{0}^{t} \mathrm{A}(t')\,\mathrm{d}t' \right)\)
+::
+
+div::[position:fixed; left:900px; top:175px;]
+**Equation is non linear**
+
+* No general method
+
+div::[height:25px;]::
+
+div::[text-align:center]
+* \(\Rightarrow\) Numerical approaches are required most of the time
+::
+::

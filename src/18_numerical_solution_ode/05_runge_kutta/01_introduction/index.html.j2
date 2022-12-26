@@ -1,0 +1,27 @@
+
+
+= Higher order method - RK
+
+
+* Higher accuracy can be achived using Taylor expansion.
+
+::[font-size:85%;]
+** ex. \(\displaystyle u^{k+1}=u^{k}+h\,\mathcal{F}(u^k,t^k)+\frac{h^2}{2}\frac{\mathrm{d}\mathcal{F}}{\mathrm{d}t}(u^k,t^k)\)
+::
+
+div::[height:25px;]::
+
+* - Second order accurate: **2nd order explicit Euler**
+
+div::[height:25px;]::
+
+* - Higher order can achieve arbitrary accuracy.
+* - In practice: computing derivatives of \(\mathcal{F}\) is complex.
+* \(\Rightarrow\) Not often used in practice
+
+::[height:2em;]::
+
+* Instead: **Runge Kutta**
+** - Reach higher order accuracy
+** - Only involve the knowledge of \(\mathcal{F}\), without its derivatives
+** - Involves several successives evaluations of \(\mathcal{F}\)

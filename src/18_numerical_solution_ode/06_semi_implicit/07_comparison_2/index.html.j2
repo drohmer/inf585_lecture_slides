@@ -1,0 +1,27 @@
+
+
+= Comparison between approaches
+
+
+
+* Larger \(h=1.0/\omega\)
+
+div::[display:flex;]
+div::[text-align:center;]
+img::assets/large_h_temporal.png[height:350px;]
+* __Temporal evolution of \(p^k\)__
+::
+div::[width:100px;]::
+div::[text-align:center;]
+img::assets/large_h_energy.png[height:350px;]
+* __Temporal evolution of energy \(E=1/2 m\,(v^k)^2+1/2 K (p^k)^2\)__
+::
+::
+
+
+* __span::[color:red] True solution :: , span::[color:blue]Semi-implicit Euler :: , span::[color:magenta]Velocity Verlet :: , Runge-Kutta RK4__
+
+div::[height:50px;]::
+
+* - RK4 loose energy and \(p^k\) converge toward \(l^0\)
+* - Symplectic integrator keep oscillating 

@@ -1,0 +1,28 @@
+
+
+= Stability analysis of Implicit Euler
+
+* What are the general conditions for which \(u'(t)=\lambda\,u(t)\) converge using Implicit Euler ?
+
+div::[height:50px;]::
+
+* \(u^{k+1}=u^{k}+h\,\lambda\,u^{k+1}\)
+* \(\Rightarrow (1-h\,\lambda)\,u^{k+1}=u^{k}\)
+* \(\Rightarrow u^{k+1}=\frac{1}{1-h\,\lambda}\,u^{k}\)
+
+div::[height:25px;]::
+
+* Stability condition: \(\displaystyle \left|\frac{1}{1-h\lambda}\right|\leq 1 \Rightarrow \left|1-h\lambda\right|\geq 1\)
+
+div::[height:25px;]::
+
+* \(|1/h-\lambda|\geq 1/h\): exterior of a disc centered on \((1/h,0)\) with radius \(1/h\)
+ 
+* \(\Rightarrow\) Fully enclose \(\mathbb{R}_e(\lambda)\leq 0\)
+* \(\Rightarrow\) Implicit euler is unconditionally stable
+
+* __Rem. May converges even when the true solution does not.__
+
+div::[position:fixed; top:300px; left:1250px;]
+img::assets/stability.svg[width:600px;]
+::

@@ -1,0 +1,18 @@
+
+
+= Example: 1D spring (/Harmonic oscillator)
+
+
+* - Force \(F(t)=-k\,(p(t)-l^0)\;\;\), \(k\) spring stiffness, \(l^0\) rest length
+* - Second order differential equation: \(m\,p''(t)+k\,p(t)=k\,l^0\)
+div::[height:25px;]::
+* - First order system \(\displaystyle \underbrace{\left(\begin{array}{c}p \\ v\end{array}\right)'(t)}_{u'(t)}=\underbrace{\left(\begin{array}{c}v(t) \\ -k/m\left(p(t)-l^0\right)\end{array}\right)}_{\mathcal{F}(u,t)}\)
+* - Linear system \(\displaystyle \underbrace{\left(\begin{array}{c}p \\ v\end{array}\right)'(t)}_{u'(t)}=\underbrace{\left(\begin{array}{cc} 0 & 1 \\ -k/m & 0\end{array}\right)}_{\mathrm{A}}\,\underbrace{\left(\begin{array}{c}p \\ v\end{array}\right)(t)}_{u(t)} + \underbrace{\left(\begin{array}{c}0 \\ k/m\;l^0\end{array}\right)}_{b}\)
+
+div::[height:50px;]::
+* - Exact solution known: \(\displaystyle p(t)=A\,\sin(\omega\,t+\varphi)+l^0\)
+** \(\omega=\sqrt{k/m}\), \(\displaystyle A^2=(p^0-l^0)^2+\left(\frac{v_0}{\omega}\right)^2\), \(\displaystyle \tan(\varphi)=\frac{p^0-l^0}{v^0/\omega}\)
+
+div::[position:fixed; top:200px; left:1300px;]
+img::assets/spring.svg[width:500px;]
+::

@@ -1,0 +1,37 @@
+
+
+= Numerical solution 
+
+== 1st order Explicit Euler
+
+Naive numerical scheme: Approximation of the derivative
+
+div::[height:25px;]::
+
+** \(\displaystyle \frac{u^{k+1}-u^k}{h}=\mathcal{F}(u^k,t^k)\)
+
+div::[height:25px;]::
+
+** \(\Rightarrow u^{k+1} = u^{k} + h\,\mathcal{F}(u^k,t^k)\)
+
+div::[height:25px;]::
+
+* In the linear case
+
+div::[height:25px;]::
+
+** \(u^{k+1}=\left(\mathrm{I}+h\,\mathrm{A}\right)\,u^{k}+h\,b^k\)
+
+div::[height:50px;]::
+
+* **Pro** : very easy to implement
+
+div::[height:50px;]::
+
+
+* __Is \(u^{k}\) a good approximation of the true solution \(\tilde u(t^k)\) ?__
+
+div::[position:fixed; top:450px; left:1150px;]
+__For a single particle with \(p,v\) variables__:
+\( \left\{ \begin{array}{l} v^{k+1}=v^k + h\, F(u^k,t^k)/m \\ p^{k+1}=p^k + h\, v^k \end{array} \right. \)
+::
