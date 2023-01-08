@@ -62,6 +62,10 @@ if __name__== '__main__':
             with open('configure_temp.yaml','w') as fid:
                 fid.write(config_yaml)
             os.system(f'python static_website_lhtml/generate.py -i configure_temp.yaml')
+            #rename pdf output using the current directory
+            pdf_file_in = site_directory+entry_dir+'slides.pdf'
+            pdf_file_out = site_directory+entry_dir+entry_dir[:-1]+'.pdf'
+            os.system(f'mv {pdf_file_in} {pdf_file_out}')
 
         # Clean configure_temp
         os.system('rm configure_temp.yaml')
