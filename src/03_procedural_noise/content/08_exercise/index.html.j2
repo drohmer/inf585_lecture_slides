@@ -1,14 +1,14 @@
 
 = Perlin Noise Terrain
 
-div::[font-size:65%; line-height:1.2em;]
+div::[font-size:65%;]
+
+div::[line-height:1.2em; position:fixed; top:150px; left:100px;]
 
 Consider the surface \(S\) defined as
 
-div::[]
-::
 
-div::[display:inline-block; width:750px;]
+div::[display:inline-block; width:650px;]
 * \(S(u,v)=\left\{ \begin{array}{l} x(u,v) = u \\ y(u,v) = v \\ z(u,v) = h \, P(s (u + o), s(v +o)) \end{array} \right. \)
 ::
 div::[display:inline-block; width:500px;]
@@ -16,7 +16,8 @@ The perlin noise
 
 * \(\displaystyle P(u,v) = \sum_{k=0} ^{N} \alpha ^k \,f(2 ^k \,u, 2 ^k v)\)
 ::
-div::[display:inline-block; width:400px; font-size:80%; line-height:0.9em;]
+
+div::[font-size:80%; line-height:0.9em; position:fixed; top:150px; left:1600px;]
 * \(N=9\)
 * \(\alpha=0.4\)
 * \(h=0.3\)
@@ -25,13 +26,16 @@ div::[display:inline-block; width:400px; font-size:80%; line-height:0.9em;]
 ::
 
 
+::
 
 
+div::[position: fixed; top:400px; left:100px;]
 div::[vertical-align:top; display:inline-block;]
 img::assets/reference_terrains.png[]
 ::
 div::[vertical-align:top; display:inline-block;]
 img::assets/parameters_terrains.png[width:1300px]
+::
 ::
 
 div::[position:fixed; top:650px; left:700px;]
@@ -66,5 +70,6 @@ __reference__
 div::[position:fixed; top:800px; left:100px; width:400px;]
 Q. Which parameters correspond to (a,b,c,d,e,f) terrains?
 ::
+
 
 ::
