@@ -54,14 +54,14 @@ if __name__== '__main__':
         config_yaml = yaml.dump(config_html)
         with open('configure_temp.yaml','w') as fid:
             fid.write(config_yaml)
-        os.system(f'python static_website_lhtml/generate.py -i configure_temp.yaml')
+        os.system(f'python3 static_website_lhtml/generate.py -i configure_temp.yaml')
 
         # PDF
         if args.pdf==True:
             config_yaml = yaml.dump(config_pdf)
             with open('configure_temp.yaml','w') as fid:
                 fid.write(config_yaml)
-            os.system(f'python static_website_lhtml/generate.py -i configure_temp.yaml')
+            os.system(f'python3 static_website_lhtml/generate.py -i configure_temp.yaml')
             #rename pdf output using the current directory
             pdf_file_in = site_directory+entry_dir+'slides.pdf'
             pdf_file_out = site_directory+entry_dir+entry_dir[:-1]+'.pdf'
