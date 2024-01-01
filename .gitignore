@@ -2,3 +2,4 @@ _site/
 cache_video/
 private/
 __pycache__/
+**/.DS_Store
