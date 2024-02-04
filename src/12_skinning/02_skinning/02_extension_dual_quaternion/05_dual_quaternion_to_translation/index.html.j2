@@ -2,20 +2,19 @@
 
 * Given a non-unit dual quaternion as input \(\hat q'=q'_0 + \epsilon q'_\epsilon\)
 ** How to compute the components of \(\hat q' / \|\hat q'\| = \hat q = q_0 + \epsilon q_\epsilon \) ?
+** \(\Rightarrow\) Force the parameterization in rotation-translation: 
+*** \(\displaystyle \hat q = q_0 + \frac{\epsilon}{2} q_t\,q_0\;\), \(\;\;q_t=(t_x,t_y,t_z,0)\)
+
+
+
 
 div::[height:50px;]::
 
-
-* Express the parameterization in rotation-translation: 
-** \(\displaystyle \hat q = q_0 + \frac{\epsilon}{2} q_t\,q_0\;\), \(\;\;q_t=(t_x,t_y,t_z,0)\)
-
-div::[height:50px;]::
-
-* First, normalize the non dual component: \(\hat q' / \|q_0'\|\)
-** \(\Rightarrow\) <div class="border">\(q_0=q_0' / \|q_0'\| \)</div>
+* First, normalize with the non dual component: \(\hat q' / \|q_0'\|\)
+** \(\Rightarrow\) <div class="border">\(q_0=q_0' / \|q_0'\| \)</div> , <div class="border">\(q_\epsilon=q_\epsilon' / \|q_0'\| \)</div>
 
 div::[height:25px;]::
 
-* Second, enforce the parameterization of the dual component: \(\frac{1}{2}q_t\,q_0 = q_\epsilon' / \|q'_0\|\)
-** \(\Rightarrow\) <div class="border">\( q_t = 2 \, q'_\epsilon \, q_0^\star / \|q'_0\|\)</div>
+* Second, enforce the parameterization of the dual component: \(\frac{1}{2}q_t\,q_0 = q_\epsilon\)
+** \(\Rightarrow\) <div class="border">\( q_t = 2 \, q_\epsilon \, q_0^\star \)</div> , \(q_0^\star \) conjugate of \(q_0\)
 

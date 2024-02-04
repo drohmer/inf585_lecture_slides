@@ -7,22 +7,36 @@
 
 div::[height:50px;]::
 
-div::[width:850px;]
+div::[width:1050px;]
 * Three possibilities
-** (1) Correct position in projecting on the constaint
+** (1) Update velocity to remove penetration
 div::[font-size:80%;line-height:1.4em;]
-*** __(+) Simple to implement__ 
-*** __(-) Physically incorrect position__
+*** __(+) Simple for well defined volumes__
+*** __(-) Keep collision state__
 ::
-** (2) Approximate the correct position
+::[height:1em;]::
+** (2) Correct positions in projecting on the contact plane
+div::[font-size:80%;line-height:1.4em;]
+*** __Position Based Dynamics (PPD)__
+*** __(+) Simple to implement__ 
+*** __(-) Physically inaccurate__
+::
+::[height:1em;]::
 ** (3) Go backward in time to find exact instant of collision
 div::[font-size:80%;line-height:1.4em;]
-*** __Continuous Collision Detection__
-*** __(+) Physically correct__
+*** __Continuous Collision Detection (CCD)__
+*** __(+) Physically accurate__
 *** __(-) Computationally heavy (binary search, etc.)__ 
 ::
 ::
 
-div::[position:fixed; top:150px; left:900px;]
-img::assets/plane_collision.svg[width:950px]
+
+div::[position:fixed; top:250px; left:1000px;]
+img::assets/1_update_velocity.svg[width:225px]
+::
+div::[position:fixed; top:500px; left:1200px;]
+img::assets/2_update_position.svg[width:225px]
+::
+div::[position:fixed; top:700px; left:1300px;]
+img::assets/3_ccd.svg[width:450px]
 ::

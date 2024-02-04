@@ -1,12 +1,19 @@
 
 
-= Result: Projecting position on plane
+= Result: After correction
 
 
 div::[text-align:center]
-videoplay::assets/with_reprojection.mp4[width:700px]
+videoplay::assets/with_reprojection.mp4[width:600px]
 ::
 
+::[font-size:90%;]
+Either avoiding negative oriented velocity
+** Velocity bounce if \((p_i-a)\cdot n < 0\) and \(v_i\cdot n < 0\)
 
+::[height:0.5em;]::
+
+Either position projection on surface contact
 * \(p_i^{new}= p_i + d\,n\)
-* \(d=r_i-(p_i-a)\cdot n_i \;\): distance of penetration
+* \(d=r_i-(p_i-a)\cdot n \;\): distance of penetration
+::

@@ -1,0 +1,36 @@
+
+
+= Summary with multiple particles
+
+== Position Based
+
+* A. Update position and velocity from field forces (gravity, friction)
+
+* B. Handle collision (velocity+position) between particles
+* C. Handle collision (velocity+position) with walls
+
+::[height:0.5em;]::
+** (+) Good collision avoindance for the last constraints
+** (-) Jittering appears in stacked spheres
+
+::[height:1em;]::
+
+== Velocity Based
+
+* A. Update velocity from field forces (gravity, friction)
+
+* B. Handle collision (with velocity) between particles, and walls
+
+* C. Cancel velocity component contributing to penetration
+
+* D. Update position from current velocity
+
+::[height:0.5em;]::
+
+** (+) Smooth and stable motion
+** (-) Existing collision persists
+
+
+div::[position:fixed; top:300px; right:50px;]
+videoplay::assets/spheres_collision.mp4[width:650px;]
+::

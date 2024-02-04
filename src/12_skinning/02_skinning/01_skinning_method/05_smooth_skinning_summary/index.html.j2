@@ -1,9 +1,10 @@
 = Smooth skinning - Summary
 
-* \(\displaystyle p=\left(\sum_{k=0}^{N-1} \alpha_k \, \mathrm{M}_k\right)\,p^0 = \left(\sum_{k=0}^{N-1} \alpha_k \; \mathrm{T}_k\,(\mathrm{T}_k^0)^{-1}\right)\,p^0 \)
-* \(\displaystyle \forall k\,,\; \alpha_k\in[0,1]\), and \(\sum_{k=0}^{N-1} \alpha_k=1\)
+* \(\displaystyle p_i=\left(\sum_{j=0}^{N-1} \alpha_{ij} \, \mathrm{T}_j\right)\,p_i^0 = \, \left(\sum_{j=0}^{N-1} \alpha_{ij} \; \mathrm{M}_j\,(\mathrm{M}_j^0)^{-1}\right)\,p_i^0 \)
+* \(\displaystyle \forall j\,,\; \alpha_{ij}\in[0,1]\), and \(\sum_{j=0}^{N-1} \alpha_{ij}=1\)
+* \(\mathrm{M}_j^0\): Bind Pose
 
-div::[position:fixed; top:200px; right:50px; ]
+div::[position:fixed; top:200px; right:25px; ]
 div::[display:flex; justify-content:center; flex-wrap: wrap; width:800px;]
 div::[] img::assets/elephant_01.png[width:350px;] ::
 div::[] img::assets/elephant_02.png[width:350px;] ::
