@@ -1,0 +1,26 @@
+
+
+= PPD: Generic Non Linear Constraints
+
+* Handling arbitrary non constraint \(C(p)>0\) over \(p=(p_1,\cdots,p_N)\)
+* Solve iteratively \(C(p+\mathrm{d}p) \simeq C(p) + \nabla C \cdot \mathrm{d}p >0\) using Lagrange multiplier
+** \(\mathrm{d}p = \lambda \, M^{-1}\,(\nabla C)^T\), \(M=\mathrm{diag}(m_1,\cdots,m_N)\):masses
+** \(\Delta p_i=-\lambda/m_i\,\nabla_{p_i} C(p)^T\)
+** \(\Rightarrow \displaystyle \lambda=\frac{C(p)}{\sum_i 1/m_i\,\|\nabla_{p_i}C(p)\|^2}\)
+
+::[height:1em;]::
+
+* Note: Converges to infinite stiffness
+
+::[height:1em;]::
+
+Proposition of eXtended PDF (XPBD)
+
+** \(\Rightarrow \displaystyle \lambda=\frac{C(p)}{\sum_i 1/m_i\,\|\nabla_{p_i}C(p)\|^2+\frac{\alpha}{K\,(\Delta t)^2}}\) 
+** \(\alpha=1/K\): compliance (inverse stiffness)
+
+* ::(.ref) link::https://matthias-research.github.io/pages/publications/XPBD.pdf[Miles Macklin, Matthias Muller, Nuttapong Chentanez. XPBD: Position-Based Simulation of Compliant Constrained Dynamics. MIG 2016] ::
+* ::(.ref) link::https://mmacklin.com/2017-EG-CourseNotes.pdf[Jan Bender, Matthias Muller, Miles Macklin. A survey on Position Based Dynamics. EUROGRAPHICS STAR 2017] ::
+::[font-size:75%; color:gray;]
+* __Note: Formulation may vary a bit depending on the paper.__
+::

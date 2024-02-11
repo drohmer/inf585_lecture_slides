@@ -1,0 +1,45 @@
+
+
+= Shape Matching Formulation
+
+
+::[display:inline-block;]
+* Reference Shape: 
+::[font-size:80%;]
+** Vertex position \(p_i^\text{ref}\) 
+** Center of mass \(c^\text{ref}\)
+** Local vertex vector \(r_i^\text{ref}=p_i^\text{ref}-c^\text{ref}\)
+::
+::
+
+::[display:inline-block; margin-left:2em;]
+* Deformed shape at \(t+\Delta t\)
+::[font-size:80%;]
+** Vertex position \(p_i\)
+** Center of mass \(c\)
+** Local vertex vector \(r_i=p_i-c\)
+::
+::
+
+::[height:1.5em;]::
+
+* Averaged transformation \(\mathrm{T}=\sum_i r_i \, r_i^T\)
+::[font-size:75%;]
+** \(\mathrm{T}\) minimizes \(\sum_i\|\mathrm{T}\,r_i^\text{ref}-r_i\|^2\)
+::
+::[height:1em;]::
+* Extract optimal rotation \(\mathrm{R}\) 
+** via polar decomposition from \(\mathrm{T}\)
+::[height:1em;]::
+* New position \(q_i=\mathrm{R}\, r_i^\text{ref}+c\)
+
+::[height:5.0em;]::
+::[font-size:75%;]
+* Reminder Polar Decomposition: \(\mathrm{R}=WV^T\), for \(svd(T)=W \, \Sigma\, V^T\)
+::
+
+
+
+::[position:fixed; left:900px; top:600px;]
+img::assets/shape_matching.png[width:950px;]
+::

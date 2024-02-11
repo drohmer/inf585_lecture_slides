@@ -1,0 +1,24 @@
+
+
+= PPD: General Idea
+
+* Handle positional constraints by moving vertex positions directly
+** Velocity computed as change of position
+** (+) Very simple, unconditionally stable
+*** Formalized in 2005
+*** ::(.ref) link::https://matthias-research.github.io/pages/publications/posBasedDyn.pdf[Matthias Muler, Bruno Heidelberger, Marcus Hennix, John Racliff. Position based Dynamics. PRIPHYS 2005.] ::
+
+::[margin-top:2em;]::
+
+PPD simulation step
+* 1) Integrate __standard forces__ to predict position
+** \(p_\text{prev}=p\)
+** \(v = v + \Delta t \,F/m \)
+** \(p = p + \Delta t \,v \)
+* 2) Project \(p\) on constraints
+* 3) Update velocity
+** \(v = (p-p_\text{prev})/\Delta t\)
+
+::[position:fixed; left:1100px; top:550px;]
+videoplay::assets/physx_nvidia.mp4[width:700px;]{controls}
+::

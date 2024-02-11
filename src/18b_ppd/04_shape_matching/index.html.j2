@@ -1,0 +1,33 @@
+
+
+= Rigid bodies dynamic: Shape Matching
+
+General Idea:
+
+* 1) Consider a reference shape.
+
+::[height:2em;]::
+
+* 2) At time \(t\), deform vertices individually
+::[line-height:1.1em; font-size:85%;]
+** \(t\to t+\Delta t\)
+** Solve for the collision constraints on each vertex
+::
+
+::[height:2em;]::
+
+* 3) Shape Matching:
+::[line-height:1.1em; font-size:85%;]
+** Compute optimal rotation \(R\) 
+*** between reference shape and current one.
+** Apply \(R\) on the reference shape (+ translate it).
+::
+
+::[height:2em;]::
+
+* (+) Garantee to preserve reference shape appearance
+* (-) May not preserve individual constraints
+
+::[position:fixed; left:1000px; top:200px;]
+img::assets/shape_matching.png[width:800px;]
+::

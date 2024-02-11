@@ -1,0 +1,82 @@
+
+<style>
+.entry{
+    width:45%; height:625px; border:2px solid black;
+}
+</style>
+
+= Constraint handling
+
+
+
+::[display:flex; text-align: center; font-weight:bold;]
+
+div::(.entry)
+Force based
+div::[margin-top:1em;]
+img::assets/2a_forces.png[width:225px;]
+
+::[text-align:left; font-size:80%; font-weight:normal; margin-top:3em; margin-left:0.5em;]
+* (+) Physical interpretation
+* (+) Arbitrary constraint
+* (-) Constraint stiffness: Divergence
+::
+
+::
+::
+
+div::(.entry)
+Impulse based
+div::[margin-top:0.5em;]
+img::assets/2b_velocity.png[width:200px;]
+
+::[text-align:left; font-size:80%; font-weight:normal; margin-top:3em; margin-left:0.5em;]
+* (+) Stability
+* (-) Collision only
+* (-) Doesn't correct existing collisions
+::
+
+::
+::
+
+div::(.entry)
+Position based
+
+div::[margin-top:1em;]
+img::assets/2c_position.png[width:225px;]
+
+::[text-align:left; font-size:80%; font-weight:normal; margin-top:3em; margin-left:0.5em;]
+* (+) Stability
+* (+) Arbitrary constraint
+* (-) Physical interpretation
+::
+
+::
+::
+::
+
+
+
+::[position:fixed; top:520px; left:180px;]
+\(v_i^{k+1}=v_i^k+F_i/m_i\,\Delta t\)
+::
+
+::[position:fixed; top:520px; left:725px;]
+\(v_i^{k+1} = v_i^{k}+J/m\)
+::
+
+::[position:fixed; top:520px; left:1325px;]
+\(p_i^{k+1} \to \mathcal{F}(p^k)\)
+::
+
+
+
+
+
+
+
+
+
+
+
+
