@@ -1,12 +1,12 @@
 = SPH for Navier Stokes
 
 * Lagrangian representation on particle \(i\)
-** \(\displaystyle m_i \frac{\mathrm{d}v_i}{\mathrm{d}t}=\underbrace{m_i\, g}_{F_{weight}} - \underbrace{\frac{m_i}{\rho_i}\,\nabla \mathrm{p}_i}_{F_{pressure}} + \underbrace{m_i\,\nu\triangle v_i}_{F_{viscosity}}\)
+** \(\displaystyle m_i \frac{\mathrm{d}v_i}{\mathrm{d}t}=\underbrace{m_i\, g}_{F_{weight}} - \underbrace{\frac{m_i}{\rho_i}\,\nabla \mathrm{p_r}_i}_{F_{pressure}} + \underbrace{m_i\,\nu\triangle v_i}_{F_{viscosity}}\)
 
 ::[height:0.5em;]::
 
 * **Objective**:
-** 1. Express \(\rho_i, \nabla \mathrm{p}_i, \triangle v_i\) using SPH formulation
+** 1. Express \(\rho_i, \nabla \mathrm{p_r}_i, \triangle v_i\) using SPH formulation
 ** 2. Then integrate: ex. \(v_i^{k+1}=v_i^{k}+\Delta t\left(F_{weight}+F_{pressure}+F_{viscosity}\right)/m_i\)
 
 ::[height:1.5em;]::

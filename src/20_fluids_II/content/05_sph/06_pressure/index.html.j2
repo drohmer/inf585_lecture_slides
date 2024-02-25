@@ -1,16 +1,18 @@
 = Pressure
 
-* \(F_{pressure}=-\frac{m_i}{\rho_i}\, \nabla \mathrm{p}_i\)
+::[font-size:90%;]
+
+* \(F_{pressure}=-\frac{m_i}{\rho_i}\, \nabla \mathrm{p_r}_i\)
 
 ::[height:1em;]::
 
-* 1. Use symetric gradient b/w (i,j) \(\;\;\;F_{pressure}=-\frac{m_i}{\rho_i}\, \nabla (\mathrm{p}_i+\mathrm{p}_j)/2\)
-** \(F_{pressure}=-\frac{m_i}{\rho_i} \, \sum_j m_j \, \frac{\mathrm{p}_i+\mathrm{p}_j}{2\,\rho_j} \; \nabla  W_h(\|p_i-p_j\|)\)
+* 1. Use symetric gradient b/w (i,j) \(\;\;\;F_{pressure}=-\frac{m_i}{\rho_i}\, \nabla (\mathrm{p_r}_i+\mathrm{p_r}_j)/2\)
+** \(\displaystyle F_{pressure}=-\frac{m_i}{\rho_i} \, \sum_{\substack{j=0 \\ j\neq i}}^{N-1} m_j \, \frac{\mathrm{p_r}_j+\mathrm{p_r}_i}{2\,\rho_j} \; \nabla  W_h(\|p_i-p_j\|)\)
 
 ::[height:1em;]::
 
 * 2. Express the pressure as a function of the density \(\rho\)
-** Simple approximation: \(\mathrm{p}_i=s\,(\rho_i-\rho_0)\)
+** Simple approximation: \(\mathrm{p_r}_i=s\,(\rho_i-\rho_0)\)
 ::[font-size:85%; line-height:1.3em;]
 *** - \(s\): Stiffness property
 *** - \(\rho_0\): Rest density of the fluid
@@ -29,4 +31,6 @@
 
 ::[position:fixed; top:650px; left:1400px;]
 img::assets/spiky_kernel.png[width:300px;]
+::
+
 ::

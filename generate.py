@@ -11,7 +11,7 @@ source_root_directory = 'src/'
 site_directory = '_site/'
 
 compile_all = False
-compile_dirs = ['18b_ppd/']
+compile_dirs = ['20_fluids_II/']
 
 
 

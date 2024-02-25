@@ -5,8 +5,10 @@
 ::[height:1em;]::
 
 * 1. Use symetric laplacian b/w (i,j) 
+::[font-size:90%;]
 ** \(F_{viscosity}= m_i\,\nu \, \triangle (\mathrm{v}_j-\mathrm{v}_i)\) \(\;\;\;\)-\(\;\) __viscosity depends on velocity differences__
-** \(F_{viscosity}= m_i\,\nu \, \sum_j m_j \frac{(\mathrm{v}_j-\mathrm{v}_i)}{\rho_j}\;\triangle W_h(\|p_i-p_j\|)\) 
+** \(\displaystyle F_{viscosity}= m_i\,\nu \, \sum_{\substack{j=0 \\ j\neq i}}^{N-1} m_j \frac{(\mathrm{v}_j-\mathrm{v}_i)}{\rho_j}\;\triangle W_h(\|p_i-p_j\|)\) 
+::
 
 
 ::[height:2em;]::
